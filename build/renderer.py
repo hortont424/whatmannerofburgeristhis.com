@@ -17,6 +17,12 @@ def readFileContents(fn):
     fileHandle.close()
     return fileContents
 
+def joinCategoryList(cats):
+    if len(cats) <= 2:
+        return string.join(cats, " and ")
+    else:
+        return string.join(cats[:-2], ", ") + ", " + string.join(cats[-2:], ", and ")
+
 def renderPost(f, template):
     metadata = json.loads(readFileContents(f), encoding='utf-8')
     contents = readFileContents(f.replace(".control",""))
@@ -42,4 +48,4 @@ def renderPost(f, template):
 def renderArchive(c, template):
     loader = TemplateLoader('templates', variable_lookup='lenient')
     tmpl = loader.load(template + '.html', encoding='utf-8')
-    return tmpl.generate(content=Markup(c.decode("utf-8","ignore")), baseurl=w("")).render('html', doctype='html')
+    return tmpl.generate(content=c.decode("utf-8","ignore"), baseurl=w("")).render('html', doctype='html')

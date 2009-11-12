@@ -15,8 +15,12 @@
   <body class="index">
     <xi:include href="button-bar.html" />
     
-    <table id="posts" border="0">
-    ${content}
+    <table id="posts" border="0" width="100%">
+    <tr>
+        <td></td>
+        <td class="post">${Markup(content)}</td>
+        <td></td>
+    </tr>
     </table>
   </body>
 </html>
