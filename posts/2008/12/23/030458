@@ -1,0 +1,21 @@
+So! I recently realized that <a href="http://www.hortont.com/dump/">the dump</a> probably wasn't the best way to share code. Actually, that's not a recent realization... I just finally got around to doing something about it.
+
+Anyway - I decided to move things into a <a href="http://bazaar-vcs.org/">bazaar</a> repository. There's some code there already, and I've been actively using it for stuff I'm working on now (which I'll write about later). Also, a bzr copy of WebKit, because Robb had forgotten about git://git.webkit.org/WebKit.git, and wanted a DVCS copy of WebKit to help him out... it took quite a few <em>days</em> to generate, so I'm going to leave it there (and keep it up to date).
+
+The repository is accessible through a loggerhead web interface, at:
+
+<a href="http://hortont.com/bzr">http://hortont.com/bzr</a>
+
+If you have SSH access to Jayne, you can use:
+
+<b>bzr+ssh://hortont.com/bzr/<i>project</i></b>
+
+to access the repository. You can also create new repositories, and commit to my stuff (but be nice!). Make a new subdirectory of <b>/bzr</b> on Jayne and <b>bzr init</b> inside of it - everything's writable by all of you.
+
+If you don't have SSH access, you can check out projects with:
+
+<b>http://hortont.com/repo/<i>project</i></b>
+
+Anyway... have fun!
+
+P.S. You might want to <a href="http://bazaar-vcs.org/Download">update</a> your bzr install. I use rich root, for the bzr-svn stuff (WebKit, nano), so you need a recent version. I'm not even sure the bzr that shipped with Intrepid is new enough.

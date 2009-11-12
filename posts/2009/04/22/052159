@@ -1,0 +1,6 @@
+<img src="http://hortont.com/files/GnomeFoot.png" style="float: left; padding-right: 20px" width="100px"/>
+Yesterday, I got a wonderful email from Google telling me that <a href="http://socghop.appspot.com/student_project/show/google/gsoc2009/gnome/t124022402774">my proposal</a> for Summer of Code was accepted! So, this summer, I'm going to be working with Thomas Andersen on GNOME Games. I'm going to finish polishing Lights Off and the Seed-Same Gnome rewrite, make it easier to write games in Seed (by making libgames-support available), and (primarily) port Mines to Seed+Clutter. I have a feeling the work encompassed in my proposal might not take the whole summer, so I'm keeping my mind open for anything else that might be interesting to do towards the end. We'll see!
+
+Anyway; thanks, again, to Google, GNOME, Thomas, and everyone, and I hope we all have a great summer!
+
+<strong>P.S.</strong> A little birdie told me that Mike and Matt both <i>also</i> got GSoC projects this summer! Congrats!

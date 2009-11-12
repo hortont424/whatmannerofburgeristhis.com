@@ -1,0 +1,19 @@
+<img style="float: right; padding-left: 10px;" src="/files/DSC_3135.jpg" alt="" width="50%" />
+
+Ahhhh! It's been a long time since I last posted, but I'm back up and running for good, now (there'll be another 24 hour outage when I move to RPI, but other than that, we should be good!).
+
+I've replaced Trinity with a nice new machine, built from a bunch of parts I bought (all from <a href="http://www.newegg.com">Newegg</a>, of course).
+
+I initially tried <a href="http://www.opensolaris.org/index.html">OpenSolaris</a> (which Mike is succeeding with), but between the <a href="http://opensolaris.org/os/project/pkg/">package manager</a> needing a serious amount of help and my general inexperience with a rather different OS, I had to go back to Debian. So, no ZFS for now, maybe <em>next</em> summer.
+
+Here's what's what in the new computer:
+
+<a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16819115052">2.53 GHz Intel Core 2 Duo (E7200)</a>
+<a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16820146526&Tpk=ddr2%2bsdram">2GB DDR2 RAM</a>
+<a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136131">2x750GB Western Digital Caviar SE16</a>
+
+all in a <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16856101074">cute little Shuttle case</a> (the K48). I had to later acquire an <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16812119052">extra SATA cable</a> and a <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16812816015">ATA-to-SATA power cable</a> (to get data and power for the second drive), but that wasn't a problem...
+
+The stock Intel fan sucks, as everyone has already noted, but Arctic Cooling's fan simply doesn't fit in the small case! (so don't spend extra money on it... just... make the Intel one work!)
+
+The most awesome bit: I get 106MB/s writing to the disk (and 60MB/s over AFP over Gigabit Ethernet, or about 80MB/s over SAMBA). Mike and I discovered that Apple's SAMBA client is broken: I get about 2MB/s with SAMBA on OS X, but 60MB/s with AFP on the same system, and 80MB/s with SAMBA on Linux on the same machine. So, simply put, don't use SAMBA from Leopard.

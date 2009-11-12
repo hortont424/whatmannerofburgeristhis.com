@@ -1,0 +1,11 @@
+I had a thought yesterday about a feature I'd like to see in Nautilus or Finder...
+
+If you're anything like me, you probably keep a lot of crap on your desktop, mostly related to things you're currently working on (and you file them away later). This certainly isn't the most efficient system, and I can <em>assure</em> you that it's not the prettiest.
+
+So I thought... wouldn't it be cool if you had a little menulet that allowed you to rapidly create directories (in a definable place, say ~/Documents/Projects, or something), and switch your Desktop between representing the contents of each of these project directories easily? If you could get this implemented, it would also allow you to assign a particular project's directory to a Space/Virtual Desktop, I suppose, but I don't use them, so I'm more interested in the thought of a cleaner desktop, and the inherent organizational improvements.
+
+I shared this idea with Robb (who noted that he thought something similar might possibly be in KDE4, though none of us have paid much attention there), and he started to implement it in Nautilus, but discovered that, while Nautilus respects XDG_DESKTOP_DIR, there's no way to convince it to reload the directory (SIGHUP, the most obvious choice, also causes the creation of a new browser window). He also noted that simply replacing the ~/Desktop folder won't work, because, if you've registered for filesystem notifications on the old ~/Desktop, you'll loose your notifications when you replace the directory.
+
+Finder is a different story entirely. Apple uses some sort of magic to determine what directory is the Desktop, and I haven't figured it out yet. It was very promising at first... I created two directories with files in them, deleted ~/Desktop (with root privileges, because a user can't delete their own Desktop...), linked one of the new directories to ~/Desktop, and *BOOM* the files are there on my desktop. But that's the only time it works... if you try to change the link, the desktop continues to represent the new folder, no matter what you do. I have a thought regarding chained links, but I'm not actually sure it's going to work; I'll try it tomorrow.
+
+So! If anyone has any suggestions... now would be the time :-)

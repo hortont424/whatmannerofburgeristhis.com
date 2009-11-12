@@ -1,0 +1,9 @@
+So! Today marks the official end of Summer of Code, at least as far as coding is concerned. Final evaluations are due to Google between noon today and noon on September 1st...
+
+I've decided to call revision <a href="http://repo.or.cz/w/evas_quartz.git?a=commit;h=c2c3fccb856771bf56fe15ad7c7ff66cf67ed2d9">c2c3fccb856771bf56fe15ad7c7ff66cf67ed2d9</a> my reviewable commit; I've not yet tested the Ecore stuff (which has progressed much further in the last 24 hours) in a clean install of Mac OS X, but that (and a patch!) will come soon.
+
+It's been a lot of fun, for sure, and I learned a lot! Especially about Cocoa/CoreGraphics, and a bit about the EFL architecture and what it is the Enlightenment 'team' spends all of their time on :-) I'm not leaving for good, but what with moving back to RPI on Wednesday, and the end of GSoC, etc., I'm probably going to be missing for a week at least.
+
+So I'll say... Nathan and Dan were both excellent mentors (I was sad to see Dan leave Enlightenment, what with his clearly rather rare knowledge of a significant portion of the EFL, but I quite much understand his decision, and hope he finds something excellent to devote his time to in the future), and I'm very glad I got to work with both of them (as well as the brief encounters I've had with other members of the team)!
+
+And, to the project: there's certainly a good bit of awesome stuff going on here; I just hope that everyone can hold it together long enough to bring all the pieces together into something as awesome as the overarching idea of E seems to be. Good luck with that, for sure, and if you ever want an 'outside' head, drop me a line!

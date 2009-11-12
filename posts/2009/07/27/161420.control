@@ -1,0 +1,12 @@
+{
+    "guid": "http://www.hortont.com/blog/?p=641", 
+    "author": "Tim", 
+    "template": "single-column", 
+    "title": "Seed, the module!", 
+    "date": "2009.07.27 16:14:20", 
+    "post-name": "seed-the-module", 
+    "categories": [
+        "gnome", 
+        "summer-of-code"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "guid": "http://apad.sytes.net/blog/?p=8", 
+    "author": "Tim", 
+    "template": "single-column", 
+    "title": "Welcome!", 
+    "date": "2008.05.12 20:55:59", 
+    "post-name": "welcome", 
+    "categories": [
+        "personal", 
+        "school", 
+        "summer-of-code"
+    ]
+}

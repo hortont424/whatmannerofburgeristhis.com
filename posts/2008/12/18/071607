@@ -1,0 +1,15 @@
+Somehow Robb and I got on the topic of two-finger scrolling in Linux, the other day.
+
+Now, being a Mac user, I'm rather used to pixel-precision two-finger scrolling...
+
+Here's what you usually get in Linux:
+
+<a href="http://vimeo.com/2561437">Bad scrolling</a> from <a href="http://vimeo.com/user1052518">Robert Carr</a> on <a href="http://vimeo.com">Vimeo</a>.
+
+Here's what you get now, with Robb's patch to Gtk and the Synaptics driver:
+
+<a href="http://vimeo.com/2561506">Awesome scrolling</a> from <a href="http://vimeo.com/user1052518">Robert Carr</a> on <a href="http://vimeo.com">Vimeo</a>.
+
+<a href="http://www.hortont.com/racarr/?p=20">Read more on Robb's blog.</a>
+
+P.S. The browser he's using there is our currently-under-development 'complete' <a href="http://bazaar.launchpad.net/~orange-owners/orange/seed-browser/files">Seed browser</a>.

@@ -1,0 +1,27 @@
+Some of you might have already heard the story of the day when <a href="http://stallman.org">Richard Stallman</a> came to stay. If not, here're some anecdotes:
+<ul>
+	<li>Matt emailed RMS to ask if he needed a place to stay. He did! (and he accepted the thought of sleeping on Matt's floor)</li>
+	<li>Weeks later, the school offered him a place to stay - a hotel, that they'd pay for. He picked a dorm room with a bunch of geeky kids instead.</li>
+	<li>About a week beforehand, Matt got an email listing his food / social requirements, and other picky bits. It was rather hilarious; I'd like to repost it but it's not clear he wouldn't get angry.</li>
+	<li>Matt ended up getting lots of emails from Luis (who works at Kitware), who was organizing the visit, picking up Stallman at the bus station, etc.</li>
+	<li>RPI TV asked if they could rebroadcast his talk - Stallman wanted to ensure it would only be available in Theora. Hopefully they don't play it over HDTV (does RPI TV do HD? probably not...)... MPEG!! (they've already put it on a DVD.... more MPEG). Poor Stallman.</li>
+	<li>On January 22, we all gathered in DCC 308, and Luis and RMS showed up.</li>
+	<li>Matt went and talked to him and shook his hand, and then he started selling stuffed GNUs, his book, and stuff like that. Matt and Robb and Mike all got GNUs. They're cute.</li>
+	<li>The last GNU got auctioned off. Moorthy won it, after a fierce bidding war with someone else who I didn't recognize. Something like <a href="http://www.globalnerdy.com/2009/01/26/winning-the-gnu/">this</a>.</li>
+	<li>He refused to sign someone's EeePC because it was running Windows, but he happily signed Matt's (GNU/)Linux box with proprietary wireless microcode running (Matt swapped out the proprietary nVidia drivers on his ThinkPad with the much-crappier Nouveau driver (which RMS had never heard of, even though it's the only FOSS driver that gets <em>some</em> video acceleration on half of the video cards currently in existence) for the duration of the visit... silly boy).</li>
+	<li>There was a good bit of yelling during the Q/A part of the talk ("How is my uncle going to feed his 8-year-old daughter?", from one particularly dense individual), but everyone mostly left in good spirits...</li>
+	<li>There was only one glaring mistake in his talk: he considers hardware something that needn't be free; his main reasons are that people aren't capable of modifying or duplicating hardware without spending millions on fabrication plants and design, etc., and that hardware cannot be "reprogrammed" in shipping devices. However, since some/many chip designs can be loaded into FPGAs with none or minor modifications (and this is how many chips are tested before going into production), this should actually qualify as "software", which should be free, in Stallman's eyes. Some people even put OpenSPARC on FPGAs... so half of his argument for not caring about free-as-in-speech hardware is entirely fallacious.</li>
+	<li>Between the talk and the Q/A session, he put on his St. iGNUcious costume for us and acted in that role for a few minutes, ancient hard disk platter and all...</li>
+	<li>He recorded some clips with DJ for WRPI to use during breaks: "I'm Richard Stallman, and I hope you're only using software which respects your freedom.", "I'm Richard Stallman, and I hope you're sharing the music you like with your friends.", "I'm Richard Stallman and you're listening to WRPI."</li>
+	<li>Matt, Robb, Luis, and RMS went to dinner at a sushi place (the place Luis had planned on taking them was closed, because the talk ran for three hours - this also led to Stallman being frustrated at losing an hour of time to work; it turns out "work" means to respond to gazillions of emails from within Emacs).</li>
+	<li>Dinner, apparently, mostly consisted of Matt and Robb talking to Luis with occasional interjections from Stallman ("F**k nVidia", "More people should learn Scheme", etc.)</li>
+	<li>Eventually they came back to Davison; it turns out that our careful planning of mattress situations didn't work out (the bed: "That's much too hard.", and the floor mattress: "Oh, that's not good, either.") - he'd brought his own air mattress, without a pump, that he wanted inflated. In our dorm, of course, it was hard to find a vacuum... after like 20 minutes of running around as if their heads had been chopped off, Robb and Matt found a vacuum (apparently the RA who gave it to them thought RMS was Matt's dad).</li>
+	<li>He spent most of the evening in Matt's chair, responding to emails ("about 400", in a day) in Emacs on his MIPS laptop (seriously, where do you find a MIPS netbook? China, apparently...)</li>
+	<li>There was a lot of playing with his hair, the temperature ("I really am a Princess"), the window, etc.</li>
+	<li>The next morning, Luis took him to a used book store, and then off to the bus station so he could continue on to his next talk (he was in Canada with a friend of Robb's within a few days).</li>
+	<li>At some point, he asked to get the "Rensselaer Center for Open Source" renamed to the "Rensselaer Center for Free Software". SURPRISE!</li>
+</ul>
+Here's the video, in Ogg formats, of course: (it'll play with VLC)
+<a href="/files/stallman/rms_hi.ogv">High Quality (600MB)</a>
+<a href="/files/stallman/rms_lo.ogv">Low Quality (260MB)</a>
+<a href="/files/stallman/rms_audio.ogg">Audio Only (100MB)</a>

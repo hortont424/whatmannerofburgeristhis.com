@@ -1,0 +1,78 @@
+I was just thinking about how I'm going to make the move to FreeBSD+ZFS for Jayne, and decided to write down a few things I want to fix with my computers and stuff this summer. That turned into a rather extensive set of instructions for getting Jayne transitioned, so I figured I'd post it here so I don't lose it! I'm not sure why the lists look so crappy, but whatever.
+
+<strong>Kaylee and Simon</strong>
+<ul>
+	<li><del datetime="2009-05-16T06:29:36+00:00">Reinstall OS X and Jaunty, and install Windows 7 RC on Kaylee.</del>
+<ul>
+	<li><del datetime="2009-05-16T06:29:36+00:00">Get Steam and friends working in 7. No more Wine!</del></li>
+	<li><del datetime="2009-05-16T06:29:36+00:00">I'm currently consuming 245GB in OS X. This can be reduced to 200GB.</del>
+<ul>
+	<li><del datetime="2009-05-16T06:29:36+00:00">Don't install FCS/CS4 content, this time.</del></li>
+</ul>
+</li>
+	<li><del datetime="2009-05-16T06:29:36+00:00">I think a 260/10/50GB split (OS X, Linux, Windows) should do it.</del></li>
+	<li><del datetime="2009-05-16T06:29:36+00:00">Install 2.6.30, pray that WiFi works now.</del> (still no WiFi)</li>
+</ul>
+</li>
+	<li><del datetime="2009-05-16T06:29:36+00:00">Install Fedora 11 final on Simon.</del></li>
+</ul>
+<strong>Jayne</strong>
+<ul>
+        <li>Move racarr.me to Dreamhost.</li>
+	<li><del datetime="2009-05-04T05:32:03+00:00">Move hortont.com to Dreamhost.</del>
+<ul>
+	<li><del datetime="2009-05-04T05:32:03+00:00">Get better DNS control, put Jayne-services and stuff jayne.hortont.com.</del></li>
+	<li><del datetime="2009-05-04T05:32:03+00:00">Archive and remove Ease wiki.</del></li>
+</ul>
+</li>
+</ul>
+<ul>
+	<li>Install three additional disks (750GB, 1TB, and 160GB), at about 230$ cost.
+<ul>
+	<li><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136284">1TB</a>, <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136283">750GB</a>, <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136075">160GB</a>, following my usual choices...</li>
+	<li>Move all content we want to persist to the 1TB disk (use ext3).
+<ul>
+	<li>Don't persist backups (maybe Matt's); don't persist Star Trek.
+<ul>
+	<li>In theory, without those things we're under 1TB.</li>
+	<li>Otherwise, start harassing Amy + CYGNUS for storage.</li>
+</ul>
+</li>
+</ul>
+</li>
+	<li>We now have 3x750GB + 3x1000GB + 1x160GB (5.41TB total).</li>
+</ul>
+</li>
+</ul>
+<ul>
+	<li>Install FreeBSD-8-CURRENT on the small disk.
+<ul>
+	<li>Quickly make sure that all hardware, AFP, git, Apache, etc. work.</li>
+	<li>Recreate users, groups (share, www-data, etc).</li>
+</ul>
+</li>
+</ul>
+<ul>
+	<li>Create a RAID-Z pool across the 750GB disks (2.25TB zpool).
+<ul>
+	<li>Create filesystems:
+<ul>
+	<li>/srv/share/public (setgid=share,setperm=770) @ /tank/share/public</li>
+	<li>/srv/share/www (setgid=www-data,setperm=770) @ /tank/share/www</li>
+	<li>/home/* @ /tank/home/*</li>
+	<li>/git (setgid=share,setperm=770) @ /tank/share/git</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+	<li>Copy the data from the single 1TB disk to the zpool.</li>
+</ul>
+<ul>
+	<li>Add a second RAID-Z pool (consisting of all of the 1TB disks) to the zpool.<ul>
+	<li>This brings the global zpool to approximately 5.25TB. For all intents and purposes, that should last us through the next two years with no problem, even with me taking video classes...</li></ul></li>
+</ul>
+<ul>
+	<li>Backup Kaylee to Jayne, see what happens. Fix, rinse, repeat. Win.</li>
+</ul>

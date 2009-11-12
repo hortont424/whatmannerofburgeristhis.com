@@ -1,0 +1,18 @@
+<a href="http://digg.com/apple/MacBook_Pro_Santa_Rosa_A_Fatal_Flaw">Digg</a>  <a href="http://www.reddit.com/info/6pa39/comments/">Reddit</a>
+
+Recently, an unknown number of first-revision Santa Rosa MacBook Pros began exhibiting issues with their onboard video cards. After a reboot, or on wake from sleep, the machine refuses to acknowledge the presence of a display, either internal or external. From that point on, the computer never regains its displays - not after a reboot, etc. Subsequent debugging indicates that the machine is misidentifying its NVIDIA GeForce 8600M GT card as the MacBook's Intel X3100 card. This issue is known to affect <strong>at least 50 people</strong> - a group of affected users has formed a <a href="https://spreadsheets.google.com/ccc?key=pV-CKzYqbB6dLQRx8wpC2aw">Google Spreadsheet</a> in order to document and organize cases.
+
+AppleCare is recommending replacing the logic board, which some have gone through with, only to have the machine return to an unusable state shortly afterwards. Compounding the issue is the fact that this problem has arisen only shortly after the expiration of the default warrantee on these machines (this issue seems to only affect machines shipped around June, 2007), thus causing the logic board replacement to cost upwards of 400$ for those who did not purchase extended warranties. If you are experiencing the issues detailed below, please add yourself to the <a href="https://spreadsheets.google.com/ccc?key=pV-CKzYqbB6dLQRx8wpC2aw">spreadsheet</a> and visit <a href="http://discussions.apple.com/thread.jspa?threadID=1478474">our thread on the Apple Support forums</a>, so we can get a reasonably accurate count of affected users.
+
+<strong>Symptoms &amp; Notes</strong>
+<ul>
+	<li>Blank screen, both on the internal and external displays</li>
+	<li>The computer boots; it is accessible over the network or with Screen Sharing</li>
+	<li>Target Disk Mode works (this can be used to backup user data!)</li>
+	<li><em>ioreg</em> and System Profiler both report an Intel X3100 video card, which is incorrect</li>
+	<li>Affects people even with MacBook Pro EFI Firmware Update 1.5.1 installed (which was released to fix a similar problem, introduced in Firmware 1.5)</li>
+	<li>Seems to be independent of any software updates, hardware changes, etc.</li>
+</ul>
+There are a great number of potential fixes floating around on the Apple Support forum thread. These include PRAM/NVRAM/PMU resets, firmware restores, changes in memory configuration, deleting Safe Sleep files, etc. However, none of these appear to be permanent fixes; apparently, even replacing the logic board is not a permanent fix, at least for some!
+
+Someone has mentioned the disabling/deleting Boot Camp might fix things. Replacing my machine's logic board seems to have worked, at least so far!

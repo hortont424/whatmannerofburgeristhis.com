@@ -1,0 +1,15 @@
+I got a "<strong>PACKAGE RECEIPT NOTIFICATION</strong>" email today. Not being sure what it was, I figured I'd pick it up on Tuesday, when the package center reopened. However, walking to lunch today, I noticed they kept it open specially, for Valentines Day (or Singles Awareness Day, or whatever, depending if you're Nate, Carol, or the rest of us)... I stopped by, and now I'm the proud owner of two copies of the second revision of the Intervalometer board!
+
+<img src="/files/board.jpg"/>
+
+I got it all soldered up today, and it's working <em>wonderfully</em> so far! I made the jump to 3.3V (with one of Sparkfun's <a href="http://www.sparkfun.com/commerce/product_info.php?products_id=9052">new 3.3V LCDs</a>); I haven't gotten output hooked up yet, and won't, today, since I have to finish some stuff with the secondary microcontroller that's in charge of the trigger and output and stuff... including actually <em>acquiring</em> the exact chip I'm going to use there.
+
+<img src="/files/connectors.jpg"/>
+
+Here's a shot of it, all clean-like, with the LCD attached, and power from a 3.3V regulator:
+
+<img src="/files/ivla-together.jpg"/>
+
+The code/schematic/etc. is all in bzr, the pictures are all on Flickr!
+
+I'll keep writing, especially once I make a box (which I can do now!! finally!)

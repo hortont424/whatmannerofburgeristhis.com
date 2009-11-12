@@ -1,0 +1,35 @@
+Here's a bunch of applications Robb, Matt, and I have written in Seed... the source is all in <a href="http://svn.gnome.org/viewvc/seed/trunk/examples/">Gnome SVN</a>...
+
+<img title="Lights Off" src="http://hortont.com/files/seed/lightsoff.png" align="center" />
+<br /><b>Lights Off</b> was Matt's first application - he went from having written no Javascript at all to a nice, working game in a matter of hours one night.<br />
+
+<img title="n-oscillator" src="http://hortont.com/files/seed/osc.png" align="center" />
+<br /><b>n-oscillator</b> was more or less the first working GTK application; Robb wrote it (who else would be interested in making annoying noises at all hours!?) just to figure out how to get things working... it lets you start an arbitrary number of oscillators and adjust their volume and frequency, and uses GStreamer for output.<br />
+
+<img title="calc" src="http://hortont.com/files/seed/calc.png" align="center" />
+<br /><b>calc</b> was my first GTK+seed application. I wrote it on the train on the way to the Gnome Summit, without any documentation... it's a horrible front-end for <i>eval</i>, nothing else!<br />
+
+<img title="browser" src="http://hortont.com/files/seed/browser.png" align="center" />
+<br /><b>mini-browser</b> is my rewrite of Robb's original WebKit/seed web browser, Spacewhale. It provides a tabbed interface (though, because of a WebKit bug, no GTK/WebKit-based browser can 'open in new tab/window' at all...), but not much else... I'm planning on revisiting this at some point, and getting it to a state similar to epiphany-webkit.<br />
+
+<img title="repl" src="http://hortont.com/files/seed/repl.png" align="center" width="90%" />
+<br /><b>repl</b> is where a lot of our testing takes place, since it provides immediate feedback. It's a rather vital part of an interpreted language, and can be written in very, very little Seed code:<br />
+
+<pre lang="javascript">
+#!/usr/local/bin/seed
+
+while(1)
+{
+	try
+	{ Seed.print(eval(Seed.readline("> "))) }
+	catch(e)
+	{ Seed.print(e.name + " " + e.message) }
+}
+</pre>
+<br />
+
+<img title="shader" src="http://hortont.com/files/seed/shader.png" align="center" />
+<br /><b>shader</b> is a cute demo Robb wrote that lets you edit GLSL shaders and apply them to an image, using Clutter to display the image and apply the texture.<br />
+
+<img title="ide" src="http://hortont.com/files/seed/ide.png" align="center" width="100%" />
+<br /><b>ide</b> is a small Seed editor that I've been writing, eventually providing syntax checking and (maybe) debugging of Seed apps.<br />

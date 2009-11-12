@@ -1,0 +1,75 @@
+<p>For <a href="http://litec.rpi.edu">LITEC</a>, each group has a C8051F02x development board attached to a car (and later, to the RPI blimps). The course only includes instructions and support for people using the SiLabs IDE within Windows (it doesn't exist for Linux or OS X), which greatly disappointed Andrew and I when we started the class a few weeks ago.</p>
+
+<p>Andrew spent a good bit of time fiddling with things in Linux before - a few days ago - he finally got it working! It turns out there are Linux drivers and support software for the SiLabs EC2 debug adapter which we use to download code to the chip (and run it, debug it, etc.)... and the Small Device C Compiler is even in APT! (sdcc-nf is the package including the non-free components which I believe we determined we need).</p>
+
+<p>So... there's a brief set of instructions to get compilation and downloading working, after the jump!</p>
+<!--more-->
+<ul>
+	<li>Install SDCC from APT (sdcc-nf, etc.)</li>
+	<li>Install kernel headers</li>
+	<li>Checkout the EC2 driver for Linux:</li>
+</ul>
+<pre lang="sh">svn co https://ec2drv.svn.sourceforge.net/svnroot/ec2drv/ec2drv/trunk ec2drv</pre>
+<ul>
+	<li>There's a mistake in the EC2 driver build scripts (at least with Jaunty and whatever Andrew uses...); in the file <em>libtool</em> find ECHO="echo", and add a line echo="echo" below it.</li>
+	<li>Build and install the EC2 driver.</li>
+	<li>Compile your program with SDCC (thanks, again, Andrew!):</li>
+</ul>
+<pre lang="sh">sdcc -mmcs51 --model-small --debug --code-loc 0x0000 --iram-size 0xFF --noinduction --nooverlay --nogcse PROJECT.C</pre>
+<ul>
+	<li>Now you have a ton of messy files sitting around. Launch 'newcdb' (which got installed with the EC2 driver). I have to run it as root because I haven't figured out which device needs more liberal permissions, but you should probably figure that out...</li>
+	<li>To connect to the EC2 debug adapter:</li>
+</ul>
+<pre lang="sh">set target SL51
+set target port USB
+set target connect</pre>
+<ul>
+	<li>Then load your file: "file PROJECT" (notice the lack of extension). This will take a while while it downloads to the board.</li>
+	<li>The commands "run", then "continue" will run your program on the 8051! Yay!</li>
+</ul>
+
+I've crafted a small Makefile for our use which might be useful for others:
+
+<pre lang="make">TARGETS = library_test
+
+all: $(TARGETS)
+
+clean:
+	rm -f *~ *.adb *.asm *.cdb *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym
+	rm -f $(TARGETS)
+
+download: $(PROJ)
+	sudo newcdb --command=download.cmd -ex="file $(PROJ)" -ex="quit"
+
+run:
+	sudo newcdb --command=run.cmd
+
+.c:
+	sdcc -mmcs51 --model-small --debug --code-loc 0x0000 --iram-size 0xFF --noinduction --nooverlay --nogcse $@.c</pre>
+
+Where download.cmd is:
+
+<pre>set target SL51
+set target port USB
+set target connect</pre>
+
+And run.cmd is:
+
+<pre>set target SL51
+set target port USB
+set target connect
+run
+continue
+quit</pre>
+
+You can download a particular project with:
+
+<pre>PROJ="library_test" make download</pre>
+
+and run it with:
+
+<pre>make run</pre>
+
+Pretty cool! We're also developing a very awesome library for use with the 8051 to make it much, much nicer, but I can't publish that because of it being for class and stuff. Maybe after the semester's over!
+
+Have fun, and if anyone tries this and can't make it work, <a href="mailto:hortont424@gmail.com">email</a> me.

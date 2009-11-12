@@ -1,0 +1,9 @@
+So I've just finally managed to get my machine up and running again! Took a few days to backup, reload (triple booting Leopard, Hardy, and XP), and copy stuff back down (that's still going on, but I've got my music back so I'm happy!).
+
+Odds and ends: Hardy is another level of spit and polish above previous releases, for sure. They're not quite there yet, but it's still wonderful compared to Windows! Year of the Linux desktop: 2 releases from now.
+
+Robb seems to think that synchronizing releases of lots of Linux software to a unified release schedule (a la Mark Shuttleworth's <a href="http://www.markshuttleworth.com/archives/150">latest blog post</a>) would be a really positive thing. I can see it, but we also discussed whether this would lead to an even lesser difference between distros (as we've been seeing anyway), and what the 'distribution' would actually come to mean in a world like that. Obviously per-distro patchsets won't go away, though I wonder if maybe they wouldn't decrease in size... everyone being coordinated, not just on a schedule, but also with more general communication, would almost certainly lead to lots more patches being pushed upstream (and probably, bad patches *ahem* being caught earlier)...&nbsp;
+
+We generally concluded that distributions would probably converge, but allow for competition, mostly in the areas of integration/artwork/customization/reasonable defaults... but would a bunch of distros, like we have today, manage to exist without really competing on legitimate technical merit?
+
+I dunno :-)

@@ -1,0 +1,29 @@
+So I made a little discovery in a <a href="http://www.omnigroup.com/mailman/archive/macosx-dev/2001-September/031573.html">7 year old mailing list post</a> yesterday, and found out how to create a fully-functional Cocoa app, without letting the default run loop take over permanently, and without embedding the executable in an application bundle. Here you go:
+
+EDIT: OK Wordpress is being silly; obviously, put &lt; &gt; around the #import file :-)
+
+EDIT 2: Also, obviously, you need MainMenu.nib to be in the same folder as your executable.
+
+EDIT 3: If you want to go NIBless, use <strong>NSBackingStoreBuffered</strong>, not the default <strong>NSBackingStoreRetained</strong> when creating your window!
+<pre lang="objc">// Build like so: gcc short.m -framework Cocoa
+
+#import Cocoa/Cocoa.h
+
+int main(int argc, char *argv[])
+{
+   [[NSAutoreleasePool alloc] init];
+   [NSApplication sharedApplication];
+
+   [[[NSNib alloc] initWithContentsOfURL:[NSURL URLWithString:@"MainMenu.nib"]] instantiateNibWithOwner:NSApp topLevelObjects:nil];
+
+   ProcessSerialNumber psn = { 0, kCurrentProcess };
+   TransformProcessType(&psn, kProcessTransformToForegroundApplication);
+
+   [NSApp finishLaunching];
+
+   while (1)
+   {
+      NSEvent *event = [NSApp nextEventMatchingMask:NSAnyEventMask untilDate:[NSDate dateWithTimeIntervalSinceNow:0.001] inMode:NSDefaultRunLoopMode dequeue:YES];
+      if (event) [NSApp sendEvent:event];
+   }
+}</pre>

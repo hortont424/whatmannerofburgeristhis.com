@@ -1,0 +1,34 @@
+Just this afternoon, I pushed <a href="http://ftp.gnome.org/pub/GNOME/sources/seed/0.8/">Seed 0.8.5</a> and <a href="http://ftp.gnome.org/pub/GNOME/sources/gnome-js-common/0.1/">gnome-js-common 0.1.1</a> to GNOME FTP. Both of these are primarily maintenance releases; however, Seed sees two <em>new</em> bits of code: native modules to bind <a href="http://www.mpfr.org/">MPFR</a> and <a href="http://www.gnu.org/software/gettext/">gettext</a>. The bindings for the former are still incomplete and experimental, but the latter has already found use in my <a href="http://git.gnome.org/cgit/gnome-games/log/?h=gsoc-seed-games">gsoc-seed-games</a> branch of GNOME Games. Many thanks to Matt Arsenault for the MPFR bindings.
+
+The largest change in 0.8.5 is a massive reorganization of the documentation. I've recently been somewhat irritated at some other projects' poor documentation, and have always appreciated the care that <a href="http://www.clutter-project.org/docs/clutter/unstable/">Clutter</a> and <a href="http://library.gnome.org/devel/glib/unstable/">GLib</a>/<a href="http://library.gnome.org/devel/gtk/unstable/">Gtk+</a> always seem to have taken with their reference manuals (all three of which I rely on <em>daily</em>). This reorg is the first step I'm trying to take towards having a good reference guide for Seed, too. I realize that there's still a lot of writing to do, but the framework is finally there in a way that I feel comfortable working within.
+
+Between 0.8 (I realize it says 0.7, someone forgot to update the source) and 0.8.5, we went from this:
+
+<img src="http://hortont.com/files/docs-before.PNG">
+
+to this:
+
+<img src="http://hortont.com/files/docs-after.PNG">
+
+As you can see, that's a pretty significant jump in structure. I've also decided to jump on the one-manual bandwagon, unless anyone objects, so I'm going to be updating and moving the tutorial into the manual, as well as constructing a Seed+Clutter tutorial (probably a walk-through of constructing a draft of one of my games, unless someone has a better idea). In addition, the runtime documentation (which covers using the JavaScript side of Seed) will be merged in (and is in dire need of updating).
+
+I realize that some of the right-hand side long descriptions are somewhat contrived, but it looks so <em>empty</em> if you leave one out!
+
+After the jump, the 0.8.5 ChangeLog:
+
+<!--more-->
+
+<ul>
+<li>Significant reorganization and expansion of the reference documentation</li>
+<li>New native modules:<ul>
+<li>gettext</li>
+<li>MPFR (partially complete)</li>
+</ul></li>
+<li>Same Seed has moved to the gsoc-seed-games branch of Gnome Games (and will eventually move to master)</li>
+<li>Add seed-module.h, which includes a handful of macros to make writing modules slightly more attractive. Look at gettext or the reference docs for examples.</li>
+<li>Prefix native modules with seed_ (libseed_readline.so, etc.); this fixes the need to incessantly 'make clean' seed and cuts down on ambiguity in naming.</li>
+<li>Add 'seed_value_is_string', 'seed_value_is_number', and 'seed_value_is_object_of_class' to libseed</li>
+<li>Update examples to latest (now frozen) Clutter API changes.</li>
+<li>Fixes a bug with the importer search path which resulted in the search path being overwritten each time something was imported</li>
+<li>The importer now also searches the directory in which the script being executed is located by default.</li></ul>
+

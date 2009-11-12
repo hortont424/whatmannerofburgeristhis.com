@@ -1,0 +1,11 @@
+{
+    "guid": "http://apad.sytes.net/blog/?p=132", 
+    "author": "Tim", 
+    "template": "single-column", 
+    "title": "Ecore Events, part one", 
+    "date": "2008.08.17 00:14:02", 
+    "post-name": "ecore-events-part-one", 
+    "categories": [
+        "summer-of-code"
+    ]
+}

@@ -1,0 +1,15 @@
+Firstly, I've started tagging photos that I've used as backgrounds before <a href="http://flickr.com/photos/hortont/tags/background/">here</a>.
+
+First-and-a-halfly: posting to WordPress from WebKit nightlies is <em>still</em> broken. Firefox on OS X. Yuk.
+
+Secondly! Last weekend was the <a href="http://live.gnome.org/Boston2008">GNOME Developer's Summit</a>; Matt and Robb and I went. We stayed at Matt's house again, which was excellent and convenient as always! The first day involved a talk from two of the awesome guys working on <a href="http://live.gnome.org/GObjectIntrospection/">gobject-introspection</a> (which is also a cornerstone of our project), which cleared up some of my fuzziness about introspection and their implementation (to some extent).
+
+We (Robb) talked to <a href="http://www.markshuttleworth.com">Mark</a> a little bit that day, and explained our plans (which I have yet to detail here, and won't today!). More about all that later...
+
+<a href="http://svn.gnome.org/viewvc/seed/trunk/">Seed</a> release later this week, after the planned gobject-introspection release. Yay for Seed! I'll write more about it after the release, post the tutorial I'm writing, etc. Pay no attention to the tutorial in SVN; I haven't gotten a GNOME SVN account yet, so none of my updates are there... we just switched to SVN from a Bazaar repo @ <a href="http://www.launchpad.net">Launchpad</a>, so all of our commit history is missing too... oh well. In any case... all will be fun!
+
+P.S. Intervalometer is waiting on PCBs from <a href="http://www.batchpcb.com">BatchPCB</a>, so it might be a while!
+
+P.P.S. Registration soon (the third)! Looking at... Programming Languages, Graph Theory, Models of Computation, Multivar, Engineering Processes, Electronic Circuits (that'll get me through the end of Junior year CS and a little further... also not taking Typography this semester because apparently the teacher is... not... optimal... and everyone)
+
+P.P.P.S. Robb's going to be working for <a href="http://litl.com/">litl</a> starting next week. Yay for an NDA with your roommate :-P

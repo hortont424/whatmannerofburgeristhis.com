@@ -1,0 +1,13 @@
+It was becoming very clear around the last time I posted about Jayne's troubles that I needed to do <em>something</em> about the seemingly ailing server that hosts this site, as well as Carol's, Matt's, and Robb's, as well as tons and tons of media and backups for the five of us... it's really unacceptable to have your <em>backup</em> machine going down every few weeks (or quicker) with disk errors!
+
+Last week, I ordered the first shipment of parts for Jayne's replacement. I, sadly, had to give up on building my "ideal" machine, a tiny little thing, realizing that such computers are for thermal engineers and Johnny Ive to design, not a mere mortal like me! So I've ended up with an absolutely gigantic case. It's actually a silver version of one of Mike's cases, though I didn't know that until it got here on Friday.
+
+The motherboard, power supply, and video card (oooold NVidia 7000 series, for cheap, since I really only need console graphics but the motherboard doesn't have anything onboard) are coming on Monday (though I don't expect the mailroom to be open then, so Tuesday!!).
+
+My main conundrum right now is what I should do with the old case/motherboard. It's clear to me that the motherboard would be perfectly fine without any storage in the machine, as a net-booted compile/render server, and I could get a <em>new</em> CPU for the new (unnamed as of yet) computer... a Core 2 Quad, or something... but that seems rather counterproductive to the whole having-money-for-potential-late-Spring-early-Summer-plans-thing (UDS?!). That would leave Jayne as a compute node without any storage, which would be cool, but expensive. And considering the fact that Jayne's load average is currently 0.01, it doesn't make much sense (though I'm careful, because of the potential heat problem).
+
+It's unfortunate that it's either <em>that</em>, or leave the board/case completely unused. Oh, well...
+
+Anyway, I'm pretty sure I'm going to move Jayne's CPU to the new machine, for now. Maybe after the summer I'll work something else out.
+
+Well that was a disconnected, early-morning rant. I'm off to sleep now!!

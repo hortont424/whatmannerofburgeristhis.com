@@ -1,0 +1,11 @@
+{
+    "guid": "http://apad.sytes.net/blog/?p=16", 
+    "author": "Tim", 
+    "template": "single-column", 
+    "title": "Evas-OpenGL-Quartz Status Report", 
+    "date": "2008.05.29 18:17:04", 
+    "post-name": "evas-opengl-quartz-status-report", 
+    "categories": [
+        "summer-of-code"
+    ]
+}

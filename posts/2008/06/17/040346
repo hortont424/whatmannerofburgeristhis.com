@@ -1,0 +1,3 @@
+I've hacked up a small program that lets you play with CoreText attributes, mostly as a way to learn my way around the API. I'm going to clean it up and post it in a few days (check back here!), but for now, here's a screenshot:
+
+<a href="/files/textplayground.png"><img src="/files/textplayground.png" width="500px" alt="" /></a>

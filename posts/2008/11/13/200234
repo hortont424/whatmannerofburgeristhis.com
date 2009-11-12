@@ -1,0 +1,11 @@
+It's been a while since I've written anything terribly much here, so I'm going to make a nice rambling post spanning various different subjects...
+
+Firstly, Seed! We're going to spend a lot of time finishing up Seed 0.2.0 during the next day-cycle (whatever that means, these days - last night, I went to sleep at 8PM and got up this morning at 4 to do homework...). We'll most likely release this weekend. Robb's changed the core a <em>lot</em> this time around - we get struct support, a much, much better memory footprint, GObject properties (and, probably, signals) from Javascript, Cairo support (it's not pretty, but it works!), many improved examples and tests. Also, exceptions work in a lot more places now, making it much easier to debug apps.
+
+I've also been rewriting Matt's Lights Off example in Clutter - I'll upload a video when I get back if I can figure it out - it's incredibly awesome!
+
+On another note: I got female headers and got the LCD interfaced properly to the PCB; I've taken lots of notes for revision B of the PCB, which should be the "final" revision. I've also started a Keynote (I'll post it here when I'm done) that I'm going to present to E-Club closer to the end of the semester, detailing the project from beginning to "end", as well as what I learned about executing a "project".
+
+As for school - everything's wrapping up; last horrific diff.eq. homework next week, last data structures lab next week, etc. I'm currently in the middle of the last project for VisComm, which is where the <a href="http://flickr.com/photos/hortont/sets/72157609002825473/">muffin pictures</a> on Flickr come from. You really need to take a look at <a href="http://flickr.com/photos/hortont/3027606526/sizes/o/in/set-72157609002825473/">this one</a> full-size... it's... scary!
+
+I'm calling Carol's landlord later tonight to schedule an apartment tour... yikes!

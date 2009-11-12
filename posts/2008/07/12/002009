@@ -1,0 +1,9 @@
+So! I've started working on Expedite, since it really feels like a better test program overall, its what my evaluation is on, and it does more reasonable performance testing (as well as allows me to only run a particular test, if I want!).
+
+I've got a run loop issue that I'm going to write up later and see if I can't get someone else to help me puzzle out... there's just too much code competing for attention, at the moment!
+
+Anyway... it draws... no events, so it's useless, and it's absolutely incredibly hacked up, but I'll work on getting it to work better and fixing things that don't work (especially image data access functions, which need to be implemented, badly!)... image after the break!
+
+<!--more-->
+
+ <a href="/files/eq_expedite.png"><img src="/files/eq_expedite.png" alt="" width="50%" /></a>

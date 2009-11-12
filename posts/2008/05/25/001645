@@ -1,0 +1,11 @@
+YAY! Here's EVAS drawing to OpenGL-on-Quartz!
+
+I have some issues...
+
+1) I can't drag/resize/focus the window. At all. I don't know why.
+
+2) I'm currently using Carbon to create the window. That's kind of awkward because of the semi-deprecated state of Carbon in Leopard... that would prevent us from ever having a 64-bit Evas-on-OS-X application. I would <em>like</em>&nbsp;to use Cocoa, of course. For one, that would greatly reduce the amount of code required; secondly, it would probably fix #1 without any fuss; thirdly, it would fix the 64-bit problem, and be much more forward-compatible. However, I really can't fight with Autotools any more today, so I won't be getting Objective-C into the mix today, so... no Cocoa! Perhaps tomorrow. Or next week. Or something!
+
+3) No input. This might be because I can't give it focus, but I think the fact that I don't handle input is also <em>why</em>&nbsp;I can't focus the window. Catch-22!
+
+<img src="http://hortont.com/files/ogl.png" alt="" />

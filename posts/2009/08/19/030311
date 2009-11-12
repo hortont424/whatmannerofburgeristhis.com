@@ -1,0 +1,15 @@
+I had a painful experience trying to make the video of gnomines-clutter for my last post... it seems to be very hard to capture OpenGL apps under X with any reasonable framerate. Anyway... after finally getting one of the dozens of programs that I tried to work (I can't remember which one now...), I decided I'd try to <em>fix</em> the problem from a different angle.
+
+I'm really only interested in exporting the output of Clutter views, mostly. So, I figured I'd hack up Clutter to output PNGs for each frame. I added a check for the CLUTTER_EXPORT_FRAMES environment variable (or the &#45;&#45;clutter-export-frames argument); if it's set, I discard the system time and instead draw <em>every</em> frame (incrementing the master clock by 1/CLUTTER_DEFAULT_FPS, so that the "frame rate" of the output is adjustable). When clutter_stage_paint is called, I read the pixels of the stage and export them to incrementally-numbered PNGs in the current directory.
+
+This should work in theory. In practice, for some reason, some animations randomly speed up or slow down. You can see it in the video (most specifically with the sliding bounces when you finish a level).
+
+Video of Lights Off with this <a href="http://hortont.com/files/clutter-export/lo.mov">here</a>.
+
+Patch is <a href="http://hortont.com/files/clutter-export/clutter-export.patch">here</a>. It's not particularly attractive... but maybe once it works I'll make it make more sense...
+
+I'll have to harass someone working on Clutter and see if we can make it work/what I'm doing that's so crazy, because I'd really love for it to work!
+
+There's at least one other thing that needs to be taken into account: idle time. Since frames are only exported when the stage is painted, when you're just sitting there doing nothing, nothing is exported, so the video runs like you're very, very quick with the mouse :-) But I'll work on that later...
+
+Anyway, this might all be crazy or pointless. If so, I apologize! In any case, it can't possibly be as crazy as Carol's <a href="http://www.carolengelbrecht.net/?p=20">first blog post</a> in many months... which is quite entertaining and awesome all at the same time, and details from a layman's point of view what she worked on all summer (while making fun of most of our crew at the same time). It's nice to see her getting along with GCC, finally! :-)

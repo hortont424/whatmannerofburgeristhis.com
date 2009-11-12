@@ -1,0 +1,30 @@
+I mentioned yesterday that I made up some random math for Autolocate. The exact thoughts behind this escape me at this point - I had been awake for well over 24 hours when I found myself in Commons (our dining hall) with my computer and a bunch of printouts on Bayes' theorem (?!? I don't think this applied in the end, and might not have been related at all!)... and a preliminary version of the following equation:
+<p style="text-align: center;"><img style="vertical-align:-2pt;" title="p=\frac{\sum i\cdot e^{-\frac{(c-i)^{2}}{.03}}}{\sum i}" src="http://www.forkosh.dreamhost.com/mathtex.cgi?p=\frac{\sum i\cdot e^{-\frac{(c-i)^{2}}{.03}}}{\sum i}" alt="p=\frac{\sum i\cdot e^{-\frac{(c-i)^{2}}{.03}}}{\sum i}" /></p>
+Where <em>i</em>&nbsp;is the ideal network strength, <em>c</em>&nbsp;is the current network strength, and you sum over the set of networks. I think I came up with 0.03 (it's the factor that changes the width of the bell curve) by playing around with stuff in Mathematica until the curves looked right (who knows what that means!)
+
+I quickly implemented it, and created a small test application that I played around with for a few more days (this is the code I mentioned in the previous post)... here's a partial implementation, which seems to work:
+<pre lang="objc" line="1">+ (float)partialProbability:(float)c withOptimal:(float)i
+{
+	return powf(M_E,-(powf(c-i,2)/.03));
+}
+
++ (float)locationProbability:(NSDictionary *)testLocation knownLocation:(NSDictionary *)knownLocation
+{
+	float totalProbability = 0;
+	float count = 0;
+
+	for(NSString * key in testLocation)
+	{
+		if([knownLocation objectForKey:key] == nil)
+			continue;
+
+		totalProbability += [ALController partialProbability:[[testLocation objectForKey:key] floatValue] withOptimal:[[knownLocation objectForKey:key] floatValue]] * [[knownLocation objectForKey:key] floatValue];
+		count += [[knownLocation objectForKey:key] floatValue];
+	}
+
+	if(count == 0)
+		return 0;
+	else
+		return totalProbability/count;
+}</pre>
+<p style="text-align: right;"><a href="http://hortont.com/files/autolocate.zip">Full source (but don't expect to be able to <em>use</em> it, it's a complete mess...)</a></p>

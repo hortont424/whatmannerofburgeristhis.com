@@ -1,0 +1,11 @@
+<img src="/files/ecore.png" width="35%" style="float: right;" />
+
+I know Summer of Code is wrapping up (Monday is the absolute-pencils-down date), but I've got more news!
+
+Following last weekend's advances (getting a Cocoa app up without a bundle and a NIB), I've restarted work on Ecore. After fighting a little bit more with Autotools (aargh!) to get Objective-C building successfully (which worked much more easily with Expedite).
+
+After that, I dropped in some code from my Expedite engine, to set up Cocoa. And, as you can see, I was met with success! A tiny Ecore_Evas_Quartz test program, successfully running. No events, yet, but they should come within a day or so...
+
+In any case, my biggest issue right now is I'm not entirely sure what to put in Ecore_Evas_Quartz, and what should go in Ecore_Quartz. Nathan suggested something like that Ecore_Quartz should provide functionality to talk to Quartz that Ecore_Evas_Quartz itself uses; I guess I'm still not entirely clear on what exactly should go where. So a lot of stuff is going in Ecore_Evas_Quartz right now, but I can move it out once I find out what's really what. (probably by reading other people's code, though if I've learned anything from this, it's that that's a bad idea *ahem*Evas_Cairo*ahem*).
+
+Also -- this code is up in Git. Not SVN, though, obviously.

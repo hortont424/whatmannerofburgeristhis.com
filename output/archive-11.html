@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="http://localhost/~hortont/output//styles/highlight.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost/~hortont/output//styles/archive.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost/~hortont/output//styles/style.css" type="text/css">
+    <link type="text/css" href="http://localhost/~hortont/output//styles/smoothness/jquery-ui-1.7.2.custom.css" rel="Stylesheet">
+    <script type="text/javascript" src="http://localhost/~hortont/output//scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="http://localhost/~hortont/output//scripts/jquery-ui-1.7.2.custom.min.js"></script>
+    <title>hortont · blog</title>
+  </head>
+  <body class="index">
+    <h1>Button Bar</h1>
+    <table id="posts" border="0">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<div>
+<h1><a>Autolocate Maths</a></h1>
+<h2>2008.05.21 03:23:43 in </h2>
+<p>I mentioned yesterday that I made up some random math for Autolocate. The exact thoughts behind this escape me at this point - I had been awake for well over 24 hours when I found myself in Commons (our dining hall) with my computer and a bunch of printouts on Bayes' theorem (?!? I don't think this applied in the end, and might not have been related at all!)... and a preliminary version of the following equation:
+<br/><p style="text-align: center;"><img style="vertical-align:-2pt;" title="p=\frac{\sum i\cdot e^{-\frac{(c-i)^{2}}{.03}}}{\sum i}" src="http://www.forkosh.dreamhost.com/mathtex.cgi?p=\frac{\sum i\cdot e^{-\frac{(c-i)^{2}}{.03}}}{\sum i}" alt="p=\frac{\sum i\cdot e^{-\frac{(c-i)^{2}}{.03}}}{\sum i}" /></p>
+<br/>Where <em>i</em>&nbsp;is the ideal network strength, <em>c</em>&nbsp;is the current network strength, and you sum over the set of networks. I think I came up with 0.03 (it's the factor that changes the width of the bell curve) by playing around with stuff in Mathematica until the curves looked right (who knows what that means!)
+<br/>
+<br/>I quickly implemented it, and created a small test application that I played around with for a few more days (this is the code I mentioned in the previous post)... here's a partial implementation, which seems to work:
+<br/><pre lang="objc" line="1">+ (float)partialProbability:(float)c withOptimal:(float)i
+<br/>{
+<br/>	return powf(M_E,-(powf(c-i,2)/.03));
+<br/>}
+<br/>
+<br/>+ (float)locationProbability:(NSDictionary *)testLocation knownLocation:(NSDictionary *)knownLocation
+<br/>{
+<br/>	float totalProbability = 0;
+<br/>	float count = 0;
+<br/>
+<br/>	for(NSString * key in testLocation)
+<br/>	{
+<br/>		if([knownLocation objectForKey:key] == nil)
+<br/>			continue;
+<br/>
+<br/>		totalProbability += [ALController partialProbability:[[testLocation objectForKey:key] floatValue] withOptimal:[[knownLocation objectForKey:key] floatValue]] * [[knownLocation objectForKey:key] floatValue];
+<br/>		count += [[knownLocation objectForKey:key] floatValue];
+<br/>	}
+<br/>
+<br/>	if(count == 0)
+<br/>		return 0;
+<br/>	else
+<br/>		return totalProbability/count;
+<br/>}</pre>
+<br/><p style="text-align: right;"><a href="http://hortont.com/files/autolocate.zip">Full source (but don't expect to be able to <em>use</em> it, it's a complete mess...)</a></p></p>
+</div>
+    </table>
+  </body>
+</html>

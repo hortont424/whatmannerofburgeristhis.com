@@ -1,0 +1,12 @@
+{
+    "guid": "http://apad.sytes.net/blog/?p=14", 
+    "author": "Tim", 
+    "template": "single-column", 
+    "title": "OpenGL Success!", 
+    "date": "2008.05.25 00:16:45", 
+    "post-name": "opengl-success", 
+    "categories": [
+        "code", 
+        "summer-of-code"
+    ]
+}

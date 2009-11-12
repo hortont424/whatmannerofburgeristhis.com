@@ -1,0 +1,110 @@
+It's been <em>way</em> too long since I've written here; and, it's going to stay that way for now, unfortunately. I'm just going to quickly copy my weekly status reports for the first five weeks of GSoC in here, to share...
+
+<strong>Week 1</strong>
+
+<blockquote>Hi, all!
+
+I was in Barcelona at UDS last week, so I didn't get that much work done, but I also started early so as to get something done.
+
+So far:
+
+* I started (and got a good ways on) a much-cleaner and more-modern-seed rewrite of Lights Off. There's all kinds of awesome brokenness (mostly a result of airport coding practices) so I wouldn't suggest installing it at the moment.
+	(http://jayne.hortont.com/git/cgit.cgi/lightsoff3.git/)
+	(http://hortont.com/files/lo3.png)
+
+* I created a PPA for those of us working on GNOME Games to publish our work; I'm going to get introspection and Clutter and seed and whatever you guys need in there shortly, and once all that is working, I'm going to merge all of the GSoC GNOME Games branches, build a copy, and push it to the PPA (and wash, rinse, repeat, at least once a week). (if anyone has working debian packaging for the as-yet-unreleased gobject-introspection-0.6.3, let me know, I've been fighting with it all morning)
+	(https://launchpad.net/~gnome-games-experimental/+archive/ppa)
+
+* I worked with racarr to get seed-0.8 out the door while at UDS, which includes an important GC-related fix that affected ClutterAnimations, so we reduced leakage (or hacky code to avoid leakage) in all of the seed games.
+	(http://ftp.gnome.org/pub/GNOME/sources/seed/0.8/)
+
+* I blogged about the Lights Off tiles (just for fun!), and got about 1000 votes, choosing the new ones 4:1 (not even remotely surprising).
+	(http://www.hortont.com/blog/2009/05/lights-off-tiles/)</blockquote>
+
+<strong>Week 2</strong>
+
+<blockquote>I spent a good part of the last five days (my last status report was late, so the duration between these two is less than it ought to be; do let me know if Sunday night is the wrong time for these!) working on various things:
+
+* I created a branch of GNOME Games for myself (gsoc-seed-games) and imported the rewrite of Lights Off from last week into it.
+
+* I finished populating the PPA that I mentioned that I created in the previous cycle. It has fresh-from-Git versions of webkit, seed, opengl-glib, gobject-introspection, gir-repository, gnome-js-common, clutter, and clutter-gtk as well as a copy of gnome-games which includes my branch, Guillaume's branch, and Zhang's branch (so, as far as I know, all of the GNOME Games GSoC Goodness).
+
+* I talked to both Guillaume and Zhang to fix tiny packaging problems in their branches in order to achieve the above.
+
+* I spent the better part of an entire day deep inside the Clutter source, trying to determine the source of a bug; I eventually found the _source_ of the bug (#1631), but do not have a proper patch; the PPA includes a patch (which is also in the seed repo, in the patches subdir) that removes the broken optimization, but I'm not sure how to appropriately /fix/ it... in any case, this means that the most significant animation bugs are fixed.
+
+* I cannot wait until Clutter-1.0's API stability. There was lots of updating Lights Off to the changes caused by the merge of the integration-1.0 branch into head, this week, too...
+
+All in all, a week of bugs and packaging, and not a whole lot of awesome new code... but these are important things! I also made a very overview-y next-steps-to-do list at Thomas' request:
+
+1) Get libgames-support installed + building gir/typelib.
+
+2) Consume libgames-support inside LO so I get game-related stock items and stuff, finish LO UI.
+
+3) Move LO + Same into gnome-games git. (this is half done, now)
+
+4) UI for Same (consuming libgames-support stuff); high-scores, preferences (?)
+
+5) Mines!</blockquote>
+
+<strong>Week 3</strong>
+
+<blockquote>Hi, again!
+
+This is going to be a terse status report, as I'm currently running around rather busy...
+
+This week, I:
+
+* got libgames-support installing into prefix/share/gnome-games-common (commondatadir)
+
+* got libgames-support build generating introspection data
+
+* consumed the aforementioned introspection data in Lights Off, and started (about halfway) to consume it (for high scores) in Same
+
+Next, I want to:
+
+* move Same into my branch of gnome-games, and get it building as an option (alongside the C version)
+
+* figure out what to do about ggz introspection data
+
+* finish high scores code in Same, menu, etc.</blockquote>
+
+<strong>Week 4</strong>
+
+<blockquote>Another week! Another short, last-minute status update.
+
+* Fixed a longstanding bug (#579008) in gobject-introspection, which was requiring us to carry around a patch to Clutter that would /never/ get applied (it removed annotations to work around the bug). Hasn't been committed yet, but since it ended up only being a single line (once I realized what was going wrong), I'm sure it will be soon. Also, filed a bug (#1653) against Clutter to *add* some necessary annotations once this gets fixed...
+
+* Worked a bit on getting the SVN version of GGZ to generate its own introspection data. This is proving to be slightly annoying, because GGZ is split into numerous parts, and I'm having awesome crashes and stuff...
+
+* Moved Same (the JS version) into gnome-games repo, get it building properly (right now, it installs beside the real version, should become a switch at some point).
+
+* Same (when it was still in the Seed repo) has a C version that I'm using to figure out some oddities with Seed+Clutter, and both that and the JS version work with Clutter head now.
+
+Stuff in the gnome-games repo hasn't been pushed yet (just got home from NY, fighting with Git, I hate losing the ability to rewrite history, etc.; it'll all be up by tomorrow).</blockquote>
+
+<strong>Week 5</strong>
+
+<blockquote>* Made a to-do list to keep up to date (http://hortont.com/gsoc-seed-games-todo.html) Right now, it only has stuff that I could think of off the top of my head this morning, but it's already a relief to no longer need to keep such things in my head. Anyway, I'll continue updating it and checking things off from here on out.
+
+* Cleaned up animation and events and stuff in Same, which fixes some strange flickering when you move the mouse over the window, and makes most of the animation smooth again (update to match the fact that Seed handles animation memory now, too). This is incomplete, still, there's a little left to be done.
+
+* Wrote a tiny 'gettext' C module for Seed, so that we can _("asdf") from JS. I still have no way to scan JS files (xgettext in C mode pulls out all of the strings for some reason), but my to-do list links to a promising project (I don't know what licensing problems would be involved in utilizing a MIT-licensed project to do this, though...) that scans JS for gettext calls.
+
+* Added an About dialog to Lights Off, after getting gettext working as above.
+
+* Finished the LO menu (except for "Help"), fixed keyboard accelerators.
+
+* Fixed the blue corruption around the LED display, and make drawing much more logical and efficient (not sure what I was thinking making dozens of ClutterCairoTextures)...
+
+* Theme names are pretty printed now, not just the name of their directory.
+
+* Keyboard-based play (use the arrow keys and enter) - move around a small glowing dot, and play without the mouse. It's not fun, but I saw it somewhere else -- Same, maybe? So it seemed like a good thing to have. Accessibility in games? I'm not sure.
+
+* GConf schema for LO prefs! Whoops; this one should have happened a long time ago.
+
+* Got most of the PPA updated. However, for some reason, gnome-games refuses to build on non-x86 architectures. If anyone wants to help me, please do :-D
+
+Anyway, LO is almost done (needs "Help" and various bits of cleanup, but it's mostly happy)... Same isn't far behind.</blockquote>
+
+
