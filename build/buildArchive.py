@@ -35,7 +35,7 @@ def outputArchivePage(page):
     outstr = ""
     for p in page:
         outstr = outstr + p
-    return renderArchive(p, "archive")
+    return renderArchive(outstr, "archive")
 
 def main():
     page_no = 1
