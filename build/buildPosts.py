@@ -23,7 +23,8 @@ def generatePostList():
 def main():
     posts = list(generatePostList())
     
-    for (filename, page) in [(f,outputPost(f)) for f in posts]:
+    for filename in posts:
+        page = outputPost(filename)
         outputFilename = os.path.join("output", filename.replace(".control", ".html"))
         
         if not os.path.exists(os.path.dirname(outputFilename)):

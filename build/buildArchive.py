@@ -43,7 +43,8 @@ def main():
     posts.sort()
     posts.reverse()
     
-    for page in map(outputArchivePage, paginate(posts)):
+    for pagination in paginate(posts):
+        page = outputArchivePage(pagination)
         if page_no == 1:
             outputFilename = os.path.join("output","archive.html")
         else:
