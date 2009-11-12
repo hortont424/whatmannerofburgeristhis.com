@@ -43,7 +43,7 @@ def renderPost(f, template):
     
     loader = TemplateLoader('templates', variable_lookup='lenient')
     tmpl = loader.load(template + '.html', encoding='utf-8')
-    return tmpl.generate(post=metadata).render('html', doctype='html')
+    return tmpl.generate(post=metadata, baseurl=w("")).render('html', doctype='html')
 
 def renderArchive(c, template):
     loader = TemplateLoader('templates', variable_lookup='lenient')

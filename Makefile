@@ -1,4 +1,4 @@
-all: clean unclean build-archive copy-data
+all: clean unclean build-posts build-archive copy-data
 
 clean:
 	rm -rf output
