@@ -1,0 +1,14 @@
+{
+    "guid": "http://www.hortont.com/blog/?p=745", 
+    "author": "Tim", 
+    "template": "single-column", 
+    "title": "On RCOS (or, Open Software at Rensselaer)", 
+    "date": "2009.11.11 08:40:20", 
+    "post-name": "on-rcos-or-open-software-at-rensselaer", 
+    "categories": [
+        "code", 
+        "gnome", 
+        "school", 
+        "summer-of-code"
+    ]
+}
