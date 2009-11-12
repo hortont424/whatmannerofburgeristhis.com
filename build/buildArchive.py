@@ -31,11 +31,17 @@ def paginate(posts):
     _paginate(posts)
     return pages
 
-def outputArchivePage(page):
+def outputArchivePage(page, next, prev):
     outstr = ""
     for p in page:
         outstr = outstr + p
-    return renderArchive(outstr, "archive")
+    return renderArchive(outstr, "archive", next, prev)
+
+def filenameForPage(page_no):
+    if page_no == 1:
+        return "index.html"
+    else:
+        return "archive-%(page)d.html" % {'page' : page_no}
 
 def main():
     page_no = 1
@@ -43,12 +49,19 @@ def main():
     posts.sort()
     posts.reverse()
     
-    for pagination in paginate(posts):
-        page = outputArchivePage(pagination)
-        if page_no == 1:
-            outputFilename = os.path.join("output","archive.html")
-        else:
-            outputFilename = os.path.join("output","archive-%(page)d.html" % {'page' : page_no})
+    pages = paginate(posts)
+    
+    for pagination in pages:
+        previousPageName = nextPageName = ""
+        
+        if page_no != 1:
+            previousPageName = filenameForPage(page_no - 1)
+        
+        if page_no != len(pages):
+            nextPageName = filenameForPage(page_no + 1)
+        
+        page = outputArchivePage(pagination, nextPageName, previousPageName)
+        outputFilename = os.path.join("output", filenameForPage(page_no))
         out = codecs.open(outputFilename, encoding='utf-8', mode='w+')
         out.write(page.decode("utf-8", "ignore"))
         out.close()

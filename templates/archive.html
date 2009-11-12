@@ -15,6 +15,9 @@
   <body class="index">
     <xi:include href="button-bar.html" />
     
+    <py:if test="nextPage != ''"><div class="navwrapperl"><a class="nav" href="${nextPage}" title="Older Posts">&larr;</a></div></py:if>
+    <py:if test="previousPage != ''"><div class="navwrapperr"><a class="nav" href="${previousPage}" title="Newer Posts">&rarr;</a></div></py:if>
+    
     <table id="posts" border="0" width="100%">
     <tr>
         <td></td>

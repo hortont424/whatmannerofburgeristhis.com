@@ -96,3 +96,25 @@ td.button
 {
     width: 100px;
 }
+
+a.nav
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+div.navwrapperl
+{
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+}
+
+div.navwrapperr
+{
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+}

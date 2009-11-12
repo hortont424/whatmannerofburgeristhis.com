@@ -45,7 +45,7 @@ def renderPost(f, template):
     tmpl = loader.load(template + '.html', encoding='utf-8')
     return tmpl.generate(post=metadata, baseurl=w("")).render('html', doctype='html')
 
-def renderArchive(c, template):
+def renderArchive(c, template, next, prev):
     loader = TemplateLoader('templates', variable_lookup='lenient')
     tmpl = loader.load(template + '.html', encoding='utf-8')
-    return tmpl.generate(content=c.decode("utf-8","ignore"), baseurl=w("")).render('html', doctype='html')
+    return tmpl.generate(content=c.decode("utf-8","ignore"), baseurl=w(""), nextPage=next, previousPage=prev).render('html', doctype='html')
