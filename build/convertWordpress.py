@@ -30,7 +30,7 @@ def parseWordpressExport(filename):
         try:
             title = re.search("<title>([^\<]*)</title>", post).groups(1)[0]
             content = re.compile("<content:encoded><!\[CDATA\[(.*)\]\]></content:encoded>", re.M | re.S).search(post).groups(1)[0]
-            date = re.compile("<pubDate>(.*)......</pubDate>").search(post).groups(1)[0]
+            pubDate = date = re.compile("<pubDate>(.*)......</pubDate>").search(post).groups(1)[0]
             date = datetime.datetime.strptime(date, "%a, %d %b %Y %H:%M:%S").strftime("%Y.%m.%d %H:%M:%S")
             
             if re.search("1999", date) != None: # special case
@@ -44,7 +44,7 @@ def parseWordpressExport(filename):
         except:
             print "Skipped one..."
             continue
-        yield {"title": title, "content": content, "date": date, "post-name": postName, "guid": guid, "categories": categories, "author": author, "template": template}
+        yield {"title": title, "content": content, "date": date, "post-name": postName, "guid": guid, "categories": categories, "author": author, "template": template, "pubDate": pubDate}
 
 def savePost(p):
     content = p["content"]
