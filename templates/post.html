@@ -23,6 +23,21 @@
             <h1>${Markup(post.title)}</h1>
             <h2>${post.date} in ${post.categories}</h2>
             <p>${Markup(post.content)}</p>
+            
+            <div class="hr" />
+            
+            <py:if test="len(post.comments) != 0">
+                <h3>Comments</h3>
+            </py:if>
+            
+            <py:for each="comment in post.comments">
+                <xi:include href="old-comment.html" />
+            </py:for>
+            
+            <py:if test="len(post.comments) != 0">
+                <div class="hr" />
+            </py:if>
+            
             <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/hortont/embed.js"></script><noscript><a href="http://disqus.com/forums/hortont/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
             </div>
         </td>

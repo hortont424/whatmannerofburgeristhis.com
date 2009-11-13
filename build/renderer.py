@@ -43,6 +43,11 @@ def renderPost(f, template):
     metadata["id"] = re.sub("[^0-9]", "", metadata["date"])
     metadata["date"] = datetime.datetime.strptime(metadata["date"], "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
     
+    try:
+        comments = metadata["comments"]
+    except:
+        metadata["comments"] = []
+    
     loader = TemplateLoader('templates', variable_lookup='lenient')
     tmpl = loader.load(template + '.html', encoding='utf-8')
     return tmpl.generate(post=metadata, baseurl=w("")).render('html', doctype='html')

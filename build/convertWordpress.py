@@ -3,6 +3,8 @@
 
 # I LOVE IT WHEN I USE REGEX TO "PARSE" XML. OH WAIT NO.
 
+# THIS FILE IS VOODOO
+
 import sys
 import os
 import codecs
