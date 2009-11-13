@@ -9,5 +9,17 @@
     "categories": [
         "gnome", 
         "summer-of-code"
+    ], 
+    "comments": [
+        {
+            "content": "Why do you need that list around the property dictionary? The dicionary should be enough for the \"property\" object, shouldn't it?", 
+            "authorURL": "http://aruiz.typepad.com", 
+            "author": "Alberto Ruiz"
+        }, 
+        {
+            "content": "I mean this:\n\nproperties: {\n             \"frequency\": {type: GObject.TYPE_INT,\n                           default_value: 10000\n                           ...},\n             \n            }", 
+            "authorURL": "http://aruiz.typepad.com", 
+            "author": "Alberto Ruiz"
+        }
     ]
 }

@@ -9,5 +9,12 @@
     "categories": [
         "code", 
         "photography"
+    ], 
+    "comments": [
+        {
+            "content": "I am looking forward to seeing this in its finished state!", 
+            "authorURL": "", 
+            "author": "Vivian"
+        }
     ]
 }

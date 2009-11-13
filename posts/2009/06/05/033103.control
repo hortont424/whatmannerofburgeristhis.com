@@ -10,5 +10,42 @@
         "code", 
         "gnome", 
         "summer-of-code"
+    ], 
+    "comments": [
+        {
+            "content": "[...] information related to your search Tim Horton: Get your fresh games here! is now available in this link&#8230;:         News [...] ", 
+            "authorURL": "http://full-linux.com/tim-horton-get-your-fresh-games-here/", 
+            "author": "Tim Horton: Get your fresh games here! | Full-Linux.com"
+        }, 
+        {
+            "content": "Hello,\n\nI just installed it under Jaunty and for the LightOff game I only have a screen with a counter but nothing else, is it normal?\n\nGood Luck with your SOC.\nOlivier", 
+            "authorURL": "", 
+            "author": "Olivier Le Thanh"
+        }, 
+        {
+            "content": "Just tested it out, can't say it was particularly stable, but I never use GNOME Games anyways, so that's no big deal. Will check them out after each available update.\n\nOne weird thing I noticed was that gnibbles didn't work with gnome-globalmenu, since I rarely use GNOME Games I have no idea if this has always been this way, doesn't it use standard gtk widgets for menus?", 
+            "authorURL": "", 
+            "author": "Hans"
+        }, 
+        {
+            "content": "Hans: Definitely not stable, but hopefully that will change! A cursory glance at the source of gnibbles suggests that it uses standard GtkMenu bits; if I remember tomorrow I'll install gnome2-globalmenu on my machine and test it out and let Guillaume know what's up.", 
+            "authorURL": "http://www.hortont.com", 
+            "author": "hortont"
+        }, 
+        {
+            "content": "Vadim: at the moment, no, they're actually the same exact package :-P\n\njef: I haven't! I'll have to take a look, but I really don't want to spend too much time on packaging (my job is to write games!), and Launchpad is quite convenient...", 
+            "authorURL": "http://www.hortont.com", 
+            "author": "hortont"
+        }, 
+        {
+            "content": "I'm subscribed to the webkit ppa from liferea. Will these conflict?", 
+            "authorURL": "http://vadi.myopenid.com", 
+            "author": "Vadim"
+        }, 
+        {
+            "content": "Have you looked at using Suse's build service for multiple distribution package building?\n\nhttp://en.opensuse.org/SUSE_Build_Tutorial\nhttp://en.opensuse.org/Build_Service/cross_distribution_package_how_to\nhttp://en.opensuse.org/Build_Service/Deb_builds", 
+            "authorURL": "", 
+            "author": "jef Spaleta"
+        }
     ]
 }

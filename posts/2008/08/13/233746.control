@@ -8,5 +8,22 @@
     "post-name": "apple-jack-chicken-pizza-with-caramelized-onions", 
     "categories": [
         "fooding"
+    ], 
+    "comments": [
+        {
+            "content": "This one sounds really good!", 
+            "authorURL": "", 
+            "author": "Vivian"
+        }, 
+        {
+            "content": "I'll be expecting Tim to make me foods next semester.", 
+            "authorURL": "", 
+            "author": "Gino"
+        }, 
+        {
+            "content": "Hahahaha how will I cook without Amy? Carol-substitute mebbe.", 
+            "authorURL": "http://apad.sytes.net", 
+            "author": "Timothy"
+        }
     ]
 }

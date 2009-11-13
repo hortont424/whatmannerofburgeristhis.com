@@ -8,5 +8,12 @@
     "post-name": "rms-rpi", 
     "categories": [
         "school"
+    ], 
+    "comments": [
+        {
+            "content": "[...] try\u00a0this several times before, in particular when Richard Stallman, the\u00a0original author of Emacs, stayed in my room for a night when he\u00a0visited RPI. I had been using Vim since I switched to GNU/Linux. At\u00a0that time, the Emacs keys made no sense. [...] ", 
+            "authorURL": "http://www.whatmannerofburgeristhis.com/?p=94", 
+            "author": "Emacs and Vim &laquo; I have a blog lol"
+        }
     ]
 }

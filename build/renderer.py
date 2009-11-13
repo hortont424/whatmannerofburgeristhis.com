@@ -36,7 +36,7 @@ def renderPost(f, template):
         metadata["categories"] = joinCategoryList(metadata["categories"])
     except:
         metadata["categories"] = ""
-        
+    
     metadata["content"] = contents
     
     metadata["url"] = w(f.replace(".control",""))

@@ -8,5 +8,6 @@
     "post-name": "evas-opengl-quartz-status-report", 
     "categories": [
         "summer-of-code"
-    ]
+    ], 
+    "comments": []
 }

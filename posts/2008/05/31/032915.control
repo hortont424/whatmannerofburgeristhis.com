@@ -8,5 +8,6 @@
     "post-name": "initial-evas-gl-quartz-patch", 
     "categories": [
         "summer-of-code"
-    ]
+    ], 
+    "comments": []
 }

@@ -8,5 +8,12 @@
     "post-name": "fooding-chicken-riggies-and-ice-cream-pie", 
     "categories": [
         "fooding"
+    ], 
+    "comments": [
+        {
+            "content": "Are you two auditioning for the food channel?  Paula Deen, look out!", 
+            "authorURL": "", 
+            "author": "Vivian"
+        }
     ]
 }

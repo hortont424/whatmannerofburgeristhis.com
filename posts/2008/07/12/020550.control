@@ -8,5 +8,27 @@
     "post-name": "fooding-stuffed-peppers-spinach-and-sandwiches", 
     "categories": [
         "fooding"
+    ], 
+    "comments": [
+        {
+            "content": "How I love stuffed peppers! Next time we are in VT, make some more.", 
+            "authorURL": "", 
+            "author": "Pepa"
+        }, 
+        {
+            "content": "YUM! Really good food. Definitely make the stuffed peppers again. And the tea and ice cream cake.", 
+            "authorURL": "", 
+            "author": "june"
+        }, 
+        {
+            "content": "Sounds like a visit to Joey Drive is in order.  Will you feed Punkin?", 
+            "authorURL": "", 
+            "author": "Vivian"
+        }, 
+        {
+            "content": "Ha! Good food. Also, the ice cream cake was 100x better the second day, for sure!", 
+            "authorURL": "http://apad.sytes.net", 
+            "author": "hortont"
+        }
     ]
 }

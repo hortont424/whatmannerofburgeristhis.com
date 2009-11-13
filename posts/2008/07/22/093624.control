@@ -8,5 +8,12 @@
     "post-name": "a-downgrade-for-now", 
     "categories": [
         "personal"
+    ], 
+    "comments": [
+        {
+            "content": "Any port in a storm...!", 
+            "authorURL": "", 
+            "author": "Vivian"
+        }
     ]
 }

@@ -8,5 +8,12 @@
     "post-name": "new-old-glass", 
     "categories": [
         "photography"
+    ], 
+    "comments": [
+        {
+            "content": "COOL!!", 
+            "authorURL": "", 
+            "author": "mom"
+        }
     ]
 }

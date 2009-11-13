@@ -10,5 +10,27 @@
         "code", 
         "gnome", 
         "summer-of-code"
+    ], 
+    "comments": [
+        {
+            "content": "i have made good video captures of opengl apps with \"glc\".\nbut its website seems down ATM http://nullkey.ath.cx/projects/glc\nhere an article: http://linux.com/archive/feature/143775", 
+            "authorURL": "", 
+            "author": "oskude"
+        }, 
+        {
+            "content": "you're right: the patch <strong>is</strong> pretty evil. it's also going to cost you a lot in terms of performance.\n\npersonally, I've always found Istanbul worked fine for me for recording GL applications; others have used gtk-recordmydesktop whe Istanbul failed. the situation with recording applications is a bit dire &mdash; you have to try them all to find the one that works.", 
+            "authorURL": "http://blogs.gnome.org/ebassi", 
+            "author": "Emmanuele Bassi"
+        }, 
+        {
+            "content": "I had to record output of an OpenGL program as well the other day and gtk-recordmydesktop failed to record the OpenGL window, while istanbul seemed to use a very low bitrate that I didn't seem to be able to adjust anywhere. After a small mishap with Istanbul where it saved the movie I recorded as ~/Desktop (i.e. replacing the directory with a file) deleting some important files, I pretty much just gave up and went to Windows and used fraps :/\n\nDidn't try glc though, I might give that a try next time", 
+            "authorURL": "http://www.aphax.nl", 
+            "author": "Aphax"
+        }, 
+        {
+            "content": "Sorry to be annoying, but would it be possible to see the video in Theora?  I haven't licensed a QuickTime decoder yet (though I suppose Flumotion might offer one?).", 
+            "authorURL": "", 
+            "author": "Richard"
+        }
     ]
 }

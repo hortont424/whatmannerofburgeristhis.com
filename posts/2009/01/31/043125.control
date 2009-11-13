@@ -8,5 +8,27 @@
     "post-name": "glslife", 
     "categories": [
         "code"
+    ], 
+    "comments": [
+        {
+            "content": "Watching it near stability is half the fun. Just when you think you are there, a little glider thing comes along and messes up some order somewhere else. It doesn't become uninteresting as fast as you would think.\n\nIf you must inject cells, can I suggest adding in gliders? It seems more \"natural\" that way.", 
+            "authorURL": "http://queerquotients.com", 
+            "author": "Tim"
+        }, 
+        {
+            "content": "Sure, sure. But it reaches /actual/, complete stability very quickly. It's not clear why. Adding in gliders is a good idea - I'll do that, too :-D", 
+            "authorURL": "http://www.hortont.com", 
+            "author": "Tim"
+        }, 
+        {
+            "content": "Yeahhhh I don't know much about screensaver stuff, I might add options like that at some point. However, you do realize that if it doesn't add more cells, it /will/ die (to a completely stable state) after a (rather short) while? Maybe coming up with a better way to do it would be better. I should look at Robb's...\n\nRainbow background should be an option, I agree. Next \"release\", perhaps!\n\nShould make framerate an option too (it /can/ go faster, and it would be nice if it could be slower). And Robb likes scaling (so that each cell is 2 square pixels), etc.\n\nI'll put it in bzr and work on stuff tomorrow or Sunday.", 
+            "authorURL": "http://apad.sytes.net", 
+            "author": "Tim"
+        }, 
+        {
+            "content": "The trails really add a lot. Its a great screensaver.\n\nBut, I don't like the way it randomly adds in more cells. You should have that be an option. And the rainbow background should be an option too.", 
+            "authorURL": "http://queerquotients.com", 
+            "author": "Tim"
+        }
     ]
 }

@@ -8,5 +8,6 @@
     "post-name": "evas_quartz-leak-hunting", 
     "categories": [
         "summer-of-code"
-    ]
+    ], 
+    "comments": []
 }

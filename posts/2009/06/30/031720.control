@@ -10,5 +10,17 @@
         "code", 
         "gnome", 
         "summer-of-code"
+    ], 
+    "comments": [
+        {
+            "content": "Hi,\n\nDid you try java mode for xgettext,\n\nThat's what we use for i18n for a javascript poker game: \n\txgettext --extract-all \\\n\t\t --lang java \\\n\t\t --from-code=UTF-8 \\\n\t\t --copyright-holder='Loic Dachary ' \\\n\t\t --output=messages.pot \\\n\t\t --sort-output \\\n\t\t jpoker/js/jquery.jpoker.js\nhttp://upstream.jspoker.pokersource.info/file/tip/Makefile\nAnd we convert it to json using:\nhttp://upstream.jspoker.pokersource.info/file/tip/mo2json.py\nBut you wouldn't need that since you've just made the gettext seed binding :)", 
+            "authorURL": "", 
+            "author": "proppy"
+        }, 
+        {
+            "content": "[...] related to your search Tim Horton: End-of-June GSoC Status Update is now available in this link&#8230;:         News [...] ", 
+            "authorURL": "http://full-linux.com/tim-horton-end-of-june-gsoc-status-update/", 
+            "author": "Tim Horton: End-of-June GSoC Status Update | Full-Linux.com"
+        }
     ]
 }

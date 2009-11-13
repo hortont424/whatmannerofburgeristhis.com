@@ -8,5 +8,17 @@
     "post-name": "first-few-days", 
     "categories": [
         "school"
+    ], 
+    "comments": [
+        {
+            "content": "Hmmmmm, I wonder how those dry professors would characterize the students...", 
+            "authorURL": "", 
+            "author": "Vivian"
+        }, 
+        {
+            "content": "I'm afraid the worst ones won't have too many students to characterize soon enough...", 
+            "authorURL": "http://apad.sytes.net", 
+            "author": "Tim"
+        }
     ]
 }

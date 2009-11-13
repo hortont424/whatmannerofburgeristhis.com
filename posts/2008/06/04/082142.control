@@ -11,5 +11,42 @@
         "personal", 
         "photography", 
         "summer-of-code"
+    ], 
+    "comments": [
+        {
+            "content": "Hey Tim,\n\nYou're right, I am running 10.5. I upgraded recently and had been on 10.3 before that.\n\nNathan", 
+            "authorURL": "", 
+            "author": "Nathan"
+        }, 
+        {
+            "content": "Happy 'bout the new baby!  Can't wait to see it in person.  Punkin wants his picture taken.  I know you are going to enjoy the D80 - have fun!", 
+            "authorURL": "", 
+            "author": "Vivian"
+        }, 
+        {
+            "content": "Hi, Dan!\n\nYep, things are slowly moving along!\n\nOh! For some reason I thought the consensus was that both Nathan and I ran 10.5, and that it wasn't unreasonable to target Leopard! I'll be more careful if that's not the case!\n\nIn this case, it'll expand the text handling code by >10x, but that's not actually a /problem/!\n\nThanks for dropping by!\n\nTim", 
+            "authorURL": "http://apad.sytes.net", 
+            "author": "hortont"
+        }, 
+        {
+            "content": "\u3042\u3064\u3044 (atsui) means hot in Japanese\n\nThe more you know!\n\nAlso, get a gravatar", 
+            "authorURL": "", 
+            "author": "timwizard"
+        }, 
+        {
+            "content": "I would just like to state that for the record, my phone battery was dead and i had a home friend crises on my hands. I would also like to question why i would call you to talk when i could walk up three flights of stairs to magically be there? Oh yeah and i call you lots now don't I???\n\nlol. mango juice. that was yummy though.\n\noh yeah...this proves teh point yet again...BLOCK SARAH\n\nand YAYAYAYAYAYAYYAAYAYYAYAYAY NEW CAMERA! YAYAYAYAYAY!", 
+            "authorURL": "", 
+            "author": "Carol"
+        }, 
+        {
+            "content": "Uhm! It would appear that in a single sitting, Carol talked to her friends more than she's talked to me forever (though this doesn't include May!)... also I believe the quantity of mango juice spilled that day was somewhat proportional to the amount of talking taking place. ahem.", 
+            "authorURL": "http://apad.sytes.net", 
+            "author": "hortont"
+        }, 
+        {
+            "content": "Sounds like you're making good progress on getting Evas to work on OSX. One quick comment, you might want to be careful on using Leopard only technology. It would probably be a good idea to be able to support older 10.x versions as well. (As, if memory serves, Nathan won't be able to test as he's running 10.3 or something.)", 
+            "authorURL": "http://everburning.com", 
+            "author": "dan"
+        }
     ]
 }

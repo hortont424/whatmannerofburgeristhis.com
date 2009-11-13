@@ -8,5 +8,12 @@
     "post-name": "expedite-runs", 
     "categories": [
         "summer-of-code"
+    ], 
+    "comments": [
+        {
+            "content": "I fixed the blue box, the crazy borders in the middle, and now have basic keyboard events working. A lot more of the tests /work/ (albeit slowly) than I was expecting...\n\nI still have my runloop problem. But ... LATER!", 
+            "authorURL": "http://apad.sytes.net", 
+            "author": "hortont"
+        }
     ]
 }

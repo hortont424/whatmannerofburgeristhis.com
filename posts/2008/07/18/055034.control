@@ -8,5 +8,12 @@
     "post-name": "ibm-psl-temperature-monitor", 
     "categories": [
         "code"
+    ], 
+    "comments": [
+        {
+            "content": "This is very much going to NOT be up until I get a replacement for Trinity.", 
+            "authorURL": "http://apad.sytes.net", 
+            "author": "hortont"
+        }
     ]
 }

@@ -9,5 +9,22 @@
     "categories": [
         "gnome", 
         "school"
+    ], 
+    "comments": [
+        {
+            "content": "should have used dailymotion, so that one can view the video with stock GNOME ;)", 
+            "authorURL": "", 
+            "author": "bla"
+        }, 
+        {
+            "content": "grr :-) I always forget to try things on Linux and see what's up (I do most of my work on OS X, so I don't have issues with things like that, so I'm never very conscious of them).", 
+            "authorURL": "http://www.hortont.com", 
+            "author": "hortont"
+        }, 
+        {
+            "content": "Vimeo is probably the least free software friendly website. The flash doesn't work with free flash and you can't download the video with clive, nor can you download raw videos without a login and they don't accept new registrations.", 
+            "authorURL": "", 
+            "author": "foo"
+        }
     ]
 }

@@ -11,5 +11,27 @@
         "gnome", 
         "school", 
         "summer-of-code"
+    ], 
+    "comments": [
+        {
+            "content": "As an '04 graduate, this is great to hear about.  I only wish it existed while I was going there.", 
+            "authorURL": "http://minuslab.net/d/", 
+            "author": "Dave Foster"
+        }, 
+        {
+            "content": "[...] to your search Tim Horton: On RCOS (or, Open Software at Rensselaer) is now available in this link&#8230;:         News [...] ", 
+            "authorURL": "http://full-linux.com/tim-horton-on-rcos-or-open-software-at-rensselaer/", 
+            "author": "Tim Horton: On RCOS (or, Open Software at Rensselaer) | Full-Linux.com"
+        }, 
+        {
+            "content": "Wow, I wish RCOS existed while I was an undergrad at RPI.  I ended up just leaving in frustration.  :(", 
+            "authorURL": "", 
+            "author": "Andres Salomon"
+        }, 
+        {
+            "content": "Thanks for the tl;dr!", 
+            "authorURL": "http://gedmin.as", 
+            "author": "Marius Gedminas"
+        }
     ]
 }

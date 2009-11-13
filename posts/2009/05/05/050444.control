@@ -9,5 +9,22 @@
     "categories": [
         "gnome", 
         "summer-of-code"
+    ], 
+    "comments": [
+        {
+            "content": "Hi Tim, I'm happy to see a fellow RPI CS-er on GNOME Planet! I graduated RPI CS '03 and I work at Red Hat now.", 
+            "authorURL": "http://journal.linuxgrrl.com/", 
+            "author": "M\u00e1ir\u00edn Duffy"
+        }, 
+        {
+            "content": "Hi Tim\r\n\r\nI guess I get to say hello first :)\r\n\r\nI'm really looking forward to working with you on this. And don't worry. If you finish early I have lots of extra things to work on planned :) This is going to be a very exciting summer for gnome-games.", 
+            "authorURL": "", 
+            "author": "Thomas Andersen"
+        }, 
+        {
+            "content": "Hi Tim!\nCongratulations on becoming a GSOC student!\n\nI watched those two videos and they looked great. I can't wait to control something as awesome as clutter with something as familiar as JavaScript. Are there any docs or similiar that you can point me to that can get me started on Seed powered Clutter stuff?", 
+            "authorURL": "http://kallepersson.se", 
+            "author": "Kalle Persson"
+        }
     ]
 }
