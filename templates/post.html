@@ -31,7 +31,17 @@
             </py:if>
             
             <py:for each="comment in post.comments">
-                <xi:include href="old-comment.html" />
+                <div class="oldcomment">
+                <p style='font-weight: bold;'>
+                    <py:if test="comment.authorURL != ''">
+                        <a href="${comment.authorURL}">${comment.author}</a>
+                    </py:if>
+                    <py:if test="comment.authorURL == ''">
+                        ${comment.author}
+                    </py:if>
+                </p>
+                <p style='margin-left: 2em;'>${comment.content}</p>
+                </div>
             </py:for>
             
             <py:if test="len(post.comments) != 0">
