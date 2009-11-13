@@ -1,6 +1,7 @@
 #!/usr/bin/env python2.6
 # -*- coding: utf-8 -*-
 
+import datetime
 import os
 import json
 import codecs
@@ -40,6 +41,7 @@ def renderPost(f, template):
     
     metadata["url"] = w(f.replace(".control",""))
     metadata["id"] = re.sub("[^0-9]", "", metadata["date"])
+    metadata["date"] = datetime.datetime.strptime(metadata["date"], "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
     
     loader = TemplateLoader('templates', variable_lookup='lenient')
     tmpl = loader.load(template + '.html', encoding='utf-8')
@@ -48,4 +50,7 @@ def renderPost(f, template):
 def renderArchive(c, template, next, prev):
     loader = TemplateLoader('templates', variable_lookup='lenient')
     tmpl = loader.load(template + '.html', encoding='utf-8')
-    return tmpl.generate(content=c.decode("utf-8","ignore"), baseurl=w(""), nextPage=next, previousPage=prev).render('html', doctype='html')
+    return tmpl.generate(content=c.decode("utf-8","ignore"),
+                         baseurl=w(""),
+                         nextPage=next,
+                         previousPage=prev).render('html', doctype='html')
