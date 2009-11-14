@@ -39,19 +39,21 @@ def renderPost(f, template, rss=False):
     except:
         metadata["categories"] = ""
     
-    if rss:
-        metadata["content"] = contents
-    else:
-        metadata["content"] = contents
+    metadata["content"] = contents
+    
+    pubDate = metadata["date"]
     
     metadata["url"] = w(f.replace(".control",""))
     metadata["id"] = re.sub("[^0-9]", "", metadata["date"])
-    metadata["date"] = datetime.datetime.strptime(metadata["date"], "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
+    metadata["date"] = datetime.datetime.strptime(pubDate, "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
     
     metadata["shortContent"] = re.sub("<(.*?)>","",contents[0:500]) + "..."
     
-    # TODO: set pubdate if it's not set!
-    # TODO: set guid if it's not set
+    if "pubDate" not in metadata:
+        metadata["pubDate"] = datetime.datetime.strptime(pubDate, "%Y.%m.%d %H:%M:%S").strftime("%a, %d %b %Y %H:%M:%S +0000")
+
+    if "guid" not in metadata:
+        metadata["guid"] = metadata["url"]
     
     try:
         comments = metadata["comments"]
@@ -72,8 +74,11 @@ def renderArchive(c, template, next, prev, rss=False):
         postfix = "xml"
         doctype = None
     
+    buildDate = datetime.datetime.today().strftime("%a, %d %b %Y %H:%M:%S +0000")
+    
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(content=c.decode("utf-8","ignore"),
                          baseurl=w(""),
                          nextPage=next,
-                         previousPage=prev).render(postfix, doctype=doctype)
+                         previousPage=prev,
+                         buildDate=buildDate).render(postfix, doctype=doctype)
