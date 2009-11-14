@@ -10,10 +10,10 @@ from renderer import *
 from build import *
 import settings
 
-def generateRSSFeed(posts, outputFilename, title=u"hortont•blog"):
+def generateRSSFeed(posts, outputFilename, title=u"hortont &middot; blog"):
     posts.sort()
     posts.reverse()
-    posts = posts[0:10]
+    posts = posts[0:settings.page_size]
     
     output = ""
     
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     categoryMap = generateCategoryMap("posts")
     
     for cat in categoryMap:
-        generateRSSFeed(categoryMap[cat], os.path.join("output", "feed", settings.categoryURLFromName(cat), "rss.xml"), u"hortont•blog•" + cat)
+        generateRSSFeed(categoryMap[cat], os.path.join("output", "topics", settings.categoryURLFromName(cat), "feed", "rss.xml"), u"hortont &middot; blog &middot; " + cat)

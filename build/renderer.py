@@ -68,7 +68,7 @@ def renderPost(f, template, rss=False):
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(post=metadata, baseurl=www_prefix).render(postfix, doctype=doctype)
 
-def renderArchive(c, template, next, prev, rss=False, title=u"hortont•blog"):
+def renderArchive(c, template, next, prev, rss=False, title=u"hortont &middot; blog"):
     postfix = doctype = "html"
     if rss:
         postfix = "xml"
