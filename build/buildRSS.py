@@ -10,7 +10,7 @@ from renderer import *
 from build import *
 import settings
 
-def generateRSSFeed(posts, outputFilename):
+def generateRSSFeed(posts, outputFilename, title=u"hortont•blog"):
     posts.sort()
     posts.reverse()
     posts = posts[0:10]
@@ -20,7 +20,7 @@ def generateRSSFeed(posts, outputFilename):
     for p in posts:
         output += renderPost(p, "rss-post", True)
     
-    page = renderArchive(output, "rss", None, None, True)
+    page = renderArchive(output, "rss", None, None, True, title)
     
     if not os.path.exists(os.path.dirname(outputFilename)):
         os.makedirs(os.path.dirname(outputFilename))
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     categoryMap = generateCategoryMap("posts")
     
     for cat in categoryMap:
-        generateRSSFeed(categoryMap[cat], os.path.join("output", "feed", settings.categoryURLFromName(cat), "rss.xml"))
+        generateRSSFeed(categoryMap[cat], os.path.join("output", "feed", settings.categoryURLFromName(cat), "rss.xml"), u"hortont•blog•" + cat)

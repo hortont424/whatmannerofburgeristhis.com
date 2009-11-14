@@ -9,7 +9,7 @@
      xmlns:py="http://genshi.edgewall.org/"
      xmlns:xi="http://www.w3.org/2001/XInclude">
     <channel>
-    <title>hortont::blog</title>
+    <title>${title}</title>
     <atom:link href="${baseurl}/feed/" rel="self" type="application/rss+xml" />
     <link>${baseurl}</link>
     <description>code + craziness</description>
