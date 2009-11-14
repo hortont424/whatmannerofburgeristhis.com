@@ -46,7 +46,7 @@ def renderPost(f, template, rss=False):
     
     pubDate = metadata["date"]
     
-    metadata["url"] = w(f.replace(".control",""))
+    metadata["url"] = w(f.replace(".control",".html"))
     metadata["id"] = re.sub("[^0-9]", "", metadata["date"])
     metadata["date"] = datetime.datetime.strptime(pubDate, "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
     
