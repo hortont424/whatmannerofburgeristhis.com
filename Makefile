@@ -1,4 +1,4 @@
-all: clean unclean build-static build-posts build-archive copy-data
+all: clean unclean build-static build-posts build-archive build-rss copy-data
 
 clean:
 	rm -rf output
@@ -15,6 +15,9 @@ build-static:
 
 build-archive:
 	python2.6 ./build/buildArchive.py
+
+build-rss:
+	python2.6 ./build/buildRSS.py
 
 copy-data:
 	cp -r images output/images

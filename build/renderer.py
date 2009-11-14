@@ -26,7 +26,7 @@ def joinCategoryList(cats):
     else:
         return string.join(cats[:-2], ", ") + ", " + string.join(cats[-2:], ", and ")
 
-def renderPost(f, template):
+def renderPost(f, template, rss=False):
     metadata = json.loads(readFileContents(f), encoding='utf-8')
     contents = readFileContents(f.replace(".control",""))
     contents = contents.replace("\n","\n<br/>")
@@ -39,23 +39,41 @@ def renderPost(f, template):
     except:
         metadata["categories"] = ""
     
-    metadata["content"] = contents
+    if rss:
+        metadata["content"] = contents
+    else:
+        metadata["content"] = contents
     
     metadata["url"] = w(f.replace(".control",""))
     metadata["id"] = re.sub("[^0-9]", "", metadata["date"])
     metadata["date"] = datetime.datetime.strptime(metadata["date"], "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
+    
+    metadata["shortContent"] = re.sub("<(.*?)>","",contents[0:500]) + "..."
+    
+    # TODO: set pubdate if it's not set!
+    # TODO: set guid if it's not set
     
     try:
         comments = metadata["comments"]
     except:
         metadata["comments"] = []
     
-    tmpl = loader.load(template + '.html', encoding='utf-8')
-    return tmpl.generate(post=metadata, baseurl=w("")).render('html', doctype='html')
+    postfix = doctype = "html"
+    if rss:
+        postfix = "xml"
+        doctype = None
+    
+    tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
+    return tmpl.generate(post=metadata, baseurl=w("")).render(postfix, doctype=doctype)
 
-def renderArchive(c, template, next, prev):
-    tmpl = loader.load(template + '.html', encoding='utf-8')
+def renderArchive(c, template, next, prev, rss=False):
+    postfix = doctype = "html"
+    if rss:
+        postfix = "xml"
+        doctype = None
+    
+    tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(content=c.decode("utf-8","ignore"),
                          baseurl=w(""),
                          nextPage=next,
-                         previousPage=prev).render('html', doctype='html')
+                         previousPage=prev).render(postfix, doctype=doctype)
