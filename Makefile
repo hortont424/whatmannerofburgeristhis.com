@@ -1,3 +1,5 @@
+# hortont.com build system
+
 all: clean unclean build-static build-posts build-archive build-rss copy-data
 
 clean:
