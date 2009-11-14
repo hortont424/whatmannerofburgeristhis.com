@@ -1,5 +1,6 @@
 import os
 
+page_size = 10
 www_prefix = "http://jayne.hortont.com/web/output/"
 
 if os.uname()[1] == "Kaylee.local":

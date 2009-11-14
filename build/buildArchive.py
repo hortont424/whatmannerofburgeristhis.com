@@ -7,25 +7,15 @@ import sys
 import codecs
 import string
 from renderer import *
-
-page_size = 10
-
-def outputPost(f):
-    return renderPost(f, "archive-post")
-
-def generatePostList():
-    for root, dirs, files in os.walk("posts"):
-        for filename in files:
-            f = os.path.join(root, filename)
-            if f.endswith(".control"):
-                yield f
+from build import *
+import settings
 
 def paginate(posts):
     pages = []
     
     def _paginate(posts):
         if len(posts) > 0:
-            pages.append(map(outputPost, posts[0:page_size]))
+            pages.append([renderPost(f, "archive-post") for f in posts[0:settings.page_size]])
             _paginate(posts[page_size:])
     
     _paginate(posts)
@@ -45,7 +35,7 @@ def filenameForPage(page_no):
 
 def main():
     page_no = 1
-    posts = list(generatePostList())
+    posts = generatePostList("posts")
     posts.sort()
     posts.reverse()
     
