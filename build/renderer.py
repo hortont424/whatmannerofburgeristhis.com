@@ -20,6 +20,9 @@ def readFileContents(fn):
     fileHandle.close()
     return fileContents
 
+def resolveCategoryList(cats):
+    return [("<a href='" + w("topics/" + categoryURLFromName(cat)) + "'>" + cat + "</a>") for cat in cats]
+
 def joinCategoryList(cats):
     if len(cats) <= 2:
         return string.join(cats, " and ")
@@ -35,7 +38,7 @@ def renderPost(f, template, rss=False):
         template = metadata["template"]
     
     try:
-        metadata["categories"] = joinCategoryList(metadata["categories"])
+        metadata["categories"] = joinCategoryList(resolveCategoryList(metadata["categories"]))
     except:
         metadata["categories"] = ""
     

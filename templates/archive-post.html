@@ -1,6 +1,6 @@
 <div class="postContent">
 <h1><a href="${post.url}">${Markup(post.title)}</a></h1>
-<h2>${post.date} in ${post.categories}</h2>
+<h2>${post.date} in ${Markup(post.categories)}</h2>
 <p>${Markup(post.content)}</p>
 <p class="commentLink"><a href="${post.url}">Comments...</a></p>
 </div>
