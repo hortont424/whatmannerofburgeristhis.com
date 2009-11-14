@@ -12,6 +12,25 @@ def generatePostList(type):
                 posts.append(f)
     return posts
 
+def generateCategoryMap(type):
+    posts = {}
+    for root, dirs, files in os.walk(type):
+        for filename in files:
+            f = os.path.join(root, filename)
+            if not f.endswith(".control"):
+                continue
+            
+            metadata = json.loads(readFileContents(f), encoding='utf-8')
+            
+            if "categories" not in metadata:
+                continue
+            
+            for cat in metadata["categories"]:
+                if cat not in posts:
+                    posts[cat] = []
+                posts[cat].append(f)
+    return posts
+
 def buildPosts(dir, template, typeName, outDir):
     for filename in generatePostList(dir):
         page = renderPost(filename, template)
