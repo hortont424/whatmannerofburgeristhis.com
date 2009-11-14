@@ -12,6 +12,8 @@ from genshi.template import TemplateLoader
 from genshi.core import Markup
 from settings import *
 
+loader = TemplateLoader('templates', variable_lookup='lenient')
+
 def readFileContents(fn):
     fileHandle = codecs.open(fn, encoding='utf-8')
     fileContents = unicode(fileHandle.read())
@@ -48,12 +50,10 @@ def renderPost(f, template):
     except:
         metadata["comments"] = []
     
-    loader = TemplateLoader('templates', variable_lookup='lenient')
     tmpl = loader.load(template + '.html', encoding='utf-8')
     return tmpl.generate(post=metadata, baseurl=w("")).render('html', doctype='html')
 
 def renderArchive(c, template, next, prev):
-    loader = TemplateLoader('templates', variable_lookup='lenient')
     tmpl = loader.load(template + '.html', encoding='utf-8')
     return tmpl.generate(content=c.decode("utf-8","ignore"),
                          baseurl=w(""),
