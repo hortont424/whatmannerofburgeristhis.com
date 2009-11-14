@@ -8,16 +8,16 @@ unclean:
 	mkdir output
 
 build-posts:
-	python ./build/buildPosts.py
+	python2.6 ./build/buildPosts.py
 
 build-static:
-	python ./build/buildStatic.py
+	python2.6 ./build/buildStatic.py
 
 build-archive:
-	python ./build/buildArchive.py
+	python2.6 ./build/buildArchive.py
 
 build-rss:
-	python ./build/buildRSS.py
+	python2.6 ./build/buildRSS.py
 
 copy-data:
 	cp -r images output/images
