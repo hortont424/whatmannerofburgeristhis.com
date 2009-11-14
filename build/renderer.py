@@ -66,7 +66,7 @@ def renderPost(f, template, rss=False):
         doctype = None
     
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
-    return tmpl.generate(post=metadata, baseurl=w("")).render(postfix, doctype=doctype)
+    return tmpl.generate(post=metadata, baseurl=www_prefix).render(postfix, doctype=doctype)
 
 def renderArchive(c, template, next, prev, rss=False):
     postfix = doctype = "html"
@@ -78,7 +78,7 @@ def renderArchive(c, template, next, prev, rss=False):
     
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(content=c.decode("utf-8","ignore"),
-                         baseurl=w(""),
+                         baseurl=www_prefix,
                          nextPage=next,
                          previousPage=prev,
                          buildDate=buildDate).render(postfix, doctype=doctype)

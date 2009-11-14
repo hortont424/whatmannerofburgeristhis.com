@@ -1,10 +1,10 @@
 import os
 
 page_size = 10
-www_prefix = "http://jayne.hortont.com/web/output/"
+www_prefix = "http://jayne.hortont.com/web/output"
 
 if os.uname()[1] == "Kaylee.local":
-    www_prefix = "http://localhost/~hortont/output/"
+    www_prefix = "http://localhost/~hortont/output"
 
 def w(u):
-    return www_prefix + u
+    return www_prefix + "/" + u
