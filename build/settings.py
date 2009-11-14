@@ -1,7 +1,7 @@
 import os
 
 page_size = 10
-www_prefix = "http://jayne.hortont.com/web/output"
+www_prefix = "http://hortont.com/blog2/output"
 
 if os.uname()[1] == "Kaylee.local":
     www_prefix = "http://localhost/~hortont/output"
