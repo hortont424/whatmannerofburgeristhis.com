@@ -6,4 +6,4 @@ import sys
 from build import buildPosts
 
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
-buildPosts("static", "static", "static page", "static")
+buildPosts("static", "static", "static page", "")

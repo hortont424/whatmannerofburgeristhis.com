@@ -6,4 +6,4 @@ import sys
 from build import buildPosts
 
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
-buildPosts("posts", "post", "post", "")
+buildPosts("posts", "post", "post", "posts")
