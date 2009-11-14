@@ -21,6 +21,17 @@
     <table id="posts" border="0" width="100%">
     <tr>
         <td></td>
+        <td class="post">
+        <py:if test="showTitle">
+            <div id="catTitle">
+                ${Markup(title)}
+            </div>
+        </py:if>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
         <td class="post">${Markup(content)}</td>
         <td></td>
     </tr>

@@ -2,3 +2,9 @@ td.post
 {
     width: 600px;
 }
+
+#catTitle
+{
+    color: #fff;
+    text-align: center;
+}

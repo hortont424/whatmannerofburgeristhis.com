@@ -76,10 +76,13 @@ def renderArchive(c, template, next, prev, rss=False, title=u"hortont &middot; b
     
     buildDate = datetime.datetime.today().strftime("%a, %d %b %Y %H:%M:%S +0000")
     
+    showTitle = (title != u"hortont &middot; blog")
+    
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(content=c.decode("utf-8","ignore"),
                          baseurl=www_prefix,
                          nextPage=next,
                          previousPage=prev,
                          buildDate=buildDate,
-                         title=title).render(postfix, doctype=doctype)
+                         title=title,
+                         showTitle=showTitle).render(postfix, doctype=doctype)
