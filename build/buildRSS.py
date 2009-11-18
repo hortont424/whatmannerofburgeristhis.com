@@ -10,6 +10,9 @@ from renderer import *
 from build import *
 import settings
 
+htaccessContents = """RewriteEngine on
+RewriteRule ^.*$ rss.xml"""
+
 def generateRSSFeed(posts, outputFilename, category=None):
     posts.sort()
     posts.reverse()
@@ -28,6 +31,12 @@ def generateRSSFeed(posts, outputFilename, category=None):
     out = codecs.open(outputFilename, encoding='utf-8', mode='w+')
     out.write(page.decode("utf-8", "ignore"))
     out.close()
+    
+    htaccess = os.path.join(os.path.dirname(outputFilename), ".htaccess")
+    out = codecs.open(htaccess, mode="w+")
+    out.write(htaccessContents)
+    out.close()
+    
     print "Built RSS feed " + outputFilename + " (%(s)d bytes)" % {'s': os.stat(outputFilename).st_size}
 
 if __name__ == "__main__":
