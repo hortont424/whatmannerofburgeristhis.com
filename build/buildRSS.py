@@ -28,7 +28,7 @@ def generateRSSFeed(posts, outputFilename, category=None):
     out = codecs.open(outputFilename, encoding='utf-8', mode='w+')
     out.write(page.decode("utf-8", "ignore"))
     out.close()
-    print "Built syndication feed " + outputFilename + " (%(s)d bytes)" % {'s': os.stat(outputFilename).st_size}
+    print "Built RSS feed " + outputFilename + " (%(s)d bytes)" % {'s': os.stat(outputFilename).st_size}
 
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
