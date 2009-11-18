@@ -21,7 +21,7 @@ def readFileContents(fn):
     return fileContents
 
 def resolveCategoryList(cats):
-    return [("<a href='" + w("topics/" + categoryURLFromName(cat)) + "'>" + cat + "</a>") for cat in cats]
+    return [("<a href='" + w("topics/" + categoryURLFromName(cat)) + "'>" + categoryDisplayName(cat) + "</a>") for cat in cats]
 
 def joinCategoryList(cats):
     if len(cats) <= 2:
@@ -71,7 +71,7 @@ def renderPost(f, template, rss=False):
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(post=metadata, baseurl=www_prefix).render(postfix, doctype=doctype)
 
-def renderArchive(c, template, next, prev, rss=False, title=u"hortont &middot; blog"):
+def renderArchive(c, template, next, prev, rss=False, category=None):
     postfix = doctype = "html"
     if rss:
         postfix = "xml"
@@ -79,7 +79,15 @@ def renderArchive(c, template, next, prev, rss=False, title=u"hortont &middot; b
     
     buildDate = datetime.datetime.today().strftime("%a, %d %b %Y %H:%M:%S +0000")
     
-    showTitle = (title != u"hortont &middot; blog")
+    title = u"hortont &middot; blog"
+    if category:
+        title = u"hortont &middot; blog &middot; " + categoryDisplayName(category)
+    
+    showTitle = (category != None)
+    
+    rssurl = www_prefix + "/feed/rss.xml"
+    if category:
+        rssurl = www_prefix + "/topics/" + category + "/feed/rss.xml"
     
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(content=c.decode("utf-8","ignore"),
@@ -88,4 +96,5 @@ def renderArchive(c, template, next, prev, rss=False, title=u"hortont &middot; b
                          previousPage=prev,
                          buildDate=buildDate,
                          title=title,
-                         showTitle=showTitle).render(postfix, doctype=doctype)
+                         showTitle=showTitle,
+                         rssurl=rssurl).render(postfix, doctype=doctype)

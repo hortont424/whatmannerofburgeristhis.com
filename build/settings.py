@@ -17,3 +17,6 @@ def categoryURLFromName(n):
     if n == "video":
         return "school/video"
     return n
+
+def categoryDisplayName(n):
+    return n.replace("-"," ")

@@ -21,11 +21,11 @@ def paginate(posts):
     _paginate(posts)
     return pages
 
-def outputArchivePage(page, next, prev, title):
+def outputArchivePage(page, next, prev, category):
     outstr = ""
     for p in page:
         outstr = outstr + p
-    return renderArchive(outstr, "archive", next, prev, False, title)
+    return renderArchive(outstr, "archive", next, prev, False, category)
 
 def filenameForPage(page_no):
     if page_no == 1:
@@ -33,7 +33,7 @@ def filenameForPage(page_no):
     else:
         return "archive-%(page)d.html" % {'page' : page_no}
 
-def generateArchive(posts, outputLocation, title=u"hortont &middot; blog"):
+def generateArchive(posts, outputLocation, category=None):
     page_no = 1
     posts.sort()
     posts.reverse()
@@ -49,7 +49,7 @@ def generateArchive(posts, outputLocation, title=u"hortont &middot; blog"):
         if page_no != len(pages):
             nextPageName = filenameForPage(page_no + 1)
         
-        page = outputArchivePage(pagination, nextPageName, previousPageName, title)
+        page = outputArchivePage(pagination, nextPageName, previousPageName, category)
         outputFilename = os.path.join(outputLocation, filenameForPage(page_no))
         
         if not os.path.exists(os.path.dirname(outputFilename)):
@@ -68,4 +68,4 @@ if __name__ == "__main__":
     categoryMap = generateCategoryMap("posts")
 
     for cat in categoryMap:
-        generateArchive(categoryMap[cat], os.path.join("output", "topics", settings.categoryURLFromName(cat)), u"hortont &middot; blog &middot; " + cat)
+        generateArchive(categoryMap[cat], os.path.join("output", "topics", settings.categoryURLFromName(cat)), cat)
