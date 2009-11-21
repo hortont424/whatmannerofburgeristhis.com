@@ -32,7 +32,7 @@ def joinCategoryList(cats):
 def renderPost(f, template, rss=False):
     metadata = json.loads(readFileContents(f), encoding='utf-8')
     contents = readFileContents(f.replace(".control",""))
-    contents = contents.replace("\n","\n<br/>")
+    contents = re.sub('\n\s*\n', "<br/><br/>", contents)
     
     if template == "":
         template = metadata["template"]

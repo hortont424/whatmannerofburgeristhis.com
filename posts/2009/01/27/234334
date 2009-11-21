@@ -1,6 +1,6 @@
 The plan was for Jayne (the machine that serves this blog, the rest of my web stuff, Robb's blog, lots of code, backups, etc.) to be a reasonably stable and very large (storage-wise) machine. The storage part worked, more or less, but the stability is ehh-not-so-much. I have a very consistent problem with libata, but it's not clear why...
 
-<a href="/files/jayne-error.jpg"><img src="/files/jayne-error.jpg" width="300px" /></a>
+<a href="http://hortont.com/files/jayne-error.jpg"><img src="http://hortont.com/files/jayne-error.jpg" width="300px" /></a>
 
 Anyway. Here's the facts:
 

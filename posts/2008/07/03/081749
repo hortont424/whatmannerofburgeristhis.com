@@ -1,4 +1,4 @@
-Hey! I hacked up the Evas_Quartz test program to push out frames as files, so I have smooth video to show you! It's incomplete, but it's mostly here. It may not play back well for y'all, depending on your machine (it's running at 50fps because that made the math easy, etc.), but <a href="/files/evas-20080703.mov">check it out!</a>
+Hey! I hacked up the Evas_Quartz test program to push out frames as files, so I have smooth video to show you! It's incomplete, but it's mostly here. It may not play back well for y'all, depending on your machine (it's running at 50fps because that made the math easy, etc.), but <a href="http://hortont.com/files/evas-20080703.mov">check it out!</a>
 
 There's still some tests broken near the end; there's still lots of work to do...
 

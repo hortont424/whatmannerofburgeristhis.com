@@ -1,37 +1,37 @@
-<a href="/files/expediteshots/1.png"><img src="/files/expediteshots/1.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/1.png"><img src="http://hortont.com/files/expediteshots/1.png" width="75%" /></a>
 
 So! Tonight I got all of the Expedite tests running. I haven't checked that they're all perfect, and there's some larger issues with the program (it draws the icon for the currently selected test really large in the upper right corner, sometimes the text disappears, or the menu forgets to disappear - not sure why); it's nice at least to have all of the tests starting. So! Pictures and notes follow...
 
 <!--more-->
 
-<a href="/files/expediteshots/2.png"><img src="/files/expediteshots/2.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/2.png"><img src="http://hortont.com/files/expediteshots/2.png" width="75%" /></a>
 
 You can see the icon thing I was talking about in the top right hand corner. Other than that, this test works well (at least, it does now that I've turned <a href="http://developer.apple.com/technotes/tn2005/tn2133.html">CGContextFlush(...) coalescing</a> off). Coalescing CGContextFlush is a per-application setting (you set <strong>CGDisableCoalescedUpdates</strong> to <i>true</i> in the application's Info.plist). I'm convinced this is a good thing, because it seems like a good idea for general applications, to prevent tearing, but it's nice to be able to turn it off, for <a href="http://www.xbench.com/">benchmarking applications</a> and the like.
 
-<a href="/files/expediteshots/3.png"><img src="/files/expediteshots/3.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/3.png"><img src="http://hortont.com/files/expediteshots/3.png" width="75%" /></a>
 
 This test hurts my eyes. I'm not sure if it's because we've only got low quality smoothing, or Expedite just gives yukky data, or what, but I'm just happy that the test runs! I ended up looting bits and pieces of different engines to get these image data access functions working (thanks GL and SDL, mostly!). I'm not sure they're perfect, yet (the last of the tests from the old program pertaining to this still doesn't work), but they're a lot better than they were recently!
 
-<a href="/files/expediteshots/4.png"><img src="/files/expediteshots/4.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/4.png"><img src="http://hortont.com/files/expediteshots/4.png" width="75%" /></a>
 
 I didn't initially understand that I needed to support <a href="http://en.wikipedia.org/wiki/YCbCr">YCbCr colorspaces</a> in my engine (nor did I, once I knew that, know how easy it would be to implement) - I initially assumed mentions of that dealt with the device's colorspace, which I was already long done with... however, this test shows that it's working now!
 
-<a href="/files/expediteshots/6.png"><img src="/files/expediteshots/6.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/6.png"><img src="http://hortont.com/files/expediteshots/6.png" width="75%" /></a>
 
 I think I caught this one in the middle of a redraw, or something. These run pretty slowly (the styled text tests), I'm not sure why - though starting up Quartz 2D Extreme just about doubles their framerate... the normal, unstyled text tests run ~60fps, which is good enough for me!
 
-<a href="/files/expediteshots/7.png"><img src="/files/expediteshots/7.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/7.png"><img src="http://hortont.com/files/expediteshots/7.png" width="75%" /></a>
 
 Here's the first test that's clearly still broken, though I think it'll only take a little bit of TLC to get it into shape, I just haven't paid any attention to some of the font metrics functions yet...
 
-<a href="/files/expediteshots/8.png"><img src="/files/expediteshots/8.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/8.png"><img src="http://hortont.com/files/expediteshots/8.png" width="75%" /></a>
 
 Runs nice; see how you can see the menu through it? That's not ... right ... but my Expedite... hack... is horrible, and is probably at fault. I'll write later today about the run loop issue that's keeping me from writing a proper Expedite backend, and maybe someone can help me!
 
-<a href="/files/expediteshots/9.png"><img src="/files/expediteshots/9.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/9.png"><img src="http://hortont.com/files/expediteshots/9.png" width="75%" /></a>
 
 Rectangles - yay! So you've probably noticed a theme by now - everything seems to be limited to right around 60fps. Wonder why? SO DO I! I turned off coalescing - that got lots of things from 30 to 60fps. I've seen the rectangles go to around 150fps, but I can't seem to duplicate that! Very very puzzling...
 
-<a href="/files/expediteshots/11.png"><img src="/files/expediteshots/11.png" width="75%" /></a>
+<a href="http://hortont.com/files/expediteshots/11.png"><img src="http://hortont.com/files/expediteshots/11.png" width="75%" /></a>
 
 All done! More posts later!

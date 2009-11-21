@@ -1,4 +1,4 @@
-<img src="/files/lisparticles/particles.png" style="margin-left:-31px" width="652px" />
+<img src="http://hortont.com/files/lisparticles/particles.png" style="margin-left:-31px" width="652px" />
 
 Here's a post I promised a <em>long </em>time ago. I was playing around with <a href="http://www.sbcl.org/">Lisp</a> back in late June, and wrote a little brute-force n-body problem solver. I should note that when I say brute force, I mean <strong>most naïve solution possible</strong> -- summing all of the forces, etc.
 
@@ -8,4 +8,4 @@ After the Lisp bit, I wrote a little point viewer in Perl (with <a href="http://
 
 So; it's all really very slow, and silly. Very. Very. Slow. But, it works. Also, it's physically inaccurate, in order to get results in any reasonable number of frames. Like, <strong>G</strong> is seven orders of magnitude larger than normal. So much for gravity being the weakest fundamental force... (<strong>EDIT</strong>: actually no. it's still <a href="http://en.wikipedia.org/wiki/Fundamental_force#Overview">not even close</a>.)
 
-So, for your particle-simulating-pleasure: <a href="/files/lisparticles/particles.lisp">the Lisp</a> and <a href="/files/lisparticles/glviewer.perl">the Perl</a>.
+So, for your particle-simulating-pleasure: <a href="http://hortont.com/files/lisparticles/particles.lisp">the Lisp</a> and <a href="http://hortont.com/files/lisparticles/glviewer.perl">the Perl</a>.

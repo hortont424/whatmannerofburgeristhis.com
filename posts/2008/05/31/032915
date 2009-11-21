@@ -2,4 +2,4 @@ I'm throwing this up here just for fun... it doesn't work entirely, but the gene
 
 Also, unless you, yourself, put the test app in an application bundle, moving and focusing the window won't work. I'll make that automatic sometime soon...
 
-<a href="/files/hortont-gl-quartz-20080530.diff">A patch!</a>
+<a href="http://hortont.com/files/hortont-gl-quartz-20080530.diff">A patch!</a>

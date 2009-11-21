@@ -8,45 +8,24 @@ There are packages for Seed in our <a href="http://launchpad.net/~orange-owners/
 
 A slightly shortened version of the Changelog, after the jump...
 
-<!--more-->
-
 <h4 style='text-align: center'>Seed 0.3, Wednesday Morning 3AM (2009.01.01)</h4>
-
 <ul>
 <li><b>Memory usage is <i>excellent</i>, finally.</b></li>
-
 <li>Innumerable bug fixes.</li>
-
 <li><b>Structs work now!</b> Things like GdkRectangle: you can allocate them, get at their members, etc.</li>
-
 <li>GObject subclassing, which was rushed in to a 0.1 point release, is reliable now! We've also added signal installation.</li>
-
 <li>Multiple context support, rather than the silly global context.</li>
-
 <li>Support for string array argument conversion.</li>
-
 <li><b>C extension Modules (readline, Multiprocessing/pipes, sqlite3, canvas)</b></li>
-
 <li>Signals use userdata now. The 'this' argument was removed, as it really just lead to organizational issues.</li>
-
 <li>object.signal.connect is defined for connecting by strings (allows for connecting to detailed signals, like property notifications)</li>
-
 <li><b>'out' arguments of methods work.</b></li>
-
 <li>Enums use Gtk.WindowType.Normal instead of Gtk.WindowType.normal, may break existing code in subtle ways (as Gtk.WindowType.normal will now be JavaScript null).</li>
-
 <li>Licensing update - libseed is LGPL. The trivial examples are BSD, the more complete ones are GPL.</li>
-
 <li><b>External API is pretty usable now, and comes with a turtle graphics example.</b></li>
-
 <li>Threading sort of works now. It's rather unpredictable, but async callbacks and stuff are fine.</li>
-
 <li>Many more Seed examples. Ranging from a Gnio Server to threading. The browser example is pretty neat now, and has sqlite bookmarks, WebInspector, and a few other tidbits. lightsoff and browser are the two highlight examples to play with.</li>
-
 <li>New builtins: Seed.spawn, Seed.repl/glib_repl/thread_repl. They're all somewhat useful for debugging.</li>
-
 <li>Removed builtin: Seed.prototype: Now use Gtk.Window.prototype</li>
-
 <li>Removed builtins: Seed.closure/Seed.closure_native: automatically handeled</li>
-
 <li>Removed builtin: Seed.readline: Moved to <i>readline</i> module.</li></ul>
