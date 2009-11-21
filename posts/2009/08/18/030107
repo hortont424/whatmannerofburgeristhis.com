@@ -18,7 +18,6 @@ It seems the general consensus is that my three games (lightsoff, same-gnome-clu
 <li><strong>same-gnome-clutter</strong> — Lots of updates and reorganization, as well as a bunch of preferences. And theming! (though there are no other themes, at the moment)</li>
 <li><strong>gnomines-clutter</strong> — Started an initial implementation, using things I've learned over the course of writing and rewriting the other two games. It has a very preliminary Clutter UI, but the game is theoretically playable.</li>
 </ul>
-
 Overall, I'm very happy with the games as they stand... I'm a little iffy about the performance of same-gnome-clutter, but I think I might know how to fix that. There's still a lot of work to do (saving high-scores still doesn't work, but I put that aside to work on gnomines-clutter so I would have something to show by the end of the project).
 
 <strong>gnomines-clutter</strong>

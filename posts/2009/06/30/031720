@@ -1,7 +1,6 @@
 It's been <em>way</em> too long since I've written here; and, it's going to stay that way for now, unfortunately. I'm just going to quickly copy my weekly status reports for the first five weeks of GSoC in here, to share...
 
 <strong>Week 1</strong>
-
 <blockquote>Hi, all!
 
 I was in Barcelona at UDS last week, so I didn't get that much work done, but I also started early so as to get something done.
@@ -20,9 +19,7 @@ So far:
 
 * I blogged about the Lights Off tiles (just for fun!), and got about 1000 votes, choosing the new ones 4:1 (not even remotely surprising).
 	(http://www.hortont.com/blog/2009/05/lights-off-tiles/)</blockquote>
-
 <strong>Week 2</strong>
-
 <blockquote>I spent a good part of the last five days (my last status report was late, so the duration between these two is less than it ought to be; do let me know if Sunday night is the wrong time for these!) working on various things:
 
 * I created a branch of GNOME Games for myself (gsoc-seed-games) and imported the rewrite of Lights Off from last week into it.
@@ -46,9 +43,7 @@ All in all, a week of bugs and packaging, and not a whole lot of awesome new cod
 4) UI for Same (consuming libgames-support stuff); high-scores, preferences (?)
 
 5) Mines!</blockquote>
-
 <strong>Week 3</strong>
-
 <blockquote>Hi, again!
 
 This is going to be a terse status report, as I'm currently running around rather busy...
@@ -68,9 +63,7 @@ Next, I want to:
 * figure out what to do about ggz introspection data
 
 * finish high scores code in Same, menu, etc.</blockquote>
-
 <strong>Week 4</strong>
-
 <blockquote>Another week! Another short, last-minute status update.
 
 * Fixed a longstanding bug (#579008) in gobject-introspection, which was requiring us to carry around a patch to Clutter that would /never/ get applied (it removed annotations to work around the bug). Hasn't been committed yet, but since it ended up only being a single line (once I realized what was going wrong), I'm sure it will be soon. Also, filed a bug (#1653) against Clutter to *add* some necessary annotations once this gets fixed...
@@ -82,9 +75,7 @@ Next, I want to:
 * Same (when it was still in the Seed repo) has a C version that I'm using to figure out some oddities with Seed+Clutter, and both that and the JS version work with Clutter head now.
 
 Stuff in the gnome-games repo hasn't been pushed yet (just got home from NY, fighting with Git, I hate losing the ability to rewrite history, etc.; it'll all be up by tomorrow).</blockquote>
-
 <strong>Week 5</strong>
-
 <blockquote>* Made a to-do list to keep up to date (http://hortont.com/gsoc-seed-games-todo.html) Right now, it only has stuff that I could think of off the top of my head this morning, but it's already a relief to no longer need to keep such things in my head. Anyway, I'll continue updating it and checking things off from here on out.
 
 * Cleaned up animation and events and stuff in Same, which fixes some strange flickering when you move the mouse over the window, and makes most of the animation smooth again (update to match the fact that Seed handles animation memory now, too). This is incomplete, still, there's a little left to be done.
@@ -106,5 +97,3 @@ Stuff in the gnome-games repo hasn't been pushed yet (just got home from NY, fig
 * Got most of the PPA updated. However, for some reason, gnome-games refuses to build on non-x86 architectures. If anyone wants to help me, please do :-D
 
 Anyway, LO is almost done (needs "Help" and various bits of cleanup, but it's mostly happy)... Same isn't far behind.</blockquote>
-
-

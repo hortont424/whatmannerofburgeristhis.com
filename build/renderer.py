@@ -61,7 +61,10 @@ def renderPost(f, template, rss=False):
     try:
         comments = metadata["comments"]
     except:
-        metadata["comments"] = []
+        metadata["comments"] = comments = []
+    
+    for c in comments:
+        c["content"] = re.sub('\\n', "<br/>", c["content"])
     
     postfix = doctype = "html"
     if rss:

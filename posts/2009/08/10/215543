@@ -36,17 +36,11 @@ OscillatorWidget = new GType({
 The property's flags default to readable/writable, but you can mark them as construct properties and then set them with the JSON construction notation. As I said before, documentation and polish are forthcoming.
 
 And, for your reading pleasure, the Seed 2.27.90 complete ChangeLog:
-
 <ul>
 <li>Expanded and updated documentation; also available at <a href="http://library.gnome.org/devel/seed/unstable/">library.gnome.org</a></li>
-
 <li>All JavaScript contexts now have a __script_path__ property, which exposes the absolute, canonical path to the evaluated script</li>
-
 <li>Add __init__.js functionality; if an imported folder contains __init__.js, it will be evaluated with the imported context as the 'this' object</li>
-
 <li>Fix bug which caused inheritance from a GType created in Seed to fail</li>
-
 <li>Add "pretty" property installation, see <a href="http://git.gnome.org/cgit/seed/tree/tests/javascript/gtypes/gtype-property-nice.js">gtype-property-nice.js</a></li>
-
 <li>New FFI module, provides an interface for calling non-introspected native C functions from JavaScript</li>
 </ul>

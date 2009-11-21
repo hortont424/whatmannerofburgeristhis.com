@@ -15,9 +15,6 @@ As you can see, that's a pretty significant jump in structure. I've also decided
 I realize that some of the right-hand side long descriptions are somewhat contrived, but it looks so <em>empty</em> if you leave one out!
 
 After the jump, the 0.8.5 ChangeLog:
-
-<!--more-->
-
 <ul>
 <li>Significant reorganization and expansion of the reference documentation</li>
 <li>New native modules:<ul>
@@ -31,4 +28,3 @@ After the jump, the 0.8.5 ChangeLog:
 <li>Update examples to latest (now frozen) Clutter API changes.</li>
 <li>Fixes a bug with the importer search path which resulted in the search path being overwritten each time something was imported</li>
 <li>The importer now also searches the directory in which the script being executed is located by default.</li></ul>
-
