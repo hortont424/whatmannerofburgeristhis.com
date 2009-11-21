@@ -1,6 +1,6 @@
 # hortont.com build system 
 
-all: clean unclean build-static build-posts build-archive build-rss copy-data
+all: clean unclean build-static build-posts build-archive build-rss build-everything copy-data
 
 clean:
 	rm -rf output
@@ -20,6 +20,12 @@ build-archive:
 
 build-rss:
 	python2.6 ./build/buildRSS.py
+
+build-everything:
+	python2.6 ./build/buildEverything.py
+
+new-post:
+	python2.6 ./build/newPost.py
 
 copy-data:
 	cp -r images output/images
