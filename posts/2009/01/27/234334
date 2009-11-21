@@ -3,7 +3,6 @@ The plan was for Jayne (the machine that serves this blog, the rest of my web st
 <a href="http://hortont.com/files/jayne-error.jpg"><img src="http://hortont.com/files/jayne-error.jpg" width="300px" /></a>
 
 Anyway. Here's the facts:
-
 <ul>
 <li>I'm using Debian unstable, with Linux 2.6.28.</li>
 <li>I've got a <a href="http://www.hortont.com/blog/2008/08/new-computer/">Shuttle case</a>, and a 100 W PSU (!!).</li>
@@ -15,7 +14,6 @@ Anyway. Here's the facts:
 <li>Only the root partition ever acquires any errors. Not the big (1.2TB) main partition.</li>
 <li>The total <i>potential</i> power use of the system is well over 100 W, and Shuttle recommended <i>against</i> putting both a Core 2 and two disks in this particular combination of case/mobo/PSU.</li>
 </ul>
-
 Any ideas?
 
 I've thought about it a lot, and cannot seem to come up with a reasonable explanation. If it's power, software, or the cables, the cooldown time doesn't make any sense; if it's the disks, running for a long time doesn't make any sense, and I've spent a lot of time beating on the disks to try to reproduce it and cannot; if it's heat (which seems most likely), the fact that it's 20 degrees C under the acceptable working temperature of the disks makes that make very little sense (and I never get SMART warnings or anything, just libata transmission errors!)...

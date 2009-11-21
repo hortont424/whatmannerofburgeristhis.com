@@ -1,8 +1,8 @@
-<p>For <a href="http://litec.rpi.edu">LITEC</a>, each group has a C8051F02x development board attached to a car (and later, to the RPI blimps). The course only includes instructions and support for people using the SiLabs IDE within Windows (it doesn't exist for Linux or OS X), which greatly disappointed Andrew and I when we started the class a few weeks ago.</p>
+For <a href="http://litec.rpi.edu">LITEC</a>, each group has a C8051F02x development board attached to a car (and later, to the RPI blimps). The course only includes instructions and support for people using the SiLabs IDE within Windows (it doesn't exist for Linux or OS X), which greatly disappointed Andrew and I when we started the class a few weeks ago.
 
-<p>Andrew spent a good bit of time fiddling with things in Linux before - a few days ago - he finally got it working! It turns out there are Linux drivers and support software for the SiLabs EC2 debug adapter which we use to download code to the chip (and run it, debug it, etc.)... and the Small Device C Compiler is even in APT! (sdcc-nf is the package including the non-free components which I believe we determined we need).</p>
+Andrew spent a good bit of time fiddling with things in Linux before - a few days ago - he finally got it working! It turns out there are Linux drivers and support software for the SiLabs EC2 debug adapter which we use to download code to the chip (and run it, debug it, etc.)... and the Small Device C Compiler is even in APT! (sdcc-nf is the package including the non-free components which I believe we determined we need).
 
-<p>So... there's a brief set of instructions to get compilation and downloading working, after the jump!</p>
+So... there's a brief set of instructions to get compilation and downloading working, after the jump!
 <ul>
 	<li>Install SDCC from APT (sdcc-nf, etc.)</li>
 	<li>Install kernel headers</li>
@@ -26,7 +26,6 @@ set target connect</pre>
 	<li>Then load your file: "file PROJECT" (notice the lack of extension). This will take a while while it downloads to the board.</li>
 	<li>The commands "run", then "continue" will run your program on the 8051! Yay!</li>
 </ul>
-
 I've crafted a small Makefile for our use which might be useful for others:
 
 <pre lang="make">TARGETS = library_test
@@ -45,30 +44,21 @@ run:
 
 .c:
 	sdcc -mmcs51 --model-small --debug --code-loc 0x0000 --iram-size 0xFF --noinduction --nooverlay --nogcse $@.c</pre>
-
 Where download.cmd is:
-
 <pre>set target SL51
 set target port USB
 set target connect</pre>
-
 And run.cmd is:
-
 <pre>set target SL51
 set target port USB
 set target connect
 run
 continue
 quit</pre>
-
 You can download a particular project with:
-
 <pre>PROJ="library_test" make download</pre>
-
 and run it with:
-
 <pre>make run</pre>
-
 Pretty cool! We're also developing a very awesome library for use with the 8051 to make it much, much nicer, but I can't publish that because of it being for class and stuff. Maybe after the semester's over!
 
 Have fun, and if anyone tries this and can't make it work, <a href="mailto:hortont424@gmail.com">email</a> me.
