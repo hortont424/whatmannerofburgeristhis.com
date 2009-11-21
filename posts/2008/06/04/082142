@@ -6,6 +6,4 @@ Second thing! I've got a much more stable, git-based workflow for working on Eva
 
 The last bit - the Ma Bell bit - is that either AT&amp;T recently added, or I recently noticed, the ability to download your call data in CSV (per-month). This meant I could clean up my call data grapher quite well (no more screen scraping means it actually works now - they broke it in January!)... so <a href="http://hortont.com/files/phone-perl.zip">here y'all go</a>. Figure it out on your own! My graph is below the jump!
 
-<!--more-->
-
 <img src="http://hortont.com/files/timphone.png" alt="" />

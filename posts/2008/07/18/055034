@@ -4,7 +4,7 @@ Way back before last Christmas, I wanted to get the PSL temperature probe, at th
 
 I then wrote a <a href="http://hortont.com/files/temperature/temperature.js">little canvas-y viewer script</a>, and left it running, polling the temperature in our room in Cary Hall every minute for approximately two and a half months. The final output is here:
 
-<img src="/files/temperature/rpi.png" alt="" width="100%" />
+<img src="http://hortont.com/files/temperature/rpi.png" alt="" width="100%" />
 
 You can pretty clearly tell when Robb and I weren't at school (especially spring break, the really smooth wavy part near the beginning). It was cool at the time, just a cute little thing... I dunno!
 

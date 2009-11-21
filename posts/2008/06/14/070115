@@ -2,28 +2,26 @@ The past few days have been very productive! I've implemented images and fixed u
 
 <strong>Note:</strong> This is Evas_Quartz, <i>not</i> to be confused with Evas_GL_Quartz. This is the meat of the project.
 
-<!--more-->
-
-<img src="/files/evas_0613/00-intro.png" alt="" />
+<img src="http://hortont.com/files/evas_0613/00-intro.png" alt="" />
 The intro part of the test is looking nice! One thing that's missing is adjustable opacity on the images. I'll get there, and I think I see exactly what needs to happen in order for that to happen! That means that the logo doesn't fade in/out...
 
-<img src="/files/evas_0613/01-perf.png" alt="" />
+<img src="http://hortont.com/files/evas_0613/01-perf.png" alt="" />
 The most obvious thing missing here is clipping! One of my next puzzles is to work out how clipping works in CoreGraphics - I think I've used it maybe <em>once</em> before, so it can't be too hard! Also... you only get reasonable performance here if you turn image smoothing off. Well... it's not unreasonable with smoothing on, it's just a slight bit imperfect. I have an issue in that Quartz wants to know if an image is going to want to be smoothed when it loads, but to Evas, that information is only relevant when you're drawing. I haven't figured out how to modify it at draw time, so right now smoothing is off everywhere...
 
-<img src="/files/evas_0613/02-move.png" alt="" />
+<img src="http://hortont.com/files/evas_0613/02-move.png" alt="" />
 Test 1 works really well. Also, all of the informative text seems to draw. The biggest text issue right now is everything is drawn in Bitstream Vera Sans. This was because, up until today, I didn't know how Apple's whole font system interacted with itself. I wasn't sure how to load a font from a file, activate it, and use it - then I found <a href="http://developer.apple.com/documentation/Carbon/Reference/ATS/Reference/reference.html#//apple_ref/c/func/ATSFontActivateFromFileReference">this!</a> So one of these days, I'll get around to that, and fonts will work properly!
 
 Test 2 is bizarrely glitchy. Something about drawing 0-width images, though fixing that doesn't actually fix the problem... I have to look into this!
 
-<img src="/files/evas_0613/03-qual.png" alt="" />
+<img src="http://hortont.com/files/evas_0613/03-qual.png" alt="" />
 
 Ha! Quality! Right! So - this is where the whole not-smoothing thing comes into play. FIXME! But the zooming is nice and smooth...
 
-<img src="/files/evas_0613/04-line.png" alt="" />
+<img src="http://hortont.com/files/evas_0613/04-line.png" alt="" />
 
 Lines draw, but apparently not in color! I must have set fill instead of stroke. Whoops! This'll be all better tomorrow!
 
-<img src="/files/evas_0613/06-poly.png" alt="" />
+<img src="http://hortont.com/files/evas_0613/06-poly.png" alt="" />
 
 Even polygons draw now! I was somewhat surprised to find that Evas had its own linked list implementation - I guess I assumed that would be somewhere higher up the chain (though there's not much higher up the EFL chain than Evas...) - but it's proved very useful so far!
 

@@ -27,9 +27,9 @@ I was just thinking about how I'm going to make the move to FreeBSD+ZFS for Jayn
 </li>
 </ul>
 <ul>
-	<li>Install three additional disks (750GB, 1TB, and 160GB), at about 230$ cost.
+	<li><del>Install three additional disks (750GB, 1TB, and 160GB), at about 230$ cost.</del>
 <ul>
-	<li><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136284">1TB</a>, <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136283">750GB</a>, <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136075">160GB</a>, following my usual choices...</li>
+	<li><del><a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136284">1TB</a>, <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136283">750GB</a>, <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136075">160GB</a>, following my usual choices...</del></li>
 	<li>Move all content we want to persist to the 1TB disk (use ext3).
 <ul>
 	<li>Don't persist backups (maybe Matt's); don't persist Star Trek.

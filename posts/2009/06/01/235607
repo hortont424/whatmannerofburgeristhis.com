@@ -7,7 +7,6 @@ On Saturday, just after 10PM, Delta flight 6372 from JFK to BTV landed on the ta
 I was in Barcelona attending the Ubuntu Developer Summit for the next release, Karmic Koala (that's 9.10, for those of you counting)...  talking (mostly listening, actually) about <a href="http://www.gnome.org">GNOME</a>, fast boot, <a href="http://www.x.org">X</a>, mobile stuff (<a href="http://code.google.com/android/">Android</a> and <a href="http://moblin.org/">Moblin</a>), <a href="http://projects.gnome.org/NetworkManager/">NM</a>, <a href="https://wiki.ubuntu.com/Artwork">prettiness</a>, and who knows what else! I met lots of awesome people, saw lots of awesome sights and ate lots of awesome food (sometimes). I don't think it's possible to properly describe the last week, so I'm just going to write bulleted bits to the best of my ability, separated into UDS-things and Barcelona-things.
 
 <strong>UDS</strong>
-
 <ul>
 <li>Scott/Mark want boot in 10/12/15 seconds on a Mini 9.</li>
 <li>It's not clear if all of gnome-games is going to be in main (partially my fault; oops).</li>
@@ -34,9 +33,7 @@ I was in Barcelona attending the Ubuntu Developer Summit for the next release, K
 <li>I started a Seed+Clutter+Cairo+DBus nm-applet mockup based off of a blog post about NM 0.8 which I can't find right now... just for fun!</li>
 <li>Got lots of work done on LO3 in the airports and stuff.</li>
 </ul>
-
 <strong>Barcelona</strong>
-
 <ul>
 <li>The region around the airport is slightly frightening compared to the rest of the city; I was a little uneasy until I got off the metro at Zona Universitària. The fact that I'd just been dumped somewhere where it was really hard to understand everyone (even with 4 useless years of Spanish) certainly didn't help any either.</li>
 <li>The power is a lie. You need the grounded plug or it doesn't work, unless you're in the <em>rooms</em> (not the lobby) of the Hotel Rey Juan Carlos. The Palau and my hotel both require the big plug, somehow. This is a problem; a brand new 15" MBP battery only lasts 3-4 hours in a fresh install of Karmic.</li>
@@ -60,7 +57,6 @@ I was in Barcelona attending the Ubuntu Developer Summit for the next release, K
 <li>There are lots of street musicians, especially around the touristy parts, like Parc Güell. A good number of them were pretty good; then there were these subset who make the strangest noises with their mouths... they sound like irritating birds or something :-)</li>
 <li>The whole philosophy of <a href="http://en.wikipedia.org/wiki/Tapas">tapas</a> seems like a much better way to do dinner than what we do here in the States. I much enjoyed the various tapas bars, especially the night of the game, out with the GNOMEites.</li>
 </ul>
-
 <a href="http://hortont.com/files/bcn-large/5.jpg"><img src="http://hortont.com/files/bcn-small/5.jpg"/></a>
 
 I probably have a lot more things to say, but I can't keep writing in this post! Too many words! I'll probably tell more stories as the days go on or something...

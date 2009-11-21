@@ -2,8 +2,6 @@
 
 So! Tonight I got all of the Expedite tests running. I haven't checked that they're all perfect, and there's some larger issues with the program (it draws the icon for the currently selected test really large in the upper right corner, sometimes the text disappears, or the menu forgets to disappear - not sure why); it's nice at least to have all of the tests starting. So! Pictures and notes follow...
 
-<!--more-->
-
 <a href="http://hortont.com/files/expediteshots/2.png"><img src="http://hortont.com/files/expediteshots/2.png" width="75%" /></a>
 
 You can see the icon thing I was talking about in the top right hand corner. Other than that, this test works well (at least, it does now that I've turned <a href="http://developer.apple.com/technotes/tn2005/tn2133.html">CGContextFlush(...) coalescing</a> off). Coalescing CGContextFlush is a per-application setting (you set <strong>CGDisableCoalescedUpdates</strong> to <i>true</i> in the application's Info.plist). I'm convinced this is a good thing, because it seems like a good idea for general applications, to prevent tearing, but it's nice to be able to turn it off, for <a href="http://www.xbench.com/">benchmarking applications</a> and the like.
