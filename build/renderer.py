@@ -21,6 +21,7 @@ def readFileContents(fn):
     return fileContents
 
 def resolveCategoryList(cats):
+    cats.sort()
     return [("<a href='" + w("topics/" + categoryURLFromName(cat)) + "'>" + categoryDisplayName(cat) + "</a>") for cat in cats]
 
 def joinCategoryList(cats):
