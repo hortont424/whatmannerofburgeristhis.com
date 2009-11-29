@@ -1,0 +1,3 @@
+My good friend and roommate Matt Arsenault has just pushed the initial (0.1) release of his <a href="http://hackage.haskell.org/package/clutterhs">Clutter bindings for Haskell</a>. This was his <a href="http://hortont.com/blog/posts/2009/11/11/084020.html">RCOS</a> project for this semester.
+
+Anyway, if you speak Haskell and enjoy Clutter, download them and see what you can do! He's looking for lots of input for the next steps, so please have at it...
