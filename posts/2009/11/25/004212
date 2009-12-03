@@ -15,7 +15,7 @@ The general flow of photos from the D80 to Final Cut follows something like the 
         </ul>
     </li>
     <li><strong>b)</strong> The photo is taken, saved to the SD card, then immediately copied to the 160GB hard drive (by <pre>gphoto2</pre>) and deleted from the camera.</li>
-    <li><strong>c)</strong> Cron runs a script every hour that <pre>rsync</pre>s the photos to a large (2TB) pool of storage on Jayne (I manually check occasionally to make sure that the 160GB drive isn't running out of space, and remove the uncopied pictures when it is; I haven't made this automatic simply as an extra layer of backup in case something goes bad).
+    <li><strong>c)</strong> Cron runs a script every hour that <pre>rsync</pre>s the photos to a large (2TB) pool of storage on Jayne (I manually check occasionally to make sure that the 160GB drive isn't running out of space, and remove the copied pictures when it is; I haven't made this automatic simply as an extra layer of backup in case something goes bad).
         <ul type="none">
             <li><pre>rsync -a /home/hortont/timelapse jayne.hortont.com:Backups/</pre></li>
         </ul>
