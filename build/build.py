@@ -12,6 +12,32 @@ def generatePostList(type):
                 posts.append(f)
     return posts
 
+def buildBackwardsCompatibilityLinks(type):
+    posts = {}
+    for root, dirs, files in os.walk(type):
+        for filename in files:
+            f = os.path.join(root, filename)
+            if not f.endswith(".control"):
+                continue
+            
+            metadata = json.loads(readFileContents(f), encoding='utf-8')
+            
+            if "post-name" not in metadata:
+                continue
+            
+            ourDate = datetime.datetime.strptime(metadata["date"], "%Y.%m.%d %H:%M:%S").strftime("%Y/%m") # TODO: fixed slash
+            outputFolder = os.path.join("output", ourDate, metadata["post-name"])
+            
+            if not os.path.exists(outputFolder):
+                os.makedirs(outputFolder)
+            
+            outputFile = os.path.join(outputFolder, ".htaccess")
+            realURL = os.path.join(www_prefix, "posts", filename.replace(".control", ".html").replace("posts" + "/", ""))
+            htaccessContents = "RewriteEngine on\n" + "RewriteRule ^.*$ " + realURL + "\n"
+            out = codecs.open(outputFile, mode="w+")
+            out.write(htaccessContents)
+            out.close()
+
 def generateCategoryMap(type):
     posts = {}
     for root, dirs, files in os.walk(type):
