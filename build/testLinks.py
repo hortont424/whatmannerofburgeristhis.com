@@ -18,11 +18,10 @@ def urlResponseCode(url):
         try:
             return e.code
         except AttributeError, f:
-            print e
-            return None
+            return None # mailto, js, etc.
     except ValueError, e:
         #print "Unknown URL type:", url
-        return None
+        return None # relative URLs. might be good to fix at some point
     return None
 
 def testLinks():
@@ -38,6 +37,6 @@ def testLinks():
                 link = a['href']
                 rc = urlResponseCode(link)
                 if rc:
-                    print rc, BaseHTTPRequestHandler.responses[rc][0],"-",link
+                    print link, rc, f
 
 testLinks()
