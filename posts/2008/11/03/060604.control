@@ -18,12 +18,12 @@
         }, 
         {
             "content": "No, actually, it's written using JavaScript! That's what's so cool about our code - it lets you use all of the powerful libraries, like WebKit, from a really friendly language - JavaScript!", 
-            "authorURL": "http://apad.sytes.net", 
+            "authorURL": "http://hortont.com", 
             "author": "Tim"
         }, 
         {
             "content": "Quite entirely! That little browser (lacking many features, for sure) is 155 lines of Javascript: http://svn.gnome.org/viewvc/seed/trunk/examples/mini-browser.js?view=markup\n\nAlso, we have a page at the GNOME Wiki detailing what we're working on: http://live.gnome.org/Seed", 
-            "authorURL": "http://apad.sytes.net", 
+            "authorURL": "http://hortont.com", 
             "author": "Tim"
         }, 
         {

@@ -4,7 +4,7 @@ Anyway - I decided to move things into a <a href="http://bazaar-vcs.org/">bazaar
 
 The repository is accessible through a loggerhead web interface, at:
 
-<a href="http://hortont.com/bzr">http://hortont.com/bzr</a>
+http://hortont.com/bzr
 
 If you have SSH access to Jayne, you can use:
 
@@ -19,3 +19,5 @@ If you don't have SSH access, you can check out projects with:
 Anyway... have fun!
 
 P.S. You might want to <a href="http://bazaar-vcs.org/Download">update</a> your bzr install. I use rich root, for the bzr-svn stuff (WebKit, nano), so you need a recent version. I'm not even sure the bzr that shipped with Intrepid is new enough.
+
+<strong>EDIT:</strong> This is no longer true; I've moved some things to <a href="http://jayne.hortont.com/git">Git</a>, which is how I'm storing everything from here on out.
