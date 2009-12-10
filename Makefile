@@ -32,4 +32,7 @@ copy-data:
 	cp -r styles output/styles
 	cp -r scripts output/scripts
 
+check-links:
+	python2.6 ./build/testLinks.py
+
 .PHONY: build-posts build-static build-archive all clean copy-data
