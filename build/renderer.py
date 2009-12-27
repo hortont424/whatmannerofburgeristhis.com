@@ -59,6 +59,9 @@ def renderPost(f, template, rss=False):
     if "guid" not in metadata:
         metadata["guid"] = metadata["url"]
     
+    if "noChrome" not in metadata:
+        metadata["noChrome"] = 0
+    
     try:
         comments = metadata["comments"]
     except:
