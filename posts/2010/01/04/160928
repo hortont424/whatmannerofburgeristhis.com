@@ -19,3 +19,5 @@ I should also note that all tests were done on the 2.4 GHz Core 2 Duo T7700 in m
 One more for your viewing pleasure (this is a zoom <em>quite</em> deep into the set, <a href="http://commons.wikimedia.org/wiki/File:Mandel_zoom_14_satellite_julia_island.jpg">Wikipedia copy</a>):
 
 <img src="http://www.hortont.com/files/compilermandelbrot2.png" />
+
+<strong>NOTE:</strong> Dad suggested that the 2x speedup might be due to autoparallelization or some such. However, luckily for my benchmark, this is not the case, as the program already takes advantage of both cores (spawning 10 threads each generating a tenth of the image), and manages to consume ~197% of the total CPU time (across two cores) over its lifetime.
