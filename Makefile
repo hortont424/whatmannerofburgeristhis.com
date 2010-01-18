@@ -30,7 +30,6 @@ new-post:
 copy-data:
 	cp -r images output/images
 	cp -r styles output/styles
-	cp -r scripts output/scripts
 
 check-links:
 	python2.6 ./build/testLinks.py
