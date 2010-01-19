@@ -35,8 +35,8 @@ def renderPost(f, template, rss=False):
     contents = readFileContents(f.replace(".control",""))
     contents = re.sub('\n\s*\n', "<br/><br/>", contents)
     
-    if template == "":
-        template = metadata["template"]
+    if "template" not in metadata:
+        metadata["template"] = template
     
     try:
         metadata["categories"] = joinCategoryList(resolveCategoryList(metadata["categories"]))
@@ -75,7 +75,7 @@ def renderPost(f, template, rss=False):
         postfix = "xml"
         doctype = None
     
-    tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
+    tmpl = loader.load(metadata["template"] + '.' + postfix, encoding='utf-8')
     return tmpl.generate(post=metadata,
                          baseurl=www_prefix,
                          blogurl=blog_prefix).render(postfix, doctype=doctype)
