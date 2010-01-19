@@ -15,3 +15,37 @@ td.post
 {
     opacity: 1.0 !important;
 }
+
+a.nav
+{
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-shadow: #edeceb 0px 0px 8px;
+}
+
+a.nav:hover
+{
+    color: #666;
+}
+
+div.navwrapperl
+{
+    position: fixed;
+    left: 8px;
+    bottom: 5px;
+}
+
+div.navwrapperr
+{
+    position: fixed;
+    right: 8px;
+    bottom: 5px;
+}
+
+p.commentLink
+{
+    text-align: right;
+    font-weight: bold;
+}

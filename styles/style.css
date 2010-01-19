@@ -42,16 +42,6 @@ li
 	padding-bottom: 0.6em;
 }
 
-div.postActions
-{
-	text-align: right;
-}
-
-div.attachments
-{
-	display: none;
-}
-
 #posts
 {
 	width: 100%;
@@ -96,35 +86,6 @@ div.button:hover
 td.button
 {
     width: 100px;
-}
-
-a.nav
-{
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 2em;
-    text-shadow: #000 0px 0px 8px;
-}
-
-div.navwrapperl
-{
-    position: fixed;
-    left: 8px;
-    bottom: 5px;
-}
-
-div.navwrapperr
-{
-    position: fixed;
-    right: 8px;
-    bottom: 5px;
-}
-
-p.commentLink
-{
-    text-align: right;
-    font-weight: bold;
 }
 
 div.hr
