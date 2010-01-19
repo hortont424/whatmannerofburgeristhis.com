@@ -2,7 +2,6 @@
     "pubDate": "Fri, 08 Aug 2008 20:04:42", 
     "guid": "http://apad.sytes.net/blog/?p=57", 
     "author": "Tim", 
-    "template": "single-column", 
     "title": "Evas_Quartz Leak Hunting", 
     "date": "2008.08.08 20:04:42", 
     "post-name": "evas_quartz-leak-hunting", 

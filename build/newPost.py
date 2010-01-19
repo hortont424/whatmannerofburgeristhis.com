@@ -13,7 +13,6 @@ import settings
 
 controlTemplate = """{
     "author": "Tim",
-    "template": "single-column",
     "title": "",
     "date": "%(y)04d.%(m)02d.%(d)02d %(hr)02d:%(min)02d:%(sec)02d",
     "categories": [
