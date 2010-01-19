@@ -9,7 +9,16 @@
   </head>
   <body class="index">
     <xi:include href="button-bar.html" />
-    
-    ${Markup(post.content)}
+    <table id="posts" border="0" width="100%">
+        <tr align="center">
+            <td></td>
+            <td class="post"><div class="postContent">
+                ${Markup(post.content)}
+            </div></td>
+            <td></td>
+        </tr>
+    </table>
   </body>
 </html>
+
+

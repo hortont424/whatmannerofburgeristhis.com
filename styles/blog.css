@@ -10,3 +10,8 @@ td.post
     font-weight: bold;
     margin-bottom: 15px;
 }
+
+#blog
+{
+    opacity: 1.0 !important;
+}
