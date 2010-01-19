@@ -13,7 +13,7 @@
     "comments": [
         {
             "content": "Annnnddddd.... http://bugzilla.gnome.org/show_bug.cgi?id=588394\n\nShould be set! (hasn't appeared yet, but I assume it's all updated once a day or something...)", 
-            "authorURL": "http://www.hortont.com", 
+            "authorURL": "http://hortont.com/blog", 
             "author": "hortont"
         }, 
         {
@@ -23,7 +23,7 @@
         }, 
         {
             "content": "bkor: That is indeed accurate :-) I'm fairly sure racarr had a reason for not uploading to library during the 0.7-ish release cycle (something about upload being broken or dreadfully slow or something), but if you point me towards instructions (I haven't found any), I'll push it up there now.", 
-            "authorURL": "http://www.hortont.com", 
+            "authorURL": "http://hortont.com/blog", 
             "author": "hortont"
         }, 
         {
@@ -33,7 +33,7 @@
         }, 
         {
             "content": "Tom: I just emailed racarr, who was working on the Seed port of gnome-shell. I'm fairly confident it's in a nearly-working state, but I'll let you know when he gets back to me. I would really like to see a solution to the two-JS-bindings issue, eventually, but for now we'll coexist in a friendly manner :-)", 
-            "authorURL": "http://www.hortont.com", 
+            "authorURL": "http://hortont.com/blog", 
             "author": "hortont"
         }
     ]

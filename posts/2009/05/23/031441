@@ -5,9 +5,7 @@ Anyway; the Lights Off tiles from the <a href="http://www.vimeo.com/2318879">vid
 In any case, I'm not sure what to use! I'm pretty sure I'm going to have a few swappable themes, but I don't know what to use as the default... or even if either of these were the best <em>we</em> can do. In the meantime, I figured I'd let you guys vote between the two, and if you have any ideas for improvement (or, even better, SVGs!), <a href="mailto:hortont424@gmail.com">send me a note</a>!
 
 Newer style is on the left, the originals (from January) are on the right. Click away (your last vote is the one that counts, and voting is immediate when you click the link)!
-<map name="vote">
-<area shape="rect" coords="0,0,300,400" href="http://www.hortont.com/votea.pl">
-<area shape="rect" coords="300,0,600,400" href="http://www.hortont.com/voteb.pl">
-</map>
 
-<img usemap="#vote" src="http://www.hortont.com/files/lovote.png">
+<img src="http://hortont.com/files/lovote.png">
+
+[Ed.: voting is closed]

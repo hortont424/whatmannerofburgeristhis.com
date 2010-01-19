@@ -1,4 +1,4 @@
-So! I recently realized that <a href="http://www.hortont.com/dump/">the dump</a> probably wasn't the best way to share code. Actually, that's not a recent realization... I just finally got around to doing something about it.
+So! I recently realized that <a href="http://hortont.com/dump/">the dump</a> probably wasn't the best way to share code. Actually, that's not a recent realization... I just finally got around to doing something about it.
 
 Anyway - I decided to move things into a <a href="http://bazaar-vcs.org/">bazaar</a> repository. There's some code there already, and I've been actively using it for stuff I'm working on now (which I'll write about later). Also, a bzr copy of WebKit, because Robb had forgotten about git://git.webkit.org/WebKit.git, and wanted a DVCS copy of WebKit to help him out... it took quite a few <em>days</em> to generate, so I'm going to leave it there (and keep it up to date).
 

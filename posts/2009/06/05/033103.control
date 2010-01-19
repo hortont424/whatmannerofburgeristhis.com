@@ -28,12 +28,12 @@
         }, 
         {
             "content": "Hans: Definitely not stable, but hopefully that will change! A cursory glance at the source of gnibbles suggests that it uses standard GtkMenu bits; if I remember tomorrow I'll install gnome2-globalmenu on my machine and test it out and let Guillaume know what's up.", 
-            "authorURL": "http://www.hortont.com", 
+            "authorURL": "http://hortont.com/blog", 
             "author": "hortont"
         }, 
         {
             "content": "Vadim: at the moment, no, they're actually the same exact package :-P\n\njef: I haven't! I'll have to take a look, but I really don't want to spend too much time on packaging (my job is to write games!), and Launchpad is quite convenient...", 
-            "authorURL": "http://www.hortont.com", 
+            "authorURL": "http://hortont.com/blog", 
             "author": "hortont"
         }, 
         {
