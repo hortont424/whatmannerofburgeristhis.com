@@ -5,7 +5,8 @@ td.post
 
 #catTitle
 {
-    color: #fff;
+    color: #222;
     text-align: center;
+    font-weight: bold;
     margin-bottom: 15px;
 }
