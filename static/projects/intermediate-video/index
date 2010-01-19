@@ -1,3 +1,9 @@
+<style>
+#projects
+{
+    opacity: 1.0 !important;
+}
+</style>
 <h1>Intermediate Video</h1>
 <p>
 During first semester of junior year, I took Intermediate Video with Chris Skinner. Over the course of four months, we had three large video projects to design and produce &mdash; two were to be originals, and one was to be a reproduction of something from Hollywood.

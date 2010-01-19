@@ -10,7 +10,7 @@ a.project
 </style>
 <h1>Code</h1>
 <p>
-<a class="project" href="#">libseed</a> &mdash; JavaScript bindings for the Gnome platform<br/>
+<a class="project" href="seed/">libseed</a> &mdash; JavaScript bindings for the Gnome platform<br/>
 <a class="project" href="#">hortont.com</a> &mdash; the array of Python scripts which generate this website<br/>
 <a class="project" href="#">Gnome Games</a> &mdash; Clutter-based Seed ports of Lights Off, Same Gnome, and Mines<br/>
 <a class="project" href="#">Epiphany Extensions</a> &mdash; a variety of Epiphany 2.28+ extensions, in Seed<br/>
