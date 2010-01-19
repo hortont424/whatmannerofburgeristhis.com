@@ -1,0 +1,16 @@
+<style>
+#projects
+{
+    opacity: 1.0 !important;
+}
+</style>
+<h1>hortont.com</h1>
+<p>
+<strong><a href="http://github.com/hortont424/hortont.com">Source Code</a></strong>
+
+Sometime during Fall '09, I became somewhat angry at WordPress; updates (necessary for "security") kept breaking my theme, and I was having other sorts of unpleasant issues. A few months earlier I had read Brent Simmons' blog post on his <a href="http://inessential.com/2009/01/30/new_publishing_system_tour_of_my_head">new publishing system</a> for <a href="http://inessential.com">Inessential</a> and <a href="http://ranchero.com/">Ranchero</a>, and had at the time quite enjoyed the thought of a completely static publishing system. Between coming completely under my control and having no <em>reason</em> for security updates (how do you exploit a static site?), it was becoming an increasingly attractive solution.
+
+So, I set out to write my new blog software. It's all written in Python, and backed by Git. It's not particularly unique or interesting, but it is <em>mine</em>, and behaves in the way that I expect it to, which is a nice change...
+
+It currently takes just over three seconds to rebuild the whole site from scratch, which includes about 500 generated files. It uses Genshi for templating, too, providing a nice way to abstract away stuff I don't want to see or duplicate.
+</p>
