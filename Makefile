@@ -1,6 +1,6 @@
 # hortont.com build system
 
-all: clean unclean build-static build-posts build-archive build-rss build-everything copy-data
+all: clean unclean copy-data build-static build-posts build-archive build-rss build-everything
 
 clean:
 	rm -rf output
