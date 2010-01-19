@@ -1,4 +1,4 @@
-I've recently been merging a few different music libraries together into my iTunes library on my laptop, so I was interested to see what sort of growth my library's had, over time. I whipped up a quick Perl script (which you can grab yourself, <a href="http://hortont.com/files/musicdates.perl">here</a> - though you'll definitely have to modify it to work on Windows). I plotted the data from <em>my</em>&nbsp;library with Mathematica, and got this:
+I've recently been merging a few different music libraries together into my iTunes library on my laptop, so I was interested to see what sort of growth my library's had, over time. I whipped up a quick Perl script (which you can grab yourself, <a href="http://hortont.com/files/musicdates.perl">here</a> &mdash; though you'll definitely have to modify it to work on Windows). I plotted the data from <em>my</em>&nbsp;library with Mathematica, and got this:
 
 <a href="http://hortont.com/files/timlibrary.png"><img src="http://hortont.com/files/timlibrary.png" alt="" width="75%" /></a>
 

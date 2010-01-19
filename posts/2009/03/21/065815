@@ -1,4 +1,4 @@
-I spent a bit of time trying to get the Intervalometer working, after Dad and I carved up the case while I was home. The board is really a mess; unsoldering the posts I put on from before turned into a real mess, so that's not going too well. We'll see - in any case, I put that off for a day when I'm not soldering at 1AM.
+I spent a bit of time trying to get the Intervalometer working, after Dad and I carved up the case while I was home. The board is really a mess; unsoldering the posts I put on from before turned into a real mess, so that's not going too well. We'll see &mdash; in any case, I put that off for a day when I'm not soldering at 1AM.
 
 Instead, I got angry at the amount of crap required to get a standalone ATmega working (and programmable) on a breadboard. Even though it's only a handful of components (3) and wires (a bunch), the most annoying part is getting the ICSP cable attached. Right now, I've been just poking wires into the cable, which is annoying because there's no way to unplug it without looking up what goes where, again and again... very annoying.
 

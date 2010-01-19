@@ -90,7 +90,7 @@ Stuff in the gnome-games repo hasn't been pushed yet (just got home from NY, fig
 
 * Theme names are pretty printed now, not just the name of their directory.
 
-* Keyboard-based play (use the arrow keys and enter) - move around a small glowing dot, and play without the mouse. It's not fun, but I saw it somewhere else -- Same, maybe? So it seemed like a good thing to have. Accessibility in games? I'm not sure.
+* Keyboard-based play (use the arrow keys and enter) &mdash; move around a small glowing dot, and play without the mouse. It's not fun, but I saw it somewhere else &mdash; Same, maybe? So it seemed like a good thing to have. Accessibility in games? I'm not sure.
 
 * GConf schema for LO prefs! Whoops; this one should have happened a long time ago.
 

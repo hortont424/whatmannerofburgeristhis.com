@@ -2,7 +2,7 @@ Today marked the final day of this year's Google Summer of Code! It's been a goo
 
 <strong>Future in GSoC</strong>
 
-I've decided that this is my last year participating in GSoC as a student; I had a great deal of fun both years, but I guess it's time to give others a chance, and I really don't like working on open-source with a definite <em>deadline</em>... it's more of a hobby to me than a "job", and I'd like to keep it that way for now - at least as long as I'm sitting at home/school; I think things would work a lot better if I had to go <em>into</em> work instead of working from somewhere where I'm comfortable/easily distracted. I guess a lot of people run into that problem...
+I've decided that this is my last year participating in GSoC as a student; I had a great deal of fun both years, but I guess it's time to give others a chance, and I really don't like working on open-source with a definite <em>deadline</em>... it's more of a hobby to me than a "job", and I'd like to keep it that way for now &mdash; at least as long as I'm sitting at home/school; I think things would work a lot better if I had to go <em>into</em> work instead of working from somewhere where I'm comfortable/easily distracted. I guess a lot of people run into that problem...
 
 Anyway; though I'm not going to participate as a student next year, I'd absolutely <em>love</em> to help out or mentor/co-mentor someone working on a GNOME-related (especially games, or Clutter, or Seed) next year. I think that would be great fun! But that's a good ways away now...
 
@@ -13,10 +13,10 @@ Also: be sure not to take any of the above to suggest that I'm leaving; far from
 It seems the general consensus is that my three games (lightsoff, same-gnome-clutter, and gnomines-clutter) will be moved to the "normal" section of GNOME Games (versus the "staging" section in which they currently reside) in master as soon as 2.28 is branched, and will ship with 2.30.
 
 <ul>
-<li><strong>seed</strong> — I was more or less <em>the</em> active Seed maintainer during the majority of the summer, so this involved a lot of releases, patches, and bugs. I wrote a <em>lot</em> of documentation over the course of GSoC.</li>
-<li><strong>lightsoff</strong> — I completely rewrote Lights Off during the GSoC period, and created the entirety of the surrounding UI. It's 99% of the way there; it needs documentation and one preference to be removed (or made functional). The new version has theming, and is much more attractive and less buggy than v.1 or v.2.</li>
-<li><strong>same-gnome-clutter</strong> — Lots of updates and reorganization, as well as a bunch of preferences. And theming! (though there are no other themes, at the moment)</li>
-<li><strong>gnomines-clutter</strong> — Started an initial implementation, using things I've learned over the course of writing and rewriting the other two games. It has a very preliminary Clutter UI, but the game is theoretically playable.</li>
+<li><strong>seed</strong> &mdash; I was more or less <em>the</em> active Seed maintainer during the majority of the summer, so this involved a lot of releases, patches, and bugs. I wrote a <em>lot</em> of documentation over the course of GSoC.</li>
+<li><strong>lightsoff</strong> &mdash; I completely rewrote Lights Off during the GSoC period, and created the entirety of the surrounding UI. It's 99% of the way there; it needs documentation and one preference to be removed (or made functional). The new version has theming, and is much more attractive and less buggy than v.1 or v.2.</li>
+<li><strong>same-gnome-clutter</strong> &mdash; Lots of updates and reorganization, as well as a bunch of preferences. And theming! (though there are no other themes, at the moment)</li>
+<li><strong>gnomines-clutter</strong> &mdash; Started an initial implementation, using things I've learned over the course of writing and rewriting the other two games. It has a very preliminary Clutter UI, but the game is theoretically playable.</li>
 </ul>
 Overall, I'm very happy with the games as they stand... I'm a little iffy about the performance of same-gnome-clutter, but I think I might know how to fix that. There's still a lot of work to do (saving high-scores still doesn't work, but I put that aside to work on gnomines-clutter so I would have something to show by the end of the project).
 

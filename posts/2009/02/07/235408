@@ -1,6 +1,6 @@
 For <a href="http://litec.rpi.edu">LITEC</a>, each group has a C8051F02x development board attached to a car (and later, to the RPI blimps). The course only includes instructions and support for people using the SiLabs IDE within Windows (it doesn't exist for Linux or OS X), which greatly disappointed Andrew and I when we started the class a few weeks ago.
 
-Andrew spent a good bit of time fiddling with things in Linux before - a few days ago - he finally got it working! It turns out there are Linux drivers and support software for the SiLabs EC2 debug adapter which we use to download code to the chip (and run it, debug it, etc.)... and the Small Device C Compiler is even in APT! (sdcc-nf is the package including the non-free components which I believe we determined we need).
+Andrew spent a good bit of time fiddling with things in Linux before &mdash; a few days ago &mdash; he finally got it working! It turns out there are Linux drivers and support software for the SiLabs EC2 debug adapter which we use to download code to the chip (and run it, debug it, etc.)... and the Small Device C Compiler is even in APT! (sdcc-nf is the package including the non-free components which I believe we determined we need).
 
 So... there's a brief set of instructions to get compilation and downloading working, after the jump!
 <ul>

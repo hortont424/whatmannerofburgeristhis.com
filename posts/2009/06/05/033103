@@ -2,11 +2,11 @@ During one of my first conversations with my <a href="http://socghop.appspot.com
 
 So, this week, I went ahead and created the <a href="https://launchpad.net/~gnome-games-experimental/+archive/ppa">gnome-games-experimental</a> PPA. It currently contains all of the dependencies for my branch of Gnome Games (including WebKit, seed, gobject-introspection, and Clutter), as well as a build of Gnome Games itself. This build includes three branches:
 
-<strong>gsoc-seed-games</strong> - my ports of Same Gnome and Mines to Clutter+Seed, and a new game, Lights Off
+<strong>gsoc-seed-games</strong> &mdash; my ports of Same Gnome and Mines to Clutter+Seed, and a new game, Lights Off
 
-<strong>gnibbles-clutter</strong> - <a href="http://damino.ca/">Guillaume Beland</a>'s port of Gnibbles to the Clutter canvas
+<strong>gnibbles-clutter</strong> &mdash; <a href="http://damino.ca/">Guillaume Beland</a>'s port of Gnibbles to the Clutter canvas
 
-<strong>sudoku-tube</strong> - <a href="http://blog.zhangsen.org/">Zhang Sen</a>'s implementation of joint Sudoku games over Telepathy tubes
+<strong>sudoku-tube</strong> &mdash; <a href="http://blog.zhangsen.org/">Zhang Sen</a>'s implementation of joint Sudoku games over Telepathy tubes
 
 Keep in mind that we've only been coding for a <em>week and a half</em>, so if you go ahead and try out the PPA today, expect to see very little working, and within what <em>works</em>, lots of horribleness (I personally know of numerous gigantic animation bugs in Lights Off that you'll get to experience!). However, if you <em>do</em> decide to jump onto the cutting edge, you can feel awesome about yourself for helping us out, and you'll also get to play with the finished products <em>long</em> before anyone else.
 
