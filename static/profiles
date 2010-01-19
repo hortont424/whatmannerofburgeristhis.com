@@ -1,0 +1,61 @@
+<style>
+#profiles
+{
+    opacity: 1.0 !important;
+}
+#profile
+{
+    color: #999;
+    font-size: 1.5em;
+    text-align: left;
+    margin: 0px auto;
+    border: 0px;
+    width: 600px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+tr.item
+{
+    border: 0px solid #444;
+}
+tr.spacer
+{
+    height: 30px;
+}
+#profile td
+{
+    padding: 10px;
+}
+td.title
+{
+    font-size: 20pt;
+    text-align: right;
+    border-right: 1px solid #ccc;
+    width: 40%;
+}
+td.link
+{
+    width: 60%;
+}
+td.link a
+{
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dashed #555;
+}
+td.link a:hover
+{
+    color: #777;
+}
+</style>
+<table id="profile">
+<tr class="item"><td class="title">Facebook</td><td class="link"><a href="http://www.facebook.com/hortont">hortont</a></td></tr>
+<tr class="item"><td class="title">Last.fm</td><td class="link"><a href="http://www.last.fm/user/hortont424/">hortont424</a> / <a href="http://www.last.fm/user/davison303">davison303</a></td></tr>
+<tr class="item"><td class="title">Wikipedia</td><td class="link"><a href="http://en.wikipedia.org/wiki/User:Hortont424">hortont424</a></td></tr>
+<tr class="item"><td class="title">Flickr</td><td class="link"><a href="http://flickr.com/photos/hortont">hortont</a></td></tr>
+<tr class="item"><td class="title">reddit</td><td class="link"><a href="http://www.reddit.com/user/hortont424/">hortont424</a></td></tr>
+<tr class="item"><td class="title">GitHub</td><td class="link"><a href="http://github.com/hortont424/">hortont424</a></td></tr>
+<tr class="item"><td class="title">Launchpad</td><td class="link"><a href="http://launchpad.net/~hortont">hortont</a></td></tr>
+<tr class="item"><td class="title">GNOME</td><td class="link"><a href="http://cia.vc/stats/author/hortont">hortont</a> / <a href="http://live.gnome.org/TimHorton">TimHorton</a></td></tr>
+<tr class="item"><td class="title">Steam</td><td class="link"><a href="http://steamcommunity.com/id/hortont424">hortont424</a></td></tr>
+</table>
