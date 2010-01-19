@@ -33,17 +33,17 @@
     <py:if test="previousPage != ''"><div class="navwrapperr"><a class="nav" href="${previousPage}" title="Newer Posts">&rarr;</a></div></py:if>
     
     <table id="posts" border="0" width="100%">
+    <py:if test="showTitle">
     <tr>
         <td></td>
         <td class="post">
-        <py:if test="showTitle">
             <div id="catTitle">
                 ${Markup(title)}
             </div>
-        </py:if>
         </td>
         <td></td>
     </tr>
+    </py:if>
     <!--<tr>
         <td></td>
         <td class="post">
