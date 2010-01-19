@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="${baseurl}styles/highlight.css" type="text/css" />
+    <link rel="stylesheet" href="${baseurl}styles/style.css" type="text/css" />
+    <title>${Markup(post.title)}</title>
+    <style>
+    body
+    {
+        text-align: center;
+    }
+    #container
+    {
+        position: absolute;
+        top: 50%;
+        margin-top: -198px;
+        left: 50%;
+        margin-left: -338px;
+        height: 395px;
+        width: 675px;
+    }
+    div.bigbutton
+    {
+        width: 245px;
+        height: 115px;
+        margin: 0px 6px;
+        cursor: pointer;
+        float: none !important;
+        display: inline-block;
+        opacity: 0.8;
+    }
+    div.bigbutton:hover
+    {
+        opacity: 1.0;
+    }
+    #footer
+    {
+        position: absolute;
+        top: 50%;
+        margin-top: 225px;
+        left: 50%;
+        margin-left: -275px;
+        height: 24px;
+        width: 550px;
+        color: #555;
+    }
+    #blog
+    {
+        background: transparent url(${baseurl}images/buttonbar/blog.png) -2px -2px no-repeat;
+    }
+    #archives
+    {
+        background: transparent url(${baseurl}images/buttonbar/archives.png) -2px -2px no-repeat;
+    }
+    #profiles
+    {
+        background: transparent url(${baseurl}images/buttonbar/profiles.png) -2px -2px no-repeat;
+    }
+    #about
+    {
+        background: transparent url(${baseurl}images/buttonbar/about.png) -2px -2px no-repeat;
+    }
+    #projects
+    {
+        background: transparent url(${baseurl}images/buttonbar/projects.png) -2px -2px no-repeat;
+    }
+    #planet
+    {
+        background: transparent url(${baseurl}images/buttonbar/planet.png) -2px -2px no-repeat;
+    }
+    </style>
+  </head>
+  <body class="index">
+      <div id="container">
+      <a href="${blogurl}"><div id="blog" title="My blog, full of code, pictures, and random thoughts!" class="bigbutton"></div></a>
+      <a href="${baseurl}projects"><div id="projects" title="Stuff that I've been working on..." class="bigbutton"></div></a><br/>
+      <a href="http://jayne.hortont.com/planet"><div id="planet" title="An aggregation of the blogs of everyone who has a blog and matters!" class="bigbutton"></div></a>
+      <a href="http://jayne.hortont.com/aperture"><div id="archives" title="An interactive browser for a library of over 10,000 photographs." class="bigbutton"></div></a><br/>
+      <a href="${baseurl}profiles.html"><div id="profiles" title="Links to my various homes across the internet." class="bigbutton"></div></a>
+      <a href="${baseurl}about.html"><div id="about" title="Why? Who? What?" class="bigbutton"></div></a>
+      </div>
+
+      <div id="footer">
+      &copy; 2010 &mdash; Tim Horton
+      </div>
+  </body>
+</html>
