@@ -1,0 +1,24 @@
+<style>
+#projects
+{
+    opacity: 1.0 !important;
+}
+a.project
+{
+    font-weight: bold;
+}
+</style>
+<h1>Code</h1>
+<p>
+<a class="project" href="#">libseed</a> &mdash; JavaScript bindings for the Gnome platform<br/>
+<a class="project" href="#">hortont.com</a> &mdash; the array of Python scripts which generate this website<br/>
+<a class="project" href="#">Gnome Games</a> &mdash; Clutter-based Seed ports of Lights Off, Same Gnome, and Mines<br/>
+<a class="project" href="#">Epiphany Extensions</a> &mdash; a variety of Epiphany 2.28+ extensions, in Seed<br/>
+<a class="project" href="#">Sheeple</a> &mdash; a Gtk+ contact management program, backed by evolution-data-server<br/>
+</p>
+<h1>Art</h1>
+<p>
+<a class="project" href="intermediate-video/">Intermediate Video</a> &mdash; three short video projects from my junior year video class<br/>
+<a class="project" href="#">APAD</a> &mdash; a photo a day for the entirety of 2007<br/>
+<a class="project" href="#">Aperture Archive</a> &mdash; web-based Aperture library tag browser<br/>
+</p>
