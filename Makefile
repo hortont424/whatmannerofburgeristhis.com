@@ -36,6 +36,6 @@ check-links:
 	python2.6 ./build/testLinks.py
 
 push:
-	ssh jayne.hortont.com "(cd /srv/share/private/hortont/hortont.com && git --git-dir=/srv/share/private/hortont/hortont.com/.git --work-tree=/srv/share/private/hortont/hortont.com pull ; make ; rsync -avz -e \"ssh -i /srv/share/private/hortont/.ssh/id_dsa_hortontcom\" /srv/share/private/hortont/hortont.com/output/ hortont.com:hortont.com/blog)"
+	ssh jayne.hortont.com "ssh-agent zsh -c '(ssh-add /srv/share/private/hortont/.ssh/id_dsa_hortontcom && cd /srv/share/private/hortont/hortont.com && git --git-dir=/srv/share/private/hortont/hortont.com/.git --work-tree=/srv/share/private/hortont/hortont.com pull ; make ; rsync -avz -e \"ssh -i /srv/share/private/hortont/.ssh/id_dsa_hortontcom\" /srv/share/private/hortont/hortont.com/output/ hortont.com:hortont.com/blog)'"
 
 .PHONY: build-posts build-static build-archive all clean copy-data push
