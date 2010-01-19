@@ -8,14 +8,14 @@ import codecs
 import string
 from renderer import *
 from build import *
-import settings
+from settings import *
 
 def paginate(posts):
     pages = []
     
     def _paginate(posts):
         if len(posts) > 0:
-            pages.append([renderPost(f, "archive-post") for f in posts[0:settings.page_size]])
+            pages.append([renderPost(f, "archive-post") for f in posts[0:page_size]])
             _paginate(posts[page_size:])
     
     _paginate(posts)
@@ -63,9 +63,9 @@ def generateArchive(posts, outputLocation, category=None):
 
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
-    generateArchive(generatePostList("posts"), os.path.join("output"))
+    generateArchive(generatePostList("posts"), os.path.join("output", blog_dir))
 
     categoryMap = generateCategoryMap("posts")
 
     for cat in categoryMap:
-        generateArchive(categoryMap[cat], os.path.join("output", "topics", settings.categoryURLFromName(cat)), cat)
+        generateArchive(categoryMap[cat], os.path.join("output", blog_dir, "topics", categoryURLFromName(cat)), cat)

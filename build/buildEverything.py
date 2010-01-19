@@ -8,7 +8,7 @@ import codecs
 import string
 from renderer import *
 from build import *
-import settings
+from settings import *
 
 def outputArchivePage(page, next, prev, category):
     outstr = ""
@@ -37,9 +37,9 @@ def generateArchive(posts, outputLocation, category=None):
 
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
-    generateArchive(generatePostList("posts"), os.path.join("output"))
+    generateArchive(generatePostList("posts"), os.path.join("output", blog_dir))
 
     categoryMap = generateCategoryMap("posts")
 
     for cat in categoryMap:
-        generateArchive(categoryMap[cat], os.path.join("output", "topics", settings.categoryURLFromName(cat)), cat)
+        generateArchive(categoryMap[cat], os.path.join("output", blog_dir, "topics", categoryURLFromName(cat)), cat)

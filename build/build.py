@@ -2,6 +2,7 @@ import os
 import sys
 import string
 from renderer import *
+from settings import *
 
 def generatePostList(type):
     posts = []
@@ -26,13 +27,13 @@ def buildBackwardsCompatibilityLinks(type):
                 continue
             
             ourDate = datetime.datetime.strptime(metadata["date"], "%Y.%m.%d %H:%M:%S").strftime("%Y/%m") # TODO: fixed slash
-            outputFolder = os.path.join("output", ourDate, metadata["post-name"])
+            outputFolder = os.path.join("output", blog_dir, ourDate, metadata["post-name"])
             
             if not os.path.exists(outputFolder):
                 os.makedirs(outputFolder)
             
             outputFile = os.path.join(outputFolder, ".htaccess")
-            realURL = os.path.join(www_prefix, "posts", f.replace(".control", ".html").replace("posts" + "/", ""))
+            realURL = os.path.join(blog_prefix, "posts", f.replace(".control", ".html").replace("posts" + "/", ""))
             htaccessContents = "RewriteEngine on\n" + "RewriteRule ^.*$ " + realURL + "\n"
             out = codecs.open(outputFile, mode="w+")
             out.write(htaccessContents)

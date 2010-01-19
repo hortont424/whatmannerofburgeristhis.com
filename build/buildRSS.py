@@ -8,7 +8,7 @@ import codecs
 import string
 from renderer import *
 from build import *
-import settings
+from settings import *
 
 htaccessContents = """RewriteEngine on
 RewriteRule ^.*$ rss.xml"""
@@ -16,7 +16,7 @@ RewriteRule ^.*$ rss.xml"""
 def generateRSSFeed(posts, outputFilename, category=None):
     posts.sort()
     posts.reverse()
-    posts = posts[0:settings.page_size]
+    posts = posts[0:page_size]
     
     output = ""
     
@@ -41,9 +41,9 @@ def generateRSSFeed(posts, outputFilename, category=None):
 
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
-    generateRSSFeed(generatePostList("posts"), os.path.join("output", "feed", "rss.xml"))
+    generateRSSFeed(generatePostList("posts"), os.path.join("output", blog_dir, "feed", "rss.xml"))
     
     categoryMap = generateCategoryMap("posts")
     
     for cat in categoryMap:
-        generateRSSFeed(categoryMap[cat], os.path.join("output", "topics", settings.categoryURLFromName(cat), "feed", "rss.xml"), cat)
+        generateRSSFeed(categoryMap[cat], os.path.join("output", blog_dir, "topics", categoryURLFromName(cat), "feed", "rss.xml"), cat)

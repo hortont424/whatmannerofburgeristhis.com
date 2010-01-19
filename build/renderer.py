@@ -22,7 +22,7 @@ def readFileContents(fn):
 
 def resolveCategoryList(cats):
     cats.sort()
-    return [("<a href='" + w("topics/" + categoryURLFromName(cat)) + "'>" + categoryDisplayName(cat) + "</a>") for cat in cats]
+    return [("<a href='" + os.path.join(blog_prefix, "topics/", categoryURLFromName(cat)) + "'>" + categoryDisplayName(cat) + "</a>") for cat in cats]
 
 def joinCategoryList(cats):
     if len(cats) <= 2:
@@ -47,7 +47,7 @@ def renderPost(f, template, rss=False):
     
     pubDate = metadata["date"]
     
-    metadata["url"] = w(f.replace(".control",".html"))
+    metadata["url"] = os.path.join(blog_prefix, f.replace(".control",".html"))
     metadata["id"] = re.sub("[^0-9]", "", metadata["date"])
     metadata["date"] = datetime.datetime.strptime(pubDate, "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
     
@@ -76,7 +76,9 @@ def renderPost(f, template, rss=False):
         doctype = None
     
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
-    return tmpl.generate(post=metadata, baseurl=www_prefix).render(postfix, doctype=doctype)
+    return tmpl.generate(post=metadata,
+                         baseurl=www_prefix,
+                         blogurl=blog_prefix).render(postfix, doctype=doctype)
 
 def renderArchive(c, template, next, prev, rss=False, category=None):
     postfix = doctype = "html"
@@ -92,13 +94,14 @@ def renderArchive(c, template, next, prev, rss=False, category=None):
     
     showTitle = (category != None)
     
-    rssurl = www_prefix + "/feed/rss.xml"
+    rssurl = blog_prefix + "/feed/rss.xml"
     if category:
-        rssurl = www_prefix + "/topics/" + category + "/feed/rss.xml"
+        rssurl = blog_prefix + "/topics/" + category + "/feed/rss.xml"
     
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(content=c.decode("utf-8","ignore"),
                          baseurl=www_prefix,
+                         blogurl=blog_prefix,
                          nextPage=next,
                          previousPage=prev,
                          buildDate=buildDate,

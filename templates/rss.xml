@@ -10,8 +10,8 @@
      xmlns:xi="http://www.w3.org/2001/XInclude">
     <channel>
     <title>${title}</title>
-    <atom:link href="${baseurl}/feed/" rel="self" type="application/rss+xml" />
-    <link>${baseurl}</link>
+    <atom:link href="${blogurl}feed/" rel="self" type="application/rss+xml" />
+    <link>${blogurl}</link>
     <description>code + craziness</description>
     <lastBuildDate>${buildDate}</lastBuildDate>
     <language>en</language>
