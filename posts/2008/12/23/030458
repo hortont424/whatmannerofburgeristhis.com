@@ -20,4 +20,4 @@ Anyway... have fun!
 
 P.S. You might want to <a href="http://bazaar-vcs.org/Download">update</a> your bzr install. I use rich root, for the bzr-svn stuff (WebKit, nano), so you need a recent version. I'm not even sure the bzr that shipped with Intrepid is new enough.
 
-<strong>EDIT:</strong> This is no longer true; I've moved some things to <a href="http://jayne.hortont.com/git">Git</a>, which is how I'm storing everything from here on out.
+<strong>EDIT:</strong> This is no longer true; I've moved some things to <a href="http://github.com/hortont424">Git</a>, which is how I'm storing everything from here on out.
