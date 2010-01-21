@@ -1,7 +1,7 @@
 # hortont.com build system
 
 .IGNORE:
-.SILENT:
+#.SILENT:
 
 baseurl=$(shell PYTHONPATH=build python2.6 -c 'import settings; print settings.www_prefix')
 
@@ -39,6 +39,7 @@ copy-data:
 	cp -r styles output/styles
 	
 	python2.6 ./build/substituteSettings.py output/styles
+	python2.6 ./build/cssmin.py output/styles
 
 check-links:
 	python2.6 ./build/testLinks.py
