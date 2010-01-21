@@ -1,6 +1,13 @@
 # hortont.com build system
 
+.IGNORE:
+.SILENT:
+
+baseurl=$(shell PYTHONPATH=build python2.6 -c 'import settings; print settings.www_prefix')
+
 all: clean unclean copy-data build-static build-posts build-archive build-rss build-everything
+	echo $(shell du -h -k -d 0 output | sed -e 's/\s*output//') total kilobytes
+	echo $(shell find output | wc -l | sed -e 's/^[ \t]*//') total files
 
 clean:
 	rm -rf output
@@ -30,6 +37,8 @@ new-post:
 copy-data:
 	cp -r images output/images
 	cp -r styles output/styles
+	
+	python2.6 ./build/substituteSettings.py output/styles
 
 check-links:
 	python2.6 ./build/testLinks.py

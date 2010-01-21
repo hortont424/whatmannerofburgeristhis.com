@@ -3,20 +3,10 @@
       xmlns:xi="http://www.w3.org/2001/XInclude">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="${baseurl}styles/highlight.css" type="text/css" />
     <link rel="stylesheet" href="${baseurl}styles/style.css" type="text/css" />
     <link rel="stylesheet" href="${baseurl}styles/blog.css" type="text/css" />
 
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="${rssurl}" />
-
-    <script type="text/javascript">
-        function searchBlog()
-        {
-            keys = document.getElementById("search").value;
-            window.location.href = "http://www.google.com/search?hl=en&amp;source=hp&amp;q=site%3Ahortont.com%2Fblog%2Fposts+" + keys + "&amp;aq=f&amp;oq=&amp;aqi=";
-            return false;
-        }
-    </script>
     
     <style>
         #blog
@@ -44,16 +34,6 @@
         <td></td>
     </tr>
     </py:if>
-    <!--<tr>
-        <td></td>
-        <td class="post">
-        <form style="margin-bottom: 15px; text-align: center;"
-              onSubmit="return searchBlog()">
-            <input class="search" name="search" id="search" type="text" style="width: 40%;" title="Search"/>
-        </form>
-        </td>
-        <td></td>
-    </tr>-->
     <tr>
         <td></td>
         <td class="post">${Markup(content)}</td>
