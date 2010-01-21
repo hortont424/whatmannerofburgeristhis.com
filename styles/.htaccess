@@ -1,0 +1,4 @@
+ExpiresActive on
+ExpiresDefault A3600
+ExpiresByType text/css A86400
+AddOutputFilterByType DEFLATE text/css
