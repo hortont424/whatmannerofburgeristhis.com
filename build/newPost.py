@@ -46,7 +46,7 @@ def createNewPost():
     touchFile(filename)
     writeFile(filename + ".control", controlFileData)
     os.system("git add " + os.path.dirname(filename))
-    os.system("mate " + os.path.dirname(filename))
+    os.system("$EDITOR " + os.path.dirname(filename))
 
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
