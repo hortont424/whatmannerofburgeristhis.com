@@ -5,7 +5,7 @@
 
 baseurl=$(shell PYTHONPATH=build python2.6 -c 'import settings; print settings.www_prefix')
 
-all: clean unclean copy-data build-static build-posts build-archive build-rss build-everything
+all: clean unclean copy-data build-parallel
 	python2.6 ./build/stats.py
 
 clean:
@@ -14,20 +14,17 @@ clean:
 unclean:
 	mkdir output
 
-build-posts:
+build-parallel:
+	./build/parallelBuild.sh
+
+all-serial: clean unclean copy-data
 	python2.6 ./build/buildPosts.py
-
-build-static:
 	python2.6 ./build/buildStatic.py
-
-build-archive:
 	python2.6 ./build/buildArchive.py
-
-build-rss:
 	python2.6 ./build/buildRSS.py
-
-build-everything:
 	python2.6 ./build/buildEverything.py
+	
+	python2.6 ./build/stats.py
 
 new-post:
 	python2.6 ./build/newPost.py
@@ -45,4 +42,4 @@ check-links:
 push:
 	ssh jayne.hortont.com "ssh-agent zsh -c '(ssh-add /srv/share/private/hortont/.ssh/id_dsa_hortontcom && cd /srv/share/private/hortont/hortont.com && git --git-dir=/srv/share/private/hortont/hortont.com/.git --work-tree=/srv/share/private/hortont/hortont.com pull ; make ; rsync -avz -e \"ssh -i /srv/share/private/hortont/.ssh/id_dsa_hortontcom\" /srv/share/private/hortont/hortont.com/output/ hortont.com:hortont.com)'"
 
-.PHONY: build-posts build-static build-archive all clean copy-data push
+.PHONY: all clean copy-data push all-serial
