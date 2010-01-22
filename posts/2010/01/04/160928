@@ -1,12 +1,12 @@
 About a year ago, I implemented a <a href="http://github.com/hortont424/mandelbrot/blob/master/mandelbrot.c">smooth-coloring Mandelbrot generator</a> in C on top of <a href="http://gmplib.org/">GMP</a> (for high precision and speed) and <a href="http://www.libgd.org/Main_Page">GD</a> (for image output). I spent a lot of time choosing GCC optimization options and hand-optimizing the code (let's play how-few-GMP-instructions-can-we-use), primarily as an exercise. It ended up <em>many</em> times faster than the original, and I eventually ran out of ideas and got bored with the optimization and set it down. It's still the most carefully crafted and most commented piece of code I've ever written, and produces output like this:
 
-<img src="http://hortont.com/files/compilermandelbrot.png" />
+<img src="http://files.hortont.com/compilermandelbrot.png" />
 
 I've been hearing a lot about <a href="http://software.intel.com/en-us/intel-compilers/">ICC</a>, the Intel C/C++ Compiler, recently &mdash; especially how much better it is at optimization of math-heavy routines when compared to GCC. I generally refused to believe people when they claimed 30-50% speedups, if only because it seemed like simple hyperbole.
 
 I downloaded an entire gigabyte worth of compiler (WHAT!) yesterday and set to do some tests using my Mandelbrot generator. I took some time to rebuild GD and GMP with each of my test compilers (ICC 11.1, GCC 4.2, LLVM-GCC 4.2, and GCC 4.5 &mdash; unfortunately I couldn't get GMP to build with <a href="http://clang.llvm.org/">clang</a>), and then sat around with the manuals correcting optimization and build arguments for each compiler. I then took the average of 10 runs of the program (all runs ended up being &plusmn;2% for any given compiler), and came up with the following:
 
-<img src="http://hortont.com/files/compilerbench.png" />
+<img src="http://files.hortont.com/compilerbench.png" />
 
 Holy <em>crap</em>... a <em>2x</em> speedup! Crazy crazy stuff! I realize that this is a completely unreasonable benchmark, performed under less than perfect benchmarking situations (though they were pretty good), and is not representative of "normal" code, and should not be used to pass judgement against any of the involved compilers, but it's relatively representative of the kind of code that I want to run <em>fast</em>. I've had long-running math-heavy programs in the past which I would have been <em>very</em> happy to have been able to speed up anywhere near 2x (in order to meet class project deadlines...)!
 
@@ -18,6 +18,6 @@ I should also note that all tests were done on the 2.4 GHz Core 2 Duo T7700 in m
 
 One more for your viewing pleasure (this is a zoom <em>quite</em> deep into the set, <a href="http://commons.wikimedia.org/wiki/File:Mandel_zoom_14_satellite_julia_island.jpg">Wikipedia copy</a>):
 
-<img src="http://hortont.com/files/compilermandelbrot2.png" />
+<img src="http://files.hortont.com/compilermandelbrot2.png" />
 
 <strong>NOTE:</strong> Dad suggested that the 2x speedup might be due to autoparallelization or some such. However, luckily for my benchmark, this is not the case, as the program already takes advantage of both cores (spawning 10 threads each generating a tenth of the image), and manages to consume ~197% of the total CPU time (across two cores) over its lifetime.

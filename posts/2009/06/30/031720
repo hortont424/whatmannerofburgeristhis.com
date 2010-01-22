@@ -9,7 +9,7 @@ So far:
 
 * I started (and got a good ways on) a much-cleaner and more-modern-seed rewrite of Lights Off. There's all kinds of awesome brokenness (mostly a result of airport coding practices) so I wouldn't suggest installing it at the moment.
 	(http://jayne.hortont.com/git/cgit.cgi/lightsoff3.git/)
-	(http://hortont.com/files/lo3.png)
+	(http://files.hortont.com/lo3.png)
 
 * I created a PPA for those of us working on GNOME Games to publish our work; I'm going to get introspection and Clutter and seed and whatever you guys need in there shortly, and once all that is working, I'm going to merge all of the GSoC GNOME Games branches, build a copy, and push it to the PPA (and wash, rinse, repeat, at least once a week). (if anyone has working debian packaging for the as-yet-unreleased gobject-introspection-0.6.3, let me know, I've been fighting with it all morning)
 	(https://launchpad.net/~gnome-games-experimental/+archive/ppa)

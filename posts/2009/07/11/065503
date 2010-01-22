@@ -4,11 +4,11 @@ The largest change in 0.8.5 is a massive reorganization of the documentation. I'
 
 Between 0.8 (I realize it says 0.7, someone forgot to update the source) and 0.8.5, we went from this:
 
-<img src="http://hortont.com/files/docs-before.PNG">
+<img src="http://files.hortont.com/docs-before.PNG">
 
 to this:
 
-<img src="http://hortont.com/files/docs-after.PNG">
+<img src="http://files.hortont.com/docs-after.PNG">
 
 As you can see, that's a pretty significant jump in structure. I've also decided to jump on the one-manual bandwagon, unless anyone objects, so I'm going to be updating and moving the tutorial into the manual, as well as constructing a Seed+Clutter tutorial (probably a walk-through of constructing a draft of one of my games, unless someone has a better idea). In addition, the runtime documentation (which covers using the JavaScript side of Seed) will be merged in (and is in dire need of updating).
 

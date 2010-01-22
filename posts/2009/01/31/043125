@@ -1,5 +1,5 @@
 Hey! Following <a href="http://blogs.gnome.org/racarr/2009/01/26/gpu-life/">Robb's</a> recent blog post about an implementation of Life as a GLSL shader, I now present to you a Mac OS X screensaver in the same style (using his shader and the original <a href="http://www.mikeash.com/?page=software/gpulife/">GPULife</a> source).
 
-<div style='text-align: center;'><img src="http://hortont.com/files/glslife.png" /></div>
-<a href="http://hortont.com/files/GLSLife.zip">Screensaver</a>
-<a href="http://hortont.com/files/GLSLife.src.zip">Source</a>
+<div style='text-align: center;'><img src="http://files.hortont.com/glslife.png" /></div>
+<a href="http://files.hortont.com/GLSLife.zip">Screensaver</a>
+<a href="http://files.hortont.com/GLSLife.src.zip">Source</a>

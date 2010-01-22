@@ -4,7 +4,7 @@ Instead, I got angry at the amount of crap required to get a standalone ATmega w
 
 So I sat down and started putting together a little gadget, based on one of the tiny little bits of protoboard I got from SparkFun. It's got a ICSP header, 16 MHz resonator, reset switch, and power LED, as well as the reset pullup resistor. There are 9 pins on the bottom (one more than optimal, really), in two rows (3 and 6) spaced at normal IC-spacing (0.2"?), so it drops right into a breadboard. Now, it's just 9 (optimally eight) wires to the ATmega, and you've got everything working great (except analog input, but that's just one or two more wires), and can easily remove the programmer without issue, and everything remaining is contained on the breadboard.
 
-<img src="http://hortont.com/files/minimega.jpg" width="100%"/>
+<img src="http://files.hortont.com/minimega.jpg" width="100%"/>
 
 It's not as elegant as the little board that slips over the ATmega that I saw on that Arduino blog a few months ago, because the protoboard I had wasn't wide enough to span all of the necessary pins. Perhaps revision 2!
 

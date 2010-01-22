@@ -32,4 +32,4 @@ I quickly implemented it, and created a small test application that I played aro
     else
         return totalProbability/count;
 }</pre>
-<p style="text-align: right;"><a href="http://hortont.com/files/autolocate.zip">Full source (but don't expect to be able to <em>use</em> it, it's a complete mess...)</a></p>
+<p style="text-align: right;"><a href="http://files.hortont.com/autolocate.zip">Full source (but don't expect to be able to <em>use</em> it, it's a complete mess...)</a></p>

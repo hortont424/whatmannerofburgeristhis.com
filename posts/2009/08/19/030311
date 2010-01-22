@@ -4,9 +4,9 @@ I'm really only interested in exporting the output of Clutter views, mostly. So,
 
 This should work in theory. In practice, for some reason, some animations randomly speed up or slow down. You can see it in the video (most specifically with the sliding bounces when you finish a level).
 
-Video of Lights Off with this <a href="http://hortont.com/files/clutter-export/lo.mov">here</a>.
+Video of Lights Off with this <a href="http://files.hortont.com/clutter-export/lo.mov">here</a>.
 
-Patch is <a href="http://hortont.com/files/clutter-export/clutter-export.patch">here</a>. It's not particularly attractive... but maybe once it works I'll make it make more sense...
+Patch is <a href="http://files.hortont.com/clutter-export/clutter-export.patch">here</a>. It's not particularly attractive... but maybe once it works I'll make it make more sense...
 
 I'll have to harass someone working on Clutter and see if we can make it work/what I'm doing that's so crazy, because I'd really love for it to work!
 
