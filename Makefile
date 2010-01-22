@@ -11,7 +11,6 @@ all: clean unclean copy-data build-static build-posts build-archive build-rss bu
 
 clean:
 	rm -rf output
-	rm -rf build/*.pyc
 
 unclean:
 	mkdir output
