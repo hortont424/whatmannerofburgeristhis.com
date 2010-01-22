@@ -112,15 +112,3 @@ td.button
 {
     background: transparent url(${baseurl}images/buttonbar/planet-small.png) -2px -2px no-repeat;
 }
-
-div.hr
-{
-    background-color: #b2b2b2;
-    width: 100%;
-    height: 1px;
-}
-
-pre
-{
-    display: inline;
-}

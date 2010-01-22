@@ -5,26 +5,31 @@ Where <em>i</em>&nbsp;is the ideal network strength, <em>c</em>&nbsp;is the curr
 I quickly implemented it, and created a small test application that I played around with for a few more days (this is the code I mentioned in the previous post)... here's a partial implementation, which seems to work:
 <pre lang="objc" line="1">+ (float)partialProbability:(float)c withOptimal:(float)i
 {
-	return powf(M_E,-(powf(c-i,2)/.03));
+    return powf(M_E,-(powf(c-i,2)/.03));
 }
 
-+ (float)locationProbability:(NSDictionary *)testLocation knownLocation:(NSDictionary *)knownLocation
++ (float)locationProbability:(NSDictionary *)testLocation 
+               knownLocation:(NSDictionary *)knownLocation
 {
-	float totalProbability = 0;
-	float count = 0;
+    float totalProbability = 0;
+    float count = 0;
 
-	for(NSString * key in testLocation)
-	{
-		if([knownLocation objectForKey:key] == nil)
-			continue;
+    for(NSString * key in testLocation)
+    {
+        if([knownLocation objectForKey:key] == nil)
+            continue;
 
-		totalProbability += [ALController partialProbability:[[testLocation objectForKey:key] floatValue] withOptimal:[[knownLocation objectForKey:key] floatValue]] * [[knownLocation objectForKey:key] floatValue];
-		count += [[knownLocation objectForKey:key] floatValue];
-	}
+        totalProbability += [ALController partialProbability:
+                                [[testLocation objectForKey:key] floatValue]
+                                                 withOptimal:
+                                [[knownLocation objectForKey:key] floatValue]] *
+                                    [[knownLocation objectForKey:key] floatValue];
+        count += [[knownLocation objectForKey:key] floatValue];
+    }
 
-	if(count == 0)
-		return 0;
-	else
-		return totalProbability/count;
+    if(count == 0)
+        return 0;
+    else
+        return totalProbability/count;
 }</pre>
 <p style="text-align: right;"><a href="http://hortont.com/files/autolocate.zip">Full source (but don't expect to be able to <em>use</em> it, it's a complete mess...)</a></p>
