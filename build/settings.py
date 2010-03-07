@@ -5,7 +5,7 @@ page_size = 10
 www_prefix = "http://www.hortont.com/"
 static_prefix = "http://files.hortont.com/www/"
 
-if os.uname()[1] == "Kaylee.local":
+if os.getcwd() == "/Users/hortont/Sites":
     www_prefix = "http://localhost/~hortont/output/"
     static_prefix = "http://localhost/~hortont/output/"
 

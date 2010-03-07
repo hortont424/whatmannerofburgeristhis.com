@@ -40,6 +40,8 @@ check-links:
 	python2.6 ./build/testLinks.py
 
 push:
-	ssh jayne.hortont.com "ssh-agent zsh -c '(ssh-add /srv/share/private/hortont/.ssh/id_dsa_hortontcom && cd /srv/share/private/hortont/hortont.com && git --git-dir=/srv/share/private/hortont/hortont.com/.git --work-tree=/srv/share/private/hortont/hortont.com pull ; make ; rsync -avz -e \"ssh -i /srv/share/private/hortont/.ssh/id_dsa_hortontcom\" /srv/share/private/hortont/hortont.com/output/ hortont.com:hortont.com)'"
+	rm -rf /tmp/hortont.com
+	cd /tmp ; git clone git@github.com:hortont424/hortont.com
+	cd /tmp/hortont.com ; make ; /usr/s3sync/s3sync.rb -r --progress -v --make-dirs -p /tmp/hortont.com/output/ files.hortont.com:www
 
 .PHONY: all clean copy-data push all-serial
