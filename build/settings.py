@@ -2,10 +2,12 @@ import os
 
 page_size = 10
 
-www_prefix = "http://www.hortont.com/"
-static_prefix = "http://files.hortont.com/www/"
+www_prefix = "http://www.whatmannerofburgeristhis.com/"
+static_prefix = "http://files.whatmannerofburgeristhis.com/www/"
 
-if os.getcwd() == "/Users/hortont/Sites":
+# Set this to the path that you keep your local copy in, and where it's served
+# to (this should point to the output directory)
+if os.getcwd() == "/Users/hortont/Desktop/whatmannerofburgeristhis.com":
     www_prefix = "http://localhost/~hortont/output/"
     static_prefix = "http://localhost/~hortont/output/"
 
@@ -16,6 +18,8 @@ blog_prefix = www_prefix + blog_dir
 def w(u):
     return www_prefix + u
 
+# Set up a hierarchy for categories here. I think this is mostly just for URLs
+# but I really don't remember.
 def categoryURLFromName(n):
     if n == "gnome":
         return "code/gnome"

@@ -1,5 +1,0 @@
-I've gotten quite a bit further along with my first deliverable, the evas-gl-quartz port (using Carbon). Focus works now (though it needs to be wrapped in an application bundle &mdash; apparently this is a <em>requirement)</em>. Keyboard input works, text drawing works (I'd accidentally commented out a bit too much!), the code is much cleaner. I haven't done mouse input yet. Things I've learned:
-
-All this code (keyboard input, bundle making, mouse input, etc.) goes in Ecore. The test program (e17/libs/test/orig/evas/) doesn't use Ecore, because it's just an Evas test, so I've had to write all of that code directly into the test program. I've been doing that, because it will make writing Ecore_Carbon and/or Ecore_Cocoa (I still haven't exactly determined what's up here, nor talked to the people I need to talk to to get this working) much easier!
-
-Performance is great! Just as smooth (which is, to say, perfect) as the OpenGL-X11 port, though the complete smoothness isn't apparent in <a href="http://files.hortont.com/evas_test_may29.mov">the video</a>.

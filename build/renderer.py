@@ -34,47 +34,47 @@ def renderPost(f, template, rss=False):
     metadata = json.loads(readFileContents(f), encoding='utf-8')
     contents = readFileContents(f.replace(".control",""))
     contents = re.sub('\n\s*\n', "<br/><br/>", contents)
-    
+
     if "template" not in metadata:
         metadata["template"] = template
-    
+
     try:
         metadata["categories"] = joinCategoryList(resolveCategoryList(metadata["categories"]))
     except:
         metadata["categories"] = ""
-    
+
     metadata["content"] = contents
-    
+
     pubDate = metadata["date"]
-    
+
     metadata["url"] = os.path.join(blog_prefix, f.replace(".control",".html"))
     metadata["id"] = re.sub("[^0-9]", "", metadata["date"])
     metadata["date"] = datetime.datetime.strptime(pubDate, "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
-    
+
     metadata["shortContent"] = re.sub("<(.*?)>","",contents[0:500]) + "..."
-    
+
     if "pubDate" not in metadata:
         metadata["pubDate"] = datetime.datetime.strptime(pubDate, "%Y.%m.%d %H:%M:%S").strftime("%a, %d %b %Y %H:%M:%S +0000")
 
     if "guid" not in metadata:
         metadata["guid"] = metadata["url"]
-    
+
     if "noChrome" not in metadata:
         metadata["noChrome"] = 0
-    
+
     try:
         comments = metadata["comments"]
     except:
         metadata["comments"] = comments = []
-    
+
     for c in comments:
         c["content"] = re.sub('\\n', "<br/>", c["content"])
-    
+
     postfix = doctype = "html"
     if rss:
         postfix = "xml"
         doctype = None
-    
+
     tmpl = loader.load(metadata["template"] + '.' + postfix, encoding='utf-8')
     return tmpl.generate(post=metadata,
                          baseurl=www_prefix,
@@ -86,19 +86,19 @@ def renderArchive(c, template, next, prev, rss=False, category=None):
     if rss:
         postfix = "xml"
         doctype = None
-    
+
     buildDate = datetime.datetime.today().strftime("%a, %d %b %Y %H:%M:%S +0000")
-    
-    title = u"hortont &middot; blog"
+
+    title = u"I have a blog lol"
     if category:
-        title = u"hortont &middot; blog &middot; " + categoryDisplayName(category)
-    
+        title = u"I have a blog lol &middot; " + categoryDisplayName(category)
+
     showTitle = (category != None)
-    
+
     rssurl = blog_prefix + "/feed/rss.xml"
     if category:
         rssurl = blog_prefix + "/topics/" + category + "/feed/rss.xml"
-    
+
     tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
     return tmpl.generate(content=c.decode("utf-8","ignore"),
                          baseurl=www_prefix,

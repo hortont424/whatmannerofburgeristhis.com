@@ -5,12 +5,12 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="${staticurl}styles/style.css" type="text/css" />
     <link rel="stylesheet" href="${staticurl}styles/blog.css" type="text/css" />
-    
-    <title>hortont &middot; blog &middot; ${Markup(post.title)}</title>
+
+    <title>I have a blog lol &middot; ${Markup(post.title)}</title>
   </head>
   <body class="index">
     <xi:include href="button-bar.html" />
-    
+
     <table id="posts" border="0" width="100%">
     <tr>
         <td></td>
@@ -19,13 +19,13 @@
             <h1>${Markup(post.title)}</h1>
             <h2>${post.date} in ${Markup(post.categories)}</h2>
             <p>${Markup(post.content)}</p>
-            
+
             <div class="hr" />
-            
+
             <py:if test="len(post.comments) != 0">
                 <h3>Comments (legacy)</h3>
             </py:if>
-            
+
             <py:for each="comment in post.comments">
                 <div class="oldcomment">
                 <p style='font-weight: bold;'>
@@ -39,12 +39,12 @@
                 <p style='margin-left: 2em;'>${Markup(comment.content)}</p>
                 </div>
             </py:for>
-            
+
             <py:if test="len(post.comments) != 0">
                 <div class="hr" />
             </py:if>
-            
-            <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/hortont/embed.js"></script><noscript><a href="http://disqus.com/forums/hortont/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/arsenm/embed.js"></script><noscript><a href="http://disqus.com/forums/arsenm/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
             </div>
         </td>
         <td></td>
@@ -60,7 +60,7 @@
             query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
         }
         }
-        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/hortont/get_num_replies.js' + query + '"></' + 'script>');
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/arsenm/get_num_replies.js' + query + '"></' + 'script>');
     })();
     //]]>
     </script>

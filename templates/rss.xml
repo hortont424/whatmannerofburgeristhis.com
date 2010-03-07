@@ -12,7 +12,7 @@
     <title>${title}</title>
     <atom:link href="${blogurl}feed/" rel="self" type="application/rss+xml" />
     <link>${blogurl}</link>
-    <description>code + craziness</description>
+    <description>I have a blog lol</description>
     <lastBuildDate>${buildDate}</lastBuildDate>
     <language>en</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>

@@ -1,5 +1,0 @@
-These are here for Amy... drag them into your bookmark bar.
-
-<a href="javascript:if%20(document.getElementById('download-youtube-video')==null%20&amp;&amp;%20!!(document.location.href.match(/http:\/\/[a-zA-Z\.]*youtube\.com\/watch/)))%20{var%20yt_mp4_path='http://www.youtube.com/get_video?fmt=18&amp;video_id='+swfArgs['video_id']+'&amp;t='+swfArgs['t'];%20var%20div_embed=document.getElementById('watch-embed-div');div_embed.innerHTML=div_embed.innerHTML+'%3Cbr%20/%3E%20%3Cspan%20id=\'download-youtube-video\'%3E%3Ca%20href=\''+yt_mp4_path+'\'%3EDownload%20as%20MP4%3C/a%3E%20(right-click%20and%20select%20%3Ci%3ESave%20'+%20(navigator.appName=='Microsoft%20Internet%20Explorer'?'target':'link')%20+'%20as%3C/i%3E)%3C/span%3E';}void(0);">Download from YouTube</a>
-
-<a href="javascript:window.location+='&amp;fmt=18';">Switch to High Resolution</a>

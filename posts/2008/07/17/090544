@@ -1,7 +1,0 @@
-Any Mac users here probably know of <a href="http://perian.org/">Perian</a> &mdash; in fact, I'd venture a guess you've probably got it installed!
-
-In any case, I'm just writing this to note that if you try to export (transcode) a video file in <a href="http://www.apple.com/quicktime/pro/">Quicktime Pro</a>, there's a chance that, if you have Perian installed, the audio won't come through &mdash; in fact, you'll find yourself completely unable to extract the audio from the file!
-
-The only solution I've found is to use the proper codec for the video (and I've not found a solution for situations where said proper codec doesn't exist, except try to wade through the <a href="http://www.mplayerhq.hu/DOCS/man/en/mplayer.1.html">mencoder</a> {warning: 1.1 MB wall of text} mess...). Perian's great, but this would be a good bug for them to fix.
-
-I've only had this problem with <a href="http://www.divx.com/">DivX</a> files, which, luckily, have an alternate, 'official' codec.

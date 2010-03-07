@@ -1,7 +1,0 @@
-Two quick Evas_Quartz updates:
-
-I've published my git repo <a href="http://repo.or.cz/w/evas_quartz.git">here</a>. I promise to try to keep it as up-to-date as I can!
-
-The other bit of good news: I got the Evas image loading code working today, replacing the old Apple PNG loading code! This is good for lots of reasons: it opens the door to getting the image data-access stuff working, fixes the smoothing problem, and also gets us that much closer to having a working image cache.
-
-The biggest issue I've noticed is that having smoothing working seems to slow things down a bit. Maybe too much &mdash; at least too much for the benchmark. It gets a little skippy... but I don't think this would be a legitimate problem for any real application written using Evas... I'll see what I can do.

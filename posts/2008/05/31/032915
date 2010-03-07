@@ -1,5 +1,0 @@
-I'm throwing this up here just for fun... it doesn't work entirely, but the general gist of things works. I feel much more comfortable with the Evas source code now than I did at the beginning of the week, but this is really just a start (considering this really isn't related at all to my final project).
-
-Also, unless you, yourself, put the test app in an application bundle, moving and focusing the window won't work. I'll make that automatic sometime soon...
-
-<a href="http://files.hortont.com/hortont-gl-quartz-20080530.diff">A patch!</a>

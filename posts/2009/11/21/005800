@@ -1,5 +1,0 @@
-If you're actually *crazy*, you might have noticed that the design of this page changed a bit about a week ago. This isn't because I've been tweaking my WordPress theme &mdash; I got sick of that a long time ago. No, instead, I replaced this all with a solution much more amenable to my own mindset; a <a href="http://github.com/hortont424/www.hortont.com">completely-statically-generated, git-backed, python-based blog</a>. It's not an interesting project in and of itself; every programmer writes blog software at least once in their early life (and this is poorly-written, just like most of them!).
-
-It's really only interesting in that I'll note that only the RSS2 feeds will work from now on; no more Atom/RSS 0.9, because I don't care enough. RSS feeds are the archive page url (for the main archive or any category) + "/feed", just like before.
-
-With that said, this is my first post entirely with the new system, so hopefully everything will go smoothly! I get to test it locally, then 'git push' and <em>whoosh!</em> magic jumps to Jayne and then off to Dreamhost.
