@@ -7,7 +7,7 @@ static_prefix = "http://files.hortont.com/www/"
 
 if os.uname()[1] == "Kaylee.local":
     www_prefix = "http://localhost/~hortont/output/"
-	static_prefix = "http://localhost/~hortont/output/"
+    static_prefix = "http://localhost/~hortont/output/"
 
 blog_dir = "blog/"
 
