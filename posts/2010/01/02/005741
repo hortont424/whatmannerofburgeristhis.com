@@ -24,7 +24,7 @@ Check out my custom ports tree:<br/>
 cd /opt
 sudo mkdir hortont-ports
 sudo chown <i>[your username]</i> hortont-ports
-git clone http://hortont.com/hortont-ports.git
+git clone http://www.hortont.com/hortont-ports.git
 </pre>
 </li>
 <li>Edit the file <pre>/opt/local/etc/macports/sources.conf</pre> with administrator privileges, and add the line:<br/>

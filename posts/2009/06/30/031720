@@ -18,7 +18,7 @@ So far:
 	(http://ftp.gnome.org/pub/GNOME/sources/seed/0.8/)
 
 * I blogged about the Lights Off tiles (just for fun!), and got about 1000 votes, choosing the new ones 4:1 (not even remotely surprising).
-	(http://hortont.com/blog/2009/05/lights-off-tiles/)</blockquote>
+	(http://www.hortont.com/blog/2009/05/lights-off-tiles/)</blockquote>
 <strong>Week 2</strong>
 <blockquote>I spent a good part of the last five days (my last status report was late, so the duration between these two is less than it ought to be; do let me know if Sunday night is the wrong time for these!) working on various things:
 
@@ -76,7 +76,7 @@ Next, I want to:
 
 Stuff in the gnome-games repo hasn't been pushed yet (just got home from NY, fighting with Git, I hate losing the ability to rewrite history, etc.; it'll all be up by tomorrow).</blockquote>
 <strong>Week 5</strong>
-<blockquote>* Made a to-do list to keep up to date (http://hortont.com/gsoc-seed-games-todo.html) Right now, it only has stuff that I could think of off the top of my head this morning, but it's already a relief to no longer need to keep such things in my head. Anyway, I'll continue updating it and checking things off from here on out.
+<blockquote>* Made a to-do list to keep up to date (http://www.hortont.com/gsoc-seed-games-todo.html) Right now, it only has stuff that I could think of off the top of my head this morning, but it's already a relief to no longer need to keep such things in my head. Anyway, I'll continue updating it and checking things off from here on out.
 
 * Cleaned up animation and events and stuff in Same, which fixes some strange flickering when you move the mouse over the window, and makes most of the animation smooth again (update to match the fact that Seed handles animation memory now, too). This is incomplete, still, there's a little left to be done.
 

@@ -33,7 +33,7 @@
         }, 
         {
             "content": "Emmanuele: Thanks!!\n\nKris: Agreed, it's not quite there. I come from Cocoa (where things are much different), and most of my Gtk work is trial-and-error. I should probably read up on making things look nice, but I'm not sure where to turn (except the source for other apps that look nice).\n\nAlexandre: Yes, I did! I actually have a theme locally which draws using your theme colors, through Cairo, and it looks like a great idea, I just have to get to the point where I can draw the tiles well with Cairo (because Robb's dream of \"theme-able svgs\" isn't here... unless it is?)", 
-            "authorURL": "http://hortont.com/blog", 
+            "authorURL": "http://www.hortont.com/blog", 
             "author": "hortont"
         }, 
         {
@@ -48,7 +48,7 @@
         }, 
         {
             "content": "Brett: I'm not sure I'd call myself a Gnome developer, exactly. I mean... I have a Gnome git account and hack on Seed and Gnome Games (with the occasional miniscule and meaningless patch to something else). But like... ebassi (above) is what _I_ would consider a Gnome developer, not me!\n\nBut... besides that, the only way I've found to learn is to jump right in! If you already know C, the references for GLib and Gtk at library.gnome.org are actually pretty awesome, though they don't really help with the general overview...\n\nLooking at other people's code helps sometimes, but that often leads to frightening things, too...\n\nI don't know... what do you think you need to get started? If you jump right in, where do you get stuck? I'd like to know because I think it would be really awesome to *fix* this...", 
-            "authorURL": "http://hortont.com/blog", 
+            "authorURL": "http://www.hortont.com/blog", 
             "author": "hortont"
         }, 
         {

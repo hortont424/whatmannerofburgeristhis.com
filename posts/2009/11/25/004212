@@ -4,7 +4,7 @@ I've got two cameras for this project; a D80, and a Coolpix 8700. They're both w
 
 Both cameras are set on full-manual &mdash; shutter speed, aperture, white balance, focus, <em>everything</em>. The D80 is outputting RAWs; the 8700 is only outputting JPEGs (for reasons I'll explain in a minute) &mdash; this means that a shot from the D80 is about 8MB, and a shot from the 8700 is about 1MB.
 
-Each camera takes a picture once a minute. To achieve this, the D80 (which doesn't ship with an intervalometer feature, and I have yet to finish <a href="http://hortont.com/blog/posts/2008/09/24/032316.html">my intervalometer project</a>) is tethered (via a nice, standard USB-A-to-USB-mini-B cable) to my <a href="http://hortont.com/blog/posts/2008/12/19/090519.html">EeePC</a> running Ubuntu. The Eee is connected to an external (USB) 160GB "buffer" hard drive.
+Each camera takes a picture once a minute. To achieve this, the D80 (which doesn't ship with an intervalometer feature, and I have yet to finish <a href="http://www.hortont.com/blog/posts/2008/09/24/032316.html">my intervalometer project</a>) is tethered (via a nice, standard USB-A-to-USB-mini-B cable) to my <a href="http://www.hortont.com/blog/posts/2008/12/19/090519.html">EeePC</a> running Ubuntu. The Eee is connected to an external (USB) 160GB "buffer" hard drive.
 
 The general flow of photos from the D80 to Final Cut follows something like the following:
 

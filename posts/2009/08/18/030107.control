@@ -18,7 +18,7 @@
         }, 
         {
             "content": "Matt: I'm really not sure! They won't be in 9.10, and I suppose their inclusion in 10.04 depends on whether that or 10.10 is the LTS release. There was also some talk of splitting gnome-games into two packages; one that ships on the CD that doesn't include the Clutter games, and the remainder in a package in universe to be installed on demand.\n\nI'd say it's somewhat hard to say what Ubuntu is going to do about GNOME 2.30, though, so I really don't know!", 
-            "authorURL": "http://hortont.com/blog", 
+            "authorURL": "http://www.hortont.com/blog", 
             "author": "hortont"
         }, 
         {

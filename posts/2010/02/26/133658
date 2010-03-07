@@ -1,4 +1,4 @@
-Last semester, during <a href="http://hortont.com/blog/posts/2009/11/11/084020.html">RCOS</a>, I started working on a contact-management application for GNOME (Seed is mostly in maintenance mode, at this point), called (for lack of a better name, at the moment) <a href="http://hortont.com/projects/sheeple/">Sheeple</a>. I keep a carefully-organized, constantly-updated address book, so I spend a bit of time in whatever contact-management program I'm using, so this is something that matters a good bit to me personally.
+Last semester, during <a href="http://www.hortont.com/blog/posts/2009/11/11/084020.html">RCOS</a>, I started working on a contact-management application for GNOME (Seed is mostly in maintenance mode, at this point), called (for lack of a better name, at the moment) <a href="http://www.hortont.com/projects/sheeple/">Sheeple</a>. I keep a carefully-organized, constantly-updated address book, so I spend a bit of time in whatever contact-management program I'm using, so this is something that matters a good bit to me personally.
 
 The de-facto application for managing contacts on GNOME at the moment is, of course, the behemoth personal-information-management suite, Evolution. Evolution has a <em>long</em> history, and is a large codebase, written by a lot of people, over a very long time. It also looks a little bit outdated:
 
@@ -24,4 +24,4 @@ After the end of last semester, I had the following:
 
 Lots of things are broken, but it's something. I don't have working syncing yet, and I believe <em>writing</em> back to EDS is broken at the moment (so no persistence of changes!), but those are things I plan on working on this semester...
 
-There are <a href="http://hortont.com/projects/sheeple/">slides and stuff</a> available, too.
+There are <a href="http://www.hortont.com/projects/sheeple/">slides and stuff</a> available, too.

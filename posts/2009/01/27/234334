@@ -5,7 +5,7 @@ The plan was for Jayne (the machine that serves this blog, the rest of my web st
 Anyway. Here's the facts:
 <ul>
 <li>I'm using Debian unstable, with Linux 2.6.28.</li>
-<li>I've got a <a href="http://hortont.com/blog/2008/08/new-computer/">Shuttle case</a>, and a 100 W PSU (!!).</li>
+<li>I've got a <a href="http://www.hortont.com/blog/2008/08/new-computer/">Shuttle case</a>, and a 100 W PSU (!!).</li>
 <li>I get the libata errors above, but only after the machine is up for two or so weeks.</li>
 <li>I didn't get the error at <i>all</i> during a one-month-long winter break, but it happened once again, two weeks after coming back to RPI.</li>
 <li>The problem has <i>never</i> happened when the case is open and a large house fan is on top of the case, which was true for a significant part of last semester.</li>
