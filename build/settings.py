@@ -1,10 +1,13 @@
 import os
 
 page_size = 10
-www_prefix = "http://hortont.com/"
+
+www_prefix = "http://www.hortont.com/"
+static_prefix = "http://files.hortont.com/www/"
 
 if os.uname()[1] == "Kaylee.local":
     www_prefix = "http://localhost/~hortont/output/"
+	static_prefix = "http://localhost/~hortont/output/"
 
 blog_dir = "blog/"
 

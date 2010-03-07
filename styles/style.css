@@ -95,25 +95,25 @@ td.button
 
 #blog
 {
-    background: transparent url(${baseurl}images/buttonbar/blog-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/blog-small.png) -2px -2px no-repeat;
 }
 #archives
 {
-    background: transparent url(${baseurl}images/buttonbar/archives-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/archives-small.png) -2px -2px no-repeat;
 }
 #profiles
 {
-    background: transparent url(${baseurl}images/buttonbar/profiles-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/profiles-small.png) -2px -2px no-repeat;
 }
 #about
 {
-    background: transparent url(${baseurl}images/buttonbar/about-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/about-small.png) -2px -2px no-repeat;
 }
 #projects
 {
-    background: transparent url(${baseurl}images/buttonbar/projects-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/projects-small.png) -2px -2px no-repeat;
 }
 #planet
 {
-    background: transparent url(${baseurl}images/buttonbar/planet-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/planet-small.png) -2px -2px no-repeat;
 }
