@@ -23,7 +23,7 @@ all-serial: clean unclean copy-data
 	python2.6 ./build/buildArchive.py
 	python2.6 ./build/buildRSS.py
 	python2.6 ./build/buildEverything.py
-	
+
 	python2.6 ./build/stats.py
 
 new-post:
@@ -32,7 +32,7 @@ new-post:
 copy-data:
 	cp -r images output/images
 	cp -r styles output/styles
-	
+
 	python2.6 ./build/substituteSettings.py output/styles
 	python2.6 ./build/cssmin.py output/styles
 
@@ -40,8 +40,8 @@ check-links:
 	python2.6 ./build/testLinks.py
 
 push:
-	rm -rf /tmp/hortont.com
-	cd /tmp ; git clone git@github.com:hortont424/hortont.com
-	cd /tmp/hortont.com ; make ; /usr/s3sync/s3sync.rb -r --progress -v --make-dirs -p /tmp/hortont.com/output/ files.hortont.com:www
+	rm -rf /tmp/whatmannerofburgeristhis.com
+	cd /tmp ; git clone git@github.com:hortont424/whatmannerofburgeristhis.com
+	cd /tmp/whatmannerofburgeristhis.com ; make ; /usr/s3sync/s3sync.rb -r --progress -v --make-dirs -p /tmp/whatmannerofburgeristhis.com/output/ files.whatmannerofburgeristhis.com:www
 
 .PHONY: all clean copy-data push all-serial
