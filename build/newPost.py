@@ -12,7 +12,7 @@ from build import *
 import settings
 
 controlTemplate = """{
-    "author": "Tim",
+    "author": "Matt",
     "title": "",
     "date": "%(y)04d.%(m)02d.%(d)02d %(hr)02d:%(min)02d:%(sec)02d",
     "categories": [
@@ -25,12 +25,12 @@ def writeFile(filename, data):
     out.close()
 
 def touchFile(filename):
-    if not os.path.exists(filename): 
+    if not os.path.exists(filename):
         open(filename, 'w').close()
 
 def createNewPost():
     (y,m,d,hr,min,sec,wday,yday,dst) = datetime.datetime.now().timetuple()
-    
+
     filename = os.path.join("posts", str(y), "%(m)02d" % { "m":m },
                             "%(d)02d" % { "d":d },
                             "%(hr)02d%(min)02d%(sec)02d" % { "hr":hr, "min":min, "sec":sec })
@@ -42,7 +42,7 @@ def createNewPost():
 
     if not os.path.exists(os.path.dirname(filename)):
         os.makedirs(os.path.dirname(filename))
-    
+
     touchFile(filename)
     writeFile(filename + ".control", controlFileData)
     os.system("git add " + os.path.dirname(filename))
