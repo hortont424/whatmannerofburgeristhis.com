@@ -3,22 +3,29 @@
       xmlns:xi="http://www.w3.org/2001/XInclude">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="${staticurl}styles/style.css" type="text/css" />
     <title>${Markup(post.title)}</title>
     <style>
+    *
+    {
+        margin: 0px;
+        padding: 0px;
+    }
     body
     {
         text-align: left;
+        background-color: #ded;
     }
     table
     {
-        border-left: 10px solid #aaa;
-        border-right: 10px solid #aaa;
+        border-left: 10px solid #aba;
+        border-right: 10px solid #aba;
         background-color: #545454;
         position: absolute;
         top: 0px;
+        width: 305px;
         margin-left: 20px;
-        padding-top: 20px;
+        padding-top: 30px;
+        padding-left: 5px;
         cursor: default;
     }
     div.bigbutton
@@ -33,16 +40,12 @@
     {
         opacity: 1.0;
     }
-    tr.buttonRow
-    {
-
-    }
     #footer
     {
         position: absolute;
         bottom: 20px;
         right: 20px;
-        color: #555;
+        color: #878787;
     }
     #blog
     {
@@ -59,14 +62,24 @@
         background: transparent url(${staticurl}images/buttonbar/about.png) -2px -2px no-repeat !important;
         width: 212px;
     }
+
+    #tri
+    {
+        position: absolute;
+        margin-left: 20px;
+        top: 350px;
+        z-index: -1;
+    }
     </style>
   </head>
   <body class="index">
       <table border="0" cellpadding="0" cellspacing="0">
-      <tr class="buttonRow"><td><a href="${blogurl}"><div id="blog" title="My blog." class="bigbutton"></div></a></td></tr>
-      <tr class="buttonRow"><td><a href="${baseurl}projects"><div id="clutterhs" title="Clutter bindings for Haskell!" class="bigbutton"></div></a></td></tr>
-      <tr class="buttonRow"><td><a href="${baseurl}about.html"><div id="about" title="A bit about me." class="bigbutton"></div></a></td></tr>
+      <tr><td><a href="${blogurl}"><div id="blog" title="My blog." class="bigbutton"></div></a></td></tr>
+      <tr><td><a href="${baseurl}projects"><div id="clutterhs" title="Clutter bindings for Haskell!" class="bigbutton"></div></a></td></tr>
+      <tr><td><a href="${baseurl}about.html"><div id="about" title="A bit about me." class="bigbutton"></div></a></td></tr>
       </table>
+
+      <img id="tri" src="${staticurl}images/buttonbar/bottom.png" />
 
       <div id="footer">
       &copy; 2010 &mdash; Matt Arsenault
