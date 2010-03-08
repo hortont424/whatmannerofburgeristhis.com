@@ -1,18 +1,18 @@
 body
 {
-    background-color: #edeceb;
+    background-color: #ded;
     font-family: 'Myriad Pro', 'Calibri', 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif;
 }
 
 a
 {
-    color: #38e;
+    color: #898;
     text-decoration: none;
 }
 
 a:hover
 {
-    color: #27d;
+    color: #aba;
     text-decoration: underline;
 }
 
@@ -40,6 +40,9 @@ h2
     font-weight: normal;
     font-size: 0.9em;
     margin: 0px;
+    position: relative;
+    top: -1.7em;
+    float: right;
 }
 
 li
@@ -64,23 +67,37 @@ div.postContent
     margin: 0px 0px 20px 0px;
     line-height: 1.5em;
     text-align: justify;
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    border: 5px solid #aba;
 }
 
 #buttonbar
 {
-    padding: 15px 0px 5px 0px;
+    position: absolute;
+    top: 0px;
+    left: 5%;
+    right: 5%;
+    border-left: 10px solid #aba;
+    border-right: 10px solid #aba;
+    border-bottom: 10px solid #aba;
+}
+
+table.buttontable
+{
+    padding: 0px;
+    padding-top: 15px !important;
+    background-color: #545454;
 }
 
 div.button
 {
-    width: 100px;
-    height: 50px;
+    /*width: 300px;*/
+    height: 90px;
     cursor: pointer;
     opacity: 0.6;
     float: none !important;
     display: inline-block;
+    margin: 0px;
+    padding: 0px;
 }
 
 div.button:hover
@@ -90,30 +107,21 @@ div.button:hover
 
 td.button
 {
-    width: 100px;
+    /*width: 100px;*/
 }
 
 #blog
 {
-    background: transparent url(${staticurl}images/buttonbar/blog-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/blog.png) -2px -2px no-repeat !important;
+    width: 161px;
 }
-#archives
+#clutterhs
 {
-    background: transparent url(${staticurl}images/buttonbar/archives-small.png) -2px -2px no-repeat;
-}
-#profiles
-{
-    background: transparent url(${staticurl}images/buttonbar/profiles-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/clutterhs.png) -2px -2px no-repeat !important;
+    width: 309px;
 }
 #about
 {
-    background: transparent url(${staticurl}images/buttonbar/about-small.png) -2px -2px no-repeat;
-}
-#projects
-{
-    background: transparent url(${staticurl}images/buttonbar/projects-small.png) -2px -2px no-repeat;
-}
-#planet
-{
-    background: transparent url(${staticurl}images/buttonbar/planet-small.png) -2px -2px no-repeat;
+    background: transparent url(${staticurl}images/buttonbar/about.png) -2px -2px no-repeat !important;
+    width: 213px;
 }
