@@ -8,81 +8,68 @@
     <style>
     body
     {
-        text-align: center;
+        text-align: left;
     }
-    #container
+    table
     {
+        border-left: 10px solid #aaa;
+        border-right: 10px solid #aaa;
+        background-color: #545454;
         position: absolute;
-        top: 50%;
-        margin-top: -198px;
-        left: 50%;
-        margin-left: -338px;
-        height: 395px;
-        width: 675px;
+        top: 0px;
+        margin-left: 20px;
+        padding-top: 20px;
+        cursor: default;
     }
     div.bigbutton
     {
-        width: 245px;
-        height: 115px;
-        margin: 0px 6px;
+        height: 90px;
+        margin: 0px;
+        padding: 10px;
         cursor: pointer;
-        float: none !important;
-        display: inline-block;
-        opacity: 0.8;
+        opacity: 0.6;
     }
     div.bigbutton:hover
     {
         opacity: 1.0;
     }
+    tr.buttonRow
+    {
+
+    }
     #footer
     {
         position: absolute;
-        top: 50%;
-        margin-top: 225px;
-        left: 50%;
-        margin-left: -275px;
-        height: 24px;
-        width: 550px;
+        bottom: 20px;
+        right: 20px;
         color: #555;
     }
     #blog
     {
         background: transparent url(${staticurl}images/buttonbar/blog.png) -2px -2px no-repeat !important;
+        width: 161px;
     }
-    #archives
+    #clutterhs
     {
-        background: transparent url(${staticurl}images/buttonbar/archives.png) -2px -2px no-repeat !important;
-    }
-    #profiles
-    {
-        background: transparent url(${staticurl}images/buttonbar/profiles.png) -2px -2px no-repeat !important;
+        background: transparent url(${staticurl}images/buttonbar/clutterhs.png) -2px -2px no-repeat !important;
+        width: 300px;
     }
     #about
     {
         background: transparent url(${staticurl}images/buttonbar/about.png) -2px -2px no-repeat !important;
-    }
-    #projects
-    {
-        background: transparent url(${staticurl}images/buttonbar/projects.png) -2px -2px no-repeat !important;
-    }
-    #planet
-    {
-        background: transparent url(${staticurl}images/buttonbar/planet.png) -2px -2px no-repeat !important;
+        width: 212px;
     }
     </style>
   </head>
   <body class="index">
-      <div id="container">
-      <a href="${blogurl}"><div id="blog" title="My blog, full of code, pictures, and random thoughts!" class="bigbutton"></div></a>
-      <a href="${baseurl}projects"><div id="projects" title="Stuff that I've been working on..." class="bigbutton"></div></a><br/>
-      <a href="http://jayne.hortont.com/planet"><div id="planet" title="An aggregation of the blogs of everyone who has a blog and matters!" class="bigbutton"></div></a>
-      <a href="http://jayne.hortont.com/aperture"><div id="archives" title="An interactive browser for a library of over 10,000 photographs." class="bigbutton"></div></a><br/>
-      <a href="${baseurl}profiles.html"><div id="profiles" title="Links to my various homes across the internet." class="bigbutton"></div></a>
-      <a href="${baseurl}about.html"><div id="about" title="Why? Who? What?" class="bigbutton"></div></a>
-      </div>
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr class="buttonRow"><td><a href="${blogurl}"><div id="blog" title="My blog." class="bigbutton"></div></a></td></tr>
+      <tr class="buttonRow"><td><a href="${baseurl}projects"><div id="clutterhs" title="Clutter bindings for Haskell!" class="bigbutton"></div></a></td></tr>
+      <tr class="buttonRow"><td><a href="${baseurl}about.html"><div id="about" title="A bit about me." class="bigbutton"></div></a></td></tr>
+      </table>
 
       <div id="footer">
-      &copy; 2010 &mdash; Tim Horton
+      &copy; 2010 &mdash; Matt Arsenault
       </div>
   </body>
 </html>
