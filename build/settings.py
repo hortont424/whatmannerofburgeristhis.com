@@ -7,9 +7,9 @@ static_prefix = "http://files.whatmannerofburgeristhis.com/www/"
 
 # Set this to the path that you keep your local copy in, and where it's served
 # to (this should point to the output directory)
-if os.getcwd() == "/Users/hortont/Desktop/whatmannerofburgeristhis.com":
-    www_prefix = "file:///Users/hortont/Desktop/whatmannerofburgeristhis.com/output/"
-    static_prefix = "file:///Users/hortont/Desktop/whatmannerofburgeristhis.com/output/"
+if os.getcwd() == "/Users/hortont/src/whatmannerofburgeristhis.com":
+    www_prefix = "file:///Users/hortont/src/whatmannerofburgeristhis.com/output/"
+    static_prefix = "file:///Users/hortont/src/whatmannerofburgeristhis.com/output/"
 
 blog_dir = "blog/"
 
