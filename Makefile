@@ -42,6 +42,6 @@ check-links:
 push:
 	rm -rf /tmp/whatmannerofburgeristhis.com
 	cd /tmp ; git clone git@github.com:hortont424/whatmannerofburgeristhis.com
-	cd /tmp/whatmannerofburgeristhis.com ; make ; rsync -a --progress /tmp/hortont.com/output/ hortont.com:/srv/matt
+	cd /tmp/whatmannerofburgeristhis.com ; make ; rsync -a --progress /tmp/whatmannerofburgeristhis.com/output/ hortont.com:/srv/matt
 
 .PHONY: all clean copy-data push all-serial
