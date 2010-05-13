@@ -1,0 +1,58 @@
+<p> I've mostly spent the semester doing homework; I didn't make as
+much progress on Clutterhs as I had planned. I hope once that I'm done
+with finals, I'll have time to make the various changes I want and
+finish binding Clutter 1.2. The release of Clutter 0.2 is still
+waiting on those, as well as a release of
+<a href="http://www.haskell.org/gtk2hs/">
+gtk2hs</a>.
+</p>
+<p>
+In total, I've completed 58 physics homework assignments, 3 essays, 6
+tests, a large number of class exercises and quizzes, and 3 upcoming
+finals. I've spent countless hours doing nothing but math. On
+occasion, there was lots of help from
+<a href="http://en.wikipedia.org/wiki/Mathematica">
+Mathematica</a>.
+</p>
+<p>
+In the 3 physics classes I took this semester (Electromagnetic Theory,
+Intro to Quantum Mechanics, Thermodynamics and Statistical Mechanics),
+in total I did 315 pages of LaTeX/
+<a href="http://www.lyx.org/">
+Lyx
+</a>
+homework at an average length of
+5.4 pages each. Nearly all of that being just
+<a href="http://files.whatmannerofburgeristhis.com/qmech_hw18.pdf">
+math</a>, with an
+<a href="http://files.whatmannerofburgeristhis.com/qmech_hw7.pdf">
+occasional graph
+</a>
+or chart. This is in addition to the countless scraps of paper I
+occasionally used (although as time passes I find myself just doing
+nearly all of the simple algebra in my head and entering directly into
+Lyx.)
+</p>
+<p>
+I'm rather disappointed to not be going anywhere this summer. I
+applied to over a dozen different research programs for the summer for
+physics and astronomy at a wide array of random places; I was rejected
+from all of them. I finally did get accepted to work on
+<a href="http://milkyway.cs.rpi.edu/milkyway/">
+milkyway@home</a>, which is what I'll be working on this summer. I'm
+glad to be working on this, although I really don't want to stay in
+Troy. It may be my ideal research project.
+</p>
+<p>
+I accidentally got accepted to <a
+href="http://code.google.com/soc/">GSoC</a>.  I applied as a final
+fallback in case I didn't get accepted to do research with
+milkyway@home. I found out after the GSoC deadline, and some time
+before the selected students were announced I dropped out as a
+student, at least according to melange. A while later it seems I was
+accepted anyway to work on the gobject introspection based binding
+generator for gtk2hs. I'll probably end up doing some work on this
+over the summer; it might also become what I work on next semester for
+<a href="http://rcos.cs.rpi.edu/"> RCOS</a>. One of the other rejected
+Haskell proposals is now taking my place.
+</p>
