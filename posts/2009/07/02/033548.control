@@ -1,23 +1,13 @@
 {
-    "guid": "http://www.whatmannerofburgeristhis.com/?p=94", 
-    "author": "Matt", 
-    "pubDate": "Thu, 02 Jul 2009 03:35:48", 
-    "title": "Emacs and Vim", 
-    "date": "2009.07.02 03:35:48", 
-    "post-name": "emacs-and-vim", 
+    "guid": "http://www.whatmannerofburgeristhis.com/?p=94",
+    "author": "Matt",
+    "pubDate": "Thu, 02 Jul 2009 03:35:48",
+    "title": "Emacs and Vim",
+    "date": "2009.07.02 03:35:48",
+    "post-name": "emacs-and-vim",
     "categories": [
         "uncategorized"
-    ], 
+    ],
     "comments": [
-        {
-            "content": "thank!", 
-            "authorURL": "http://100-mp3.ru", 
-            "author": "abidoantito"
-        }, 
-        {
-            "content": "ocljlwijlmcds", 
-            "authorURL": "", 
-            "author": "ocljlwijlmcds"
-        }
     ]
 }
