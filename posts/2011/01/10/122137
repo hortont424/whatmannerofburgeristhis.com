@@ -1,0 +1,87 @@
+
+The evening started out with a simple goal: to avoid paying extra for
+an Apple approved video card, and get more screens to work for
+Peter. For his Mac Pro, Peter made the unfortunate choice of a Radeon
+5750, as this GPU does not have doubles. Doubles are a critical
+feature for
+<a href="http://milkyway.cs.rpi.edu/milkyway">Milkyway@Home</a>. Apple's OpenCL implementation unfortunately seems to be missing support for doubles
+on GPUs which is also problematic.
+
+We started out leaving <a
+href="http://public.kitware.com/OpenSourceSoftwarePractice/index.php/Fall2010/Main_Page">
+Open Source Software Practice </a> class and headed to Peter's
+apartment, stopping for pizza on the way. Peter gave us a tour of his
+scary apartment in the sketchy parts of Troy, and showed us the demon
+GPU. Tim and Peter argued for a while about something dealing with
+backups and new hard drives. Earlier Tim had been giving out hard
+drives after giving up on Jayne's disk situation and getting a new NAS
+box, in addition to random sale drives Peter had. Peter was concerned
+about preserving his torrents; his ratio is important to him. There
+was some kind of copy that was never going to finish.
+
+To use this random GPU from Newegg in the Mac Pro, it needed new EFI
+friendly firmware or something like that. It's not exactly clear to me
+why it needs to be different. I had suggested to Peter getting the
+5830, since the 5830 a much more acceptable card, with doubles! I
+found a comment on a blog post about these hacky firmwares which
+claimed to have it sort of working with some weird caveats about which
+outputs worked. The correct, good GPU with no work would be a 5870
+from Apple, though that would be more expensive.
+
+We sat around Peter's apartment for a while before heading to our
+apartment to use my desktop for flashing purposes. Peter drove us, but
+there wasn't parking near our apartment. We went one street over, a
+strange place I have never been before. I have had to swap my GPU on a
+daily basis recently to work on Milkyway@Home, so I put in Peter's new
+GPU. While waiting to be told the next step to try, I played with the
+AMD OpenCL examples. To flash the video card, we thought we needed to
+get a DOS boot disk with the flash utility, which couldn't be used
+from Windows. It turns out this is close to impossible. I don't really
+remember all the nonsense we tried, but there was all kinds of boot
+sector hackery, and 16-bit tools which wouldn't run. We spent many
+hours making various disks and trying to flash with each one. Files
+would just mysteriously not show up and pretty much everything was
+failing. While the garbage utilities we were trying to use were old,
+the whole experience seemed like an adventure in computer use from the
+very early 90s. We booted off of Tim's camera, although it didn't
+actually help.
+
+We eventually gave up and decided we could try flashing it again after
+it was installed in the Mac Pro and see if it would just happen
+to work. We went outside and couldn't find Peter's car. We walked up
+and down the street looking for it, and Peter came to the conclusion
+that it was towed again. It turns out it was; the fence we parked in
+front of was apparently a driveway of sorts. The next day Peter was
+supposed to drive some person he had never met through some extended
+relation, and didn't really want to do it. He now had the perfect
+excuse to get out of it, but for some reason was determined to go get
+the car now. We didn't have any other way to get there, so we were
+going to walk.
+
+We stopped at the pizza place briefly so Peter could get money for the
+tow from the ATM. We then started our walking adventure through Troy
+after midnight. I haven't really wandered through Troy yet in almost 4
+years. This walking adventure took a bit more than half an hour to the
+fabulous garage. Some random people in a car parked there said the guy
+was calling back, but Peter still called the guy, who confirmed he was
+coming back. We headed around back to where the cars were and paid the
+tow guy, where some kind of sketchy guy showed up behind.
+
+Peter paid $200 I think for the tow. It would have been cheaper to buy
+the Apple 5870 in the first place and avoid all of this. After that,
+we went to Denny's. Peter had commentary on some of the other patrons
+here at 2 am. I noticed that many of the people were old and wearing
+fancy clothes which I found strange.
+
+I ordered some kind of food which I didn't quite understand what it
+was, so I pointed to it on the menu using my formidable social
+skills. I didn't quite get the right thing, but close enough. While
+sitting there eating, Peter explained that he had talked to Netkas
+about something or other related to the original GPU problem. Tim and
+I got excited, and sort of asked in disbelief about this conversation
+with him. It was kind of sad and hilarious that we both instantly
+recognized this completely random OSx86 hacker. We left Denny's and
+still didn't have a working GPU in a Mac Pro so everything was a
+complete failure.
+
+
