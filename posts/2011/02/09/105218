@@ -1,0 +1,15 @@
+<p>I'm posting these so I don't accidentally almost lose them again, since it's rather painful to make them again, and in the unlikely event they're actually useful for someone else.
+I have binaries for the Milkyway@Home dependencies, in particular <a href="http://rpm5.org/files/popt/">popt</a> built with Visual Studio (which I ported last semester, which mostly involved removing C99 features, and casting mallocs since MSVC brings in lots of C++ stupidity to C while somehow also not supporting C99 features that are in C++).
+For MinGW libraries, the BOINC libraries are 6.10.58 with my patch to fix the MinGW build from last June, which still hasn't been applied.
+Crlibm, as required by the N-body to get consistent math results, I never got to truly work on Windows. These have the crlibm_init() function stripped out, since headers it was using to set the x87 FPU control flags seemed to be missing. It's been on my TODO list to get Crlibm properly working on Windows (and maybe with MSVC too), but I haven't gotten to it.
+</p>
+</p>
+These are binaries for MSVC 2010, and for MinGW with GCC 4.4 (from <a href="http://takeoffgw.sourceforge.net/">TakeoffGW</a>), for use with the static runtime (/MT). I had some trouble recently when trying to link these with GCC 4.5 stuff (at least the BOINC/C++ parts since C++ linking tends to stop working with new releases of things) from the new MinGW installer, so I'm not sure it will work with those.
+</p>
+<a href="http://files.whatmannerofburgeristhis.com/MinGWDeps.zip">MinGW dependencies</a><br/>
+<a href="http://files.whatmannerofburgeristhis.com/MSVCDeps.zip">MSVC dependencies</a><br/>
+<a href="http://files.whatmannerofburgeristhis.com/MSVCPoptBins.zip">Popt built with Visual Studio</a><br/>
+
+
+
+
