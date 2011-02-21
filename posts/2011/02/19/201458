@@ -1,0 +1,63 @@
+Today I fixed the most time consuming bug ever. I believe I've spent
+well over 50 hours total actively trying to find it, and countless
+more thinking about it. I first encountered this problem some time in
+early December on my first pass through the new CAL/CAL++ for ATI
+GPUs <a href="http://milkyway.cs.rpi.edu/milkyway/"> Milkyway@Home</a>
+separation application. The final results were differed on the order
+of 10&#x207b;&#x2076;, much larger than the required accuracy within
+10&#x207b;&sup1;&sup2;. I took a long break in December and early
+January to apply to grad school and other things, but I was still
+thinking of the problem. Nearly all the time I've spent working on
+Milkyway@Home since I got back to RPI almost a month ago has been
+trying to find this bug. It's stolen dozens of hours from me, but it's
+finally working.
+
+The problem was errors that looked like this:<br/>
+<a href="http://files.whatmannerofburgeristhis.com/CALErrorsVsPosition.png">
+   <img src="http://files.whatmannerofburgeristhis.com/CALErrorsVsPosition.png" alt="CAL++ version errors" align="center" width="600"/>
+</a>
+
+This is the &mu; &middot; r area integrated over one &nu; step in the integral
+from the broken CAL version compared to the correct OpenCL results.
+
+It looks like there's almost a sort of order to the error, with the
+grids and deep lines at some points, though the grids are much less
+prominent when the full range of errors are plotted, except for the
+deep line in the middle of r. I spent many hours looking for something
+related to reading/writing invalid positions in the various buffers
+used (I find dealing with image pitch and stuff very annoying), and
+every time finding that everything was right after many hours of
+tedious work comparing numbers.
+
+It also didn't help that for a long time, my test inputs were not what
+I thought they were, which finally pushed me to get the automated
+testing I've meant to get working since I started working on the
+project last May.
+
+I eventually happened to find this <a href="http://developer.amd.com/support/KnowledgeBase/Lists/KnowledgeBase/DispForm.aspx?ID=92">
+this</a> on the internet.
+
+I vaguely remember finding this before and reading "Declaring data
+buffers which contain IEEE double-precision floating point values as
+CAL_DOUBLE_1 or CAL_DOUBLE_2 would also prevent any issues with
+current AMD GPUs." and decided whatever changes it was talking about
+didn't apply to me, since I was already using the latest stuff and
+using the Radeon 5870. Apparently this is wrong.
+
+
+This claims CAL_FORMAT_DOUBLE_2 should work correctly, but it
+apparently doesn't. I also don't understand why I can't use the
+integer formats for stuff put into constant buffers. I spent way too
+much of my time searching for random details in ATI
+documentation. It's rather annoying. Switching to the
+CAL_FORMAT_UNSIGNED_INT32_{2 | 4} formats
+for my buffers solved the stupid problem. I guess some kind of
+terrible sampling was going on? I don't understand how that results in
+the error plots, with half the buffer being much worse, and the grids.
+
+I really don't understand why this wasn't in the actual documentation,
+and instead I just happened to find this. Only one of the provided
+examples for CAL uses doubles, and it is a very simple example.
+
+
+
