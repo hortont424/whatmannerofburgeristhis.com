@@ -1,0 +1,59 @@
+
+I've just finished making the next release of the <a
+href="http://milkyway.cs.rpi.edu/milkyway/"> Milkyway@Home</a> N-body
+simulation. These should start going out soon along with new
+searches. The major change in this version is that <a
+href=http://en.wikipedia.org/wiki/Lua_(programming_language)>Lua</a>
+is now used for configuration instead of the old static JSON file. You can now script
+a totally arbitrary initial particle distribution, and you can run a
+simulation without the milkyway background potential, so it's probably
+more useful for anyone else to use now for other N-body
+simulations.
+
+This all started one night when I was planning on finishing the few
+remaining issues with the new CAL/CAL++/ATI Separation application,
+but needed to get some reference results from the working OpenCL
+application on Nvidia. But then <a href="http://www.hortont.com/"> Tim
+Horton</a> left Jayne (the system with the GTX 480 donated by a <a
+href="http://milkyway.cs.rpi.edu/milkyway/show_user.php?userid=108749">Milkyway@Home
+user</a>) running Windows and disappeared somewhere. Then there was
+something of an obstacle to doing what I was planning on doing and I
+thought it would be cool to have an embedded dynamic language. My
+original thought was to use JavaScript after <a
+href="http://live.gnome.org/Seed"> Seed</a>, but JavaScriptCore isn't
+really split out from Webkit, and the full Webkit dependency was too
+much for what I needed. I considered Python, but the Lua libraries
+were an order of magnitude smaller, so I chose it and spent the next
+few days getting basic things working. I spent a long time writing
+boring bindings for many of the structs for the N-body simulation. I
+later found that if I had used LuaJIT, it seems it would have done
+most of the work for me. About a week later I had something working.
+Although the mini-API isn't really close to what I originally
+envisioned or wanted, you can now script any simulation you want. I'm
+considering making it possible to use a Lua closure for the external
+potential, but I'm not sure how much slower that will be.
+
+This enables more complex models to be fit without a need to make new
+releases, and avoids a need to mangle the code every time the model
+changes to support more combinations of features. The current plan is
+to try multi-component dwarfs, with an extra component of dark matter
+which will be ignored in the final likelihood calculation.
+
+I've fixed a few other small random bugs, such as in some cases on
+Windows some system IO error would happen when checkpointing, and
+there would be a "something something failed: No error" type error
+message. I'm also using newer BOINC libraries for Linux to hopefully
+avoid the
+<a
+href="http://lists.ssl.berkeley.edu/pipermail/boinc_dev/2010-November/017376.html">
+random crashes which were coming from the 6.10.58 libraries</a>.
+
+I've switched to only using the multithreaded versions using OpenMP
+for all systems. The 64-bit Windows build is now actually 64 bit as
+well. Building on Windows is still an agonizing process (mostly
+getting dependencies and a functioning build environment, not actually
+building it) I don't understand, but it's getting better.
+
+You can download the source here <a href="http://milkyway.cs.rpi.edu/milkyway/download/src/milkyway_nbody_0.40.tar.xz">here</a>.
+
+
