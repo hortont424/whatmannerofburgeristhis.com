@@ -1,0 +1,10 @@
+
+Milkyway@Home has now been released for iPhone / iOS! Now you can not only use your GPU to figure out the structure of our galaxy, but your phone too!
+You can get install instructions on the <a href="http://milkyway.cs.rpi.edu/milkyway/forum_thread.php?id=2303">news post</a>.
+
+Technically, the new client is only semi-functional. The actual important core code is there and working, but the BOINC pieces are missing which are necessary for it to be to more (sort of) useful. It downloads 1 of about 5 sample workunits (which also happen to be 1000x smaller than the real versions so that they actually can complete on the phone). Checkpointing and some other stuff still works normally. There wasn't really time to port BOINC / the libraries, so there isn't any accounting or actual task fetching. The results also are just optionally emailed to me at Milkyway4iOS@gmail.com. I'm curious what results I'll get back.
+
+The small tests that run in about 10 seconds on my desktop take over 20 minutes on my iPhone 3g, and drain the battery about 8%, so it's about 2 orders of magnitude slower. I do not think the full size units will complete in a week, although I haven't actually tried it.
+
+
+
