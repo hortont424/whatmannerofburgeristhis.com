@@ -1,0 +1,51 @@
+
+I've been working on the Milkyway Nbody GPU application using OpenCL, mostly basing it off of
+<a href="http://www.google.com/url?sa=t&source=web&cd=1&ved=0CBcQFjAA&url=http%3A%2F%2Fwww.cs.txstate.edu%2F~mb92%2Fpapers%2Fgcg11.pdf&ei=Xlk7TrTRD8qTtwfJ3oXmAg&usg=AFQjCNHuLabaUJN6yg78VXFQIZK4xx-s8w&sig2=zzLtF_p6L0XfpF4wO8GyVQ">a CUDA implementation</a> of the <a href="http://en.wikipedia.org/wiki/Barnes–Hut_simulation">Barnes-Hut algorithm.</a> The port (and addition of a slew of other minor features and details to match the original) to OpenCL has been quite a bit more painful and time consuming than I anticipated. In it's current state, it seems to work correctly on Nvidia GPUs (somewhat unsurprisingly).
+
+The most recent problems I've been exploring is an apparent "tree incest" problem which seems to happen quite frequently in situations where it should not. In the traversal of the tree to compute a force on a body, it should enter nearby cells and perform a more accurate force calculation based on individual bodies (as opposed to the center of mass of a collection of farther away bodies, which is how this is an O(n log n) approximation and not the basic O(n<sup>2</sup>) algorithm. Logically, the cell a body itself belongs to should be entered and forces calculated from it's neighbors while skipping an interaction on itself. If when calculating forces on a body it doesn't run into itself, there's something wrong. This can happen ordinarily depending on the distribution of bodies, usually when bodies are very close to the edges of a cell. It happens most often with the classic cell opening criterion, particularly when using opening angles close to the maximum of 1.0. This is happening nondeterministically and in all cases on AMD GPUs (usually for some small number of bodies relative to the total I'm testing with), so something is slightly broken.
+
+The CUDA implementation uses in several places the __threadfence() and __threadfence_block() functions. The CUDA documentation for these functions is mostly clear. It stalls the current thread until its memory accesses complete. The closest equivalents in OpenCL are the mem_fence() functions. According to the <a href="http://developer.amd.com/zones/OpenCLZone/programming/pages/portingcudatoopencl.aspx">AMD porting CUDA guide</a> says of __threadfence() that there is "no direct equivalent" in OpenCL, but that mem_fence(CLK_GLOBAL_MEM_FENCE | CLK_LOCAL_MEM_FENCE) is an equivalent of __threadfence_block(). My guess was that the potentially different behaviour between mem_fence() and __threadfence() might be responsible, so I went looking for what actually happens.
+
+Ignoring the supposedly identical __threadfence_block(), and mem_fence(GLOBAL|LOCAL) I went looking at __threadfence().
+According to the CUDA documentation
+<h4> __threadfence() waits until all global and shared memory accesses made by the calling thread prior to __threadfence() are visible to:</h4>
+<ul>
+<li>All threads in the thread block for shared memory accesses</li>
+<li>All threads in the device for global memory accesses</li>
+</ul>
+According to the OpenCL spec, a mem_fence() "Orders loads and stores of a work-item executing a kernel. This means that loads and stores preceding the mem_fence will be committed to memory before any loads and stores following the mem_fence." Earlier in the spec (section 3.3.1 Memory Consistency), it states that "Global memory is consistent across work-items in a single work-group at a work-group barrier, but there are no guarantees of memory consistency between different work-groups executing a kernel."
+
+This says that there's no concept of (device) global memory consistency. The global memory accesses are completed and visible to other threads <i>in the same workgroup</i> and only at a barrier, which this is not. I guess that means the writes could be trapped in some kind of cache and only visible to threads in the other wavefronts executing on the same compute unit making up the workgroup. This is quite the difference from the much stronger __threadfence() where the writes are visible to all threads in the <i>device</i>. From this it unfortunately sounds like what I need to happen can't be done without some unfortunate hackery involving atomics or splitting into multiple kernels to achieve a global weak sort of "synchronization." Breaking (some of) these pieces into separate kernels isn't really practical in this case. It would have been kind of painful to do and slower. I figured I would look into what actually is happening.
+
+Since things seemed to be working correctly on Nvidia, I checked what happens there. Inspecting the PTX from CUDA and my sample OpenCL kernels, it appears that the CUDA __threadfence() and __threadfence_block() compile into the same instructions as OpenCL's mem_fence() (as well as read_mem_fence() and write_mem_fence()) with the different flags. Any of the fences with a CLK_GLOBAL_MEM_FENCE compiles to membar.gl, and mem_fences with only CLK_LOCAL_MEM_FENCE compiles to membar.cta. I thought the PTX documentation was more clear on what actually happens here.
+
+According the PTX documentation, membar.cta "waits for prior memory accesses to complete relative to other threads in the CTA." CTA stands for "Cooperative Thread Array," which apparently is a CUDA block (an OpenCL workgroup). This would seem to confirm the same behaviour with mem_fence(LOCAL). More interestingly, membar.gl waits for prior memory accesses to complete relative to other threads in the device confirming that __threadfence() and mem_fence(GLOBAL) have the same behaviour on Nvidia. If the problem I'm debugging is this issue, this explains why it does work as expected on Nvidia.
+
+Since now I was sure the correct thing should in fact be happening on Nvidia, I checked the AMD IL from my sample kernels, and found fence_lds_memory in the places I was most interested in. AMD IL instructions are built up out of a base name (in this case "fence") and then have modifiers prefixed with underscores appended to the name. In this case, the _lds modifier is the local fence around the workgroup. The LDS is the "local data store," and is the same as OpenCL __local memory.  Once again, mem_fence(GLOBAL|LOCAL) appears to have the same expected behaviour as __threadfence_block() as expected.
+
+Specifically, it states that:
+<h4>_lds - shared memory fence. It ensures that:</h4>
+<ul>
+<li>no LDS read/write instructions can be re-ordered or moved across this fence instruction.</li>
+<li>all LDS write instructions are complete (the data has been written to LDS memory, not in
+internal buffers) and visible to other threads.</li>
+</ul>
+What I'm actually looking for is the global behaviour, as given by the _memory modifier:
+<h4>_memory - global/scatter memory fence. It ensures that:</h4>
+<ul>
+<li>No memory import/export instructions can be re-ordered or moved across this fence instruction.</li>
+<li>All memory export instructions are complete (the data has been written to physical memory, not in the cache) and is visible to other threads.</li>
+</ul>
+I supposed I should also have checked the final ISA to be sure, but I'm lazy and gave up on finding the Cayman ISA reference. Tthere does appear to be some sort of waiting for the write:
+<pre>
+  03 MEM_RAT_CACHELESS_STORE_DWORD__NI_ACK: RAT(11)[R0].xy__, R1, ARRAY_SIZE(4)  MARK  VPM
+  04 WAIT_ACK:  Outstanding_acks <= 0
+</pre>
+I guess this might kill my hypothesis about the different mem_fence() behaviour. I would feel a bit better if it included the phrase "in the device" at the end, but my reading of this is still that it does what I hoped. It does appear that a mem_fence() is consistent across the device with AMD and Nvidia's GPU implementations of OpenCL, so now I need to do more work to find what's actually broken.
+
+So now I'm relying on implementation detail behaviour beyond the spec (it's not the only place...), but oh well. It's much nicer than the alternative (more work).
+
+The conclusion of all of this, is that relying on OpenCL implementation behaviour, a mem_fence() with CLK_GLOBAL_MEM_FENCE should work among all threads in the device for both Nvidia and AMD GPUs (at least on current hardware) and as far as I can tell from chasing the documentation.
+
+
+
