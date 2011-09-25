@@ -27,6 +27,7 @@ h1
     font-weight: normal;
     font-size: 1.7em;
     margin: 0px;
+    clear: both;
 }
 
 h1>a
@@ -40,8 +41,7 @@ h2
     font-weight: normal;
     font-size: 0.9em;
     margin: 0px;
-    position: relative;
-    top: -1.7em;
+    margin-bottom: 5px;
     float: right;
 }
 
@@ -63,7 +63,7 @@ div.postContent
     font-size: 0.8em;
     background-color: #fff;
     width: 600px;
-    padding: 20px 20px 5px 20px;
+    padding: 10px 20px 5px 20px;
     margin: 0px 0px 20px 0px;
     line-height: 1.5em;
     text-align: justify;
