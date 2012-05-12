@@ -11,11 +11,6 @@ if os.getcwd() == "/Volumes/Users/matt/src/whatmannerofburgeristhis.com":
     www_prefix = "file:///Volumes/Users/matt/src/whatmannerofburgeristhis.com/output/"
     static_prefix = "file:///Volumes/Users/matt/src/whatmannerofburgeristhis.com/output/"
 
-# For Tim's machine
-if os.getcwd() == "/Users/hortont/src/whatmannerofburgeristhis.com":
-    www_prefix = "http://localhost:8000/"
-    static_prefix = "http://localhost:8000/"
-
 blog_dir = "blog/"
 
 blog_prefix = www_prefix + blog_dir

@@ -25,7 +25,7 @@ def urlResponseCode(url):
     return None
 
 def testLinks():
-    for root, dirs, files in os.walk("output/blog"):
+    for root, dirs, files in os.walk("output/blog/posts"):
         for filename in files:
             f = os.path.join(root, filename)
             if not f.endswith(".html"):
