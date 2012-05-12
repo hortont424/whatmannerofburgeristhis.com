@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 from settings import *
 from build import generateCategoryMap

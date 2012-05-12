@@ -8,19 +8,10 @@
 
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="${rssurl}" />
 
-    <style>
-        #blog
-        {
-            /*opacity: 1.0 !important;*/
-        }
-    </style>
     <title>${Markup(title)}</title>
   </head>
   <body class="index">
     <xi:include href="button-bar.html" />
-
-    <py:if test="nextPage != ''"><div class="navwrapperl"><a class="nav" href="${nextPage}" title="Older Posts">&larr;</a></div></py:if>
-    <py:if test="previousPage != ''"><div class="navwrapperr"><a class="nav" href="${previousPage}" title="Newer Posts">&rarr;</a></div></py:if>
 
     <table id="posts" border="0" width="100%">
     <py:if test="showTitle">
@@ -37,6 +28,15 @@
     <tr>
         <td></td>
         <td class="post">${Markup(content)}</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="post">
+            <div style="text-align: center; font-size: 120%; margin-top: 10px;">
+                <a href="${blogurl}history">See Older Posts</a>
+            </div>
+        </td>
         <td></td>
     </tr>
     </table>

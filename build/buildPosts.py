@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.6
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import codecs
@@ -9,4 +9,4 @@ from settings import *
 
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
 buildPosts("posts", "post", "post", os.path.join(blog_dir, "posts"))
-#buildBackwardsCompatibilityLinks("posts")
+buildBackwardsCompatibilityLinks("posts")

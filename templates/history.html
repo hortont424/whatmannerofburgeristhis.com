@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="${baseurl}styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="${baseurl}styles/blog.css" type="text/css" />
+
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="${rssurl}" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
+    <link href='http://fonts.googleapis.com/css?family=Hammersmith+One&amp;v2' rel='stylesheet' type='text/css' />
+
+    <title>${Markup(title)}</title>
+  </head>
+  <body class="index">
+    <xi:include href="button-bar.html" />
+
+    <table id="posts" border="0" width="100%">
+    <tr>
+        <td></td>
+        <td class="post">
+            <py:for each="year in reversed(sorted(posts.keys()))">
+            <div class="postContent" xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:py="http://genshi.edgewall.org/"
+                  xmlns:xi="http://www.w3.org/2001/XInclude">
+            <h1>${Markup(year)}</h1>
+            <p>
+            <py:for each="post in posts[year]">
+                ${post.date} &mdash; <strong><a href="${post.url}">${Markup(post.title)}</a></strong> <span style="font-size: 75%;">in ${Markup(post.categories)}</span><br/>
+            </py:for>
+            </p>
+            </div>
+            </py:for>
+
+        </td>
+        <td></td>
+    </tr>
+
+    </table>
+  </body>
+</html>

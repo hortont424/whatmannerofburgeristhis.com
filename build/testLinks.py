@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.6
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import os
@@ -25,12 +25,12 @@ def urlResponseCode(url):
     return None
 
 def testLinks():
-    for root, dirs, files in os.walk("output/blog/posts"):
+    for root, dirs, files in os.walk("output/blog"):
         for filename in files:
             f = os.path.join(root, filename)
             if not f.endswith(".html"):
                 continue
-            
+
             soup = BeautifulSoup(readFileContents(f))
             anchors = soup.findAll('a')
             for a in anchors:

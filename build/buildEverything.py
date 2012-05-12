@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.6
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import os
@@ -20,16 +20,20 @@ def generateArchive(posts, outputLocation, category=None):
     page_no = 1
     posts.sort()
     posts.reverse()
-    
+
     pages = [renderPost(f, "archive-post") for f in posts]
-        
+
     page = outputArchivePage(pages, "", "", category)
     outputFilename = os.path.join(outputLocation, "everything", "index.html")
-    
+    secondOutputFilename = os.path.join(outputLocation, "AllInOneFile.html")
+
     if not os.path.exists(os.path.dirname(outputFilename)):
         os.makedirs(os.path.dirname(outputFilename))
-    
+
     out = codecs.open(outputFilename, encoding='utf-8', mode='w+')
+    out.write(page.decode("utf-8", "ignore"))
+    out.close()
+    out = codecs.open(secondOutputFilename, encoding='utf-8', mode='w+')
     out.write(page.decode("utf-8", "ignore"))
     out.close()
     print outputFilename.replace(os.path.join("output", ""), "") + " (all, %(s)d bytes)" % {'s': os.stat(outputFilename).st_size}
