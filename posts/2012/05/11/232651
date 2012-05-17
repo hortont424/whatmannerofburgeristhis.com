@@ -1,0 +1,53 @@
+This is an update for
+my <a href="http://www.whatmannerofburgeristhis.com/blog/posts/2011/08/04/224357.html">previous
+  post</a> about the global behaviour of mem_fence() on existing GPUs
+for ones which have started existing since then.
+
+On previous AMD architectures the caches were not really used except
+for read only images. The latest Tahiti/GCN GPUs have a read/write,
+incoherent L1 cache local to a compute unit.  Since a single workgroup
+will always run on a single compute unit, memory will be consistent in
+that group using the cache.
+
+According to the OpenCL specification, global memory is only
+guaranteed to be consistent outside of a workgroup, after an execution
+barrier, i.e. the kernel is finished, so memory will be consistent
+before the next invocation. I found this to be really annoying and
+would ruin my kernels, and in some cases had a high overhead from the
+multiple kernel launches.
+
+The write does seem to be committed to memory like the IL
+documentation would indicate, however the read is still problematic
+outside of the workgroup. You must bypass the L1 cache in order to
+ensure reading an updated value.
+
+For some cases I found it faster and more convenient to use atomics to
+bypass the L1 cache (e.g. read any given int value with
+atomic_or(&amp;address, 0)).
+
+- Use atomics to bypass the L1 cache if you need strong memory
+ consistency across workgroups. This is an option for reads that aren't very critical. This was
+ true for one of the N-body kernels. For another it was many times
+ slower than running a single workgroup at time to ensure global
+ consistency.
+
+In the future when the GDS hardware becomes available as an extension,
+it will probably be a better option for global synchronization. It's
+been in the hardware at least since Cayman (and maybe Evergreen?) but
+we don't (yet) have a way to access it from the OpenCL layer.
+
+
+On the Nvidia side, there is the potential that mem_fence() will stop
+providing a truly global fence in a future compiler update. Since CUDA
+4.0 or so the OpenCL compiler has supported inline PTX. You can get
+the same effect as __threadfence() by using the membar.gl instruction directly:
+
+inline void strong_global_mem_fence_ptx()
+{
+    asm("{\n\t"
+        "membar.gl;\n\t"
+        "}\n\t"
+        );
+}
+
+
