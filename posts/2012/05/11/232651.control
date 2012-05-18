@@ -2,6 +2,5 @@
     "author": "Matt",
     "title": "GCN OpenCL memory fences update (and inline PTX)",
     "date": "2012.05.11 23:26:51",
-    "categories": [GPU, OpenCL, Tahiti, AMD, ISA, GCN, PTX, Nvidia
-    ]
+    "categories": ["GPU", "OpenCL", "Tahiti", "AMD", "ISA", "GCN", "PTX", "Nvidia"]
 }
