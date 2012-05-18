@@ -14,6 +14,9 @@ from settings import *
 
 loader = TemplateLoader('templates', variable_lookup='lenient')
 
+def generatePostName(title):
+    return re.sub("^-*", "", re.sub("--+", "-", re.sub("[^a-z0-9\-]", "", re.sub("\s","-", re.sub("<[^>]*>", "", re.sub(u"α ↔ ω", "alphaomega", title.lower()))))))
+
 def readFileContents(fn):
     fileHandle = codecs.open(fn, encoding='utf-8')
     fileContents = unicode(fileHandle.read())
@@ -47,7 +50,14 @@ def renderPost(f, template, rss=False):
 
     pubDate = metadata["date"]
 
-    metadata["url"] = os.path.join(blog_prefix, f.replace(".control",".html"))
+    if "post-name" not in metadata:
+        metadata["post-name"] = generatePostName(metadata["title"])
+
+    if template is not "static":
+        metadata["url"] = os.path.join(blog_prefix, metadata["post-name"])
+    else:
+        metadata["url"] = os.path.join(blog_prefix, f.replace(".control",".html"))
+
     metadata["id"] = re.sub("[^0-9]", "", metadata["date"])
     metadata["date"] = datetime.datetime.strptime(pubDate, "%Y.%m.%d %H:%M:%S").strftime("%Y.%m.%d")
 
@@ -110,3 +120,17 @@ def renderArchive(c, template, next, prev, rss=False, category=None):
                          title=title,
                          showTitle=showTitle,
                          rssurl=rssurl).render(postfix, doctype=doctype)
+
+def renderHistory(c, template):
+    postfix = doctype = "html"
+    buildDate = datetime.datetime.today().strftime("%a, %d %b %Y %H:%M:%S +0000")
+
+    title = u"I have a blog lol &middot; blog &middot; history"
+
+    tmpl = loader.load(template + '.' + postfix, encoding='utf-8')
+    return tmpl.generate(posts=c,
+                         baseurl=www_prefix,
+                         staticurl=static_prefix,
+                         blogurl=blog_prefix,
+                         buildDate=buildDate,
+                         title=title).render(postfix, doctype=doctype)

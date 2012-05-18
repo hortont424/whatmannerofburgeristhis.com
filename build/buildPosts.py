@@ -9,4 +9,4 @@ from settings import *
 
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
 buildPosts("posts", "post", "post", os.path.join(blog_dir, "posts"))
-#buildBackwardsCompatibilityLinks("posts")
+buildBackwardsCompatibilityLinks("posts")
