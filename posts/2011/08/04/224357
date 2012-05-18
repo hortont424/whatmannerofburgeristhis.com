@@ -1,5 +1,5 @@
 
-<i><a href="http://whatmannerofburgeristhis.com/blog/posts/2012/05/12/232651.html">Update: This information is only partially useful on the most recent Tahiti/GCN GPUs, and a safer option is now available for Nvidia</a></i>
+<i><a href="http://www.whatmannerofburgeristhis.com/blog/gcn-opencl-memory-fences-update-and-inline-ptx/">Update: This information is only partially useful on the most recent Tahiti/GCN GPUs, and a safer option is now available for Nvidia</a></i>
 
 I've been working on the Milkyway Nbody GPU application using OpenCL, mostly basing it off of
 <a href="http://www.google.com/url?sa=t&source=web&cd=1&ved=0CBcQFjAA&url=http%3A%2F%2Fwww.cs.txstate.edu%2F~mb92%2Fpapers%2Fgcg11.pdf&ei=Xlk7TrTRD8qTtwfJ3oXmAg&usg=AFQjCNHuLabaUJN6yg78VXFQIZK4xx-s8w&sig2=zzLtF_p6L0XfpF4wO8GyVQ">a CUDA implementation</a> of the <a href="http://en.wikipedia.org/wiki/Barnes–Hut_simulation">Barnes-Hut algorithm.</a> The port (and addition of a slew of other minor features and details to match the original) to OpenCL has been quite a bit more painful and time consuming than I anticipated. In it's current state, it seems to work correctly on Nvidia GPUs (somewhat unsurprisingly).
