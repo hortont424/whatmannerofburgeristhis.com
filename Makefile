@@ -45,4 +45,12 @@ push:
 	cd /tmp ; git clone git@github.com:hortont424/whatmannerofburgeristhis.com
 	cd /tmp/whatmannerofburgeristhis.com ; make ; rsync -a --progress /tmp/whatmannerofburgeristhis.com/output/ hortont.com:/srv/matt
 
-.PHONY: all clean copy-data push all-serial
+preview:
+	open -a /Applications/Safari.app http://localhost:12345/
+	cd output ; python -m SimpleHTTPServer 12345
+
+deploy:
+	docker build -t hortont/wmobitcom deploy/
+	docker push hortont/wmobitcom
+
+.PHONY: all clean copy-data push all-serial preview deploy
